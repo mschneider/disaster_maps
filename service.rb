@@ -2,6 +2,7 @@ require 'yaml'
 require 'mongoid'
 require './models/event'
 require 'sinatra'
+require 'sinatra/namespace'
 
 set :app_file, __FILE__
 set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
