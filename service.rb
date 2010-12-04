@@ -13,11 +13,15 @@ require './models/event'
 require 'sinatra'
 
 get '/api/v1/events/:id' do
-  Event.find_by_id(params[:id].to_i).to_json
+  event = Event.find_by_id(params[:id].to_i)
+  raise Sinatra::NotFound unless event
+  event.to_json
 end
 
 get '/api/v1/tags/:tag/events' do
-  Event.find(:tag => params[:tag]).to_json
+  events = Event.find(:tag => params[:tag])
+  raise Sinatra::NotFound unless events
+  events.to_json
 end
 
 post '/api/v1/events' do

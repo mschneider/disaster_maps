@@ -18,6 +18,12 @@ describe 'Service' do
       get '/api/v1/events/1'
       last_response.should be_ok
     end
+    
+    it 'should return a 404 for an event that doesn\'t exist' do
+      Event.expects(:find_by_id).with(1).returns(nil)
+      get '/api/v1/events/1'
+      last_response.should_not be_ok
+    end
   end
 
   describe 'GET /api/v1/tags/:tag/events' do
@@ -28,7 +34,11 @@ describe 'Service' do
       JSON.parse(last_response.body).first.should have_key('tags')
     end
     
-    it 'should return a 404 for an event that doesn\'t exist'
+    it 'should return a 404 for an tag that doesn\'t exist' do
+      Event.expects(:find).with(:tag => 'bridge').returns(nil)
+      get '/api/v1/tags/bridge/events'
+      last_response.should_not be_ok
+    end
   end
 
   describe 'GET /api/v1/events/:bounds' do
