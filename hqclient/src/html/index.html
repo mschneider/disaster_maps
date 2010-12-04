@@ -29,17 +29,21 @@
 	   
 	       
 	</head>
-	<body class="bp two-col" onload="init()">
+	<body class="spatialbrowser" onload="init()">
 	   <div id="container">
 		   <div id="header">
                <h1>Disaster Maps</h1>
 		   </div>
 		   <div id="sidebar">
-		      <ul>
-		          <li>tag1</li>
-		          <li>tag2</li>
-		          <li>tag3</li>
-		          <li>tag4</li>
+		      <ul id="currentTags" class="taglist">
+                  <li class="tag"><a href="">tag1</a></li>
+                  <li class="tag"><a href="">tag2</a></li>
+                  <li class="tag"><a href="">tag3</a></li>
+                  <li class="tag"><a href="">tag4</a></li>
+		      </ul>
+		      <ul id="mostPopularTags" class="taglist">
+                  <li class="tag"><a href="">tag1</a></li>
+                  <li class="tag"><a href="">tag2</a></li>
 		      </ul>
 		   </div>
 		   <div id="content">

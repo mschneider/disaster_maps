@@ -21,18 +21,59 @@
 //    |        #footer         |
 //    +--------+---------------+
 
-body.two-col {
+body.spatialbrowser {
+  height: 100%;
+  background-color: #ddd;
+  
   #container {
-    @include container; }
-  #header, #footer {
-    @include column($blueprint-grid-columns); }
+    @include container;
+    border-right: 1px solid black;
+    border-left: 1px solid black; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #fff;
+  }
+  h1, h2, h3, h4, h5, h6 {
+     @include text-shadow;
+  }
+
+  #header {
+    @include column($blueprint-grid-columns); 
+  }
+  
+  #footer {
+    @include column($blueprint-grid-columns); 
+  }
+  
   #sidebar {
-    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    $sidebar-columns: floor($blueprint-grid-columns / 3);
-    @include column($sidebar-columns); }
-  #content {
-    // Two thirds of the grid columns, rounding up.
-    // With 24 cols, this is 16.
-    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
+    // One fifth of the grid columns, rounding down. 
+    $sidebar-columns: floor($blueprint-grid-columns / 5);
     // true means it's the last column in the row
-    @include column($content-columns, true); } }
+    @include column($sidebar-columns, true);
+    float: right;
+    
+    .taglist {
+        @include no-bullets;
+        @include box-shadow;
+        @include border-radius;
+        padding: 5px;
+        margin: 5px;
+        a {
+            @include unstyled-link;
+        } 
+    } 
+  }
+  #content {
+    // four fifth of the grid columns, rounding up.
+    $content-columns: ceil(4 * $blueprint-grid-columns / 5);
+    @include column($content-columns);
+    float: left; 
+    background-color: grey;
+    height: 400px;
+    #map {
+        height: 100%;
+    }
+  }
+     
+}
