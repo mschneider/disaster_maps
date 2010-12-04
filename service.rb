@@ -16,7 +16,14 @@ get '/api/v1/events/:id' do
   Event.find_by_id(params[:id].to_i).to_json
 end
 
-post '/api/v1/events/' do
-  debugger
-  Event.create(JSON.parse(params))
+get '/api/v1/tags/:tag/events' do
+  Event.find(:tag => params[:tag]).to_json
+end
+
+post '/api/v1/events' do
+  Event.create(JSON.parse(params[:event]))
+end
+
+get '/' do
+  'Hello world!'
 end
