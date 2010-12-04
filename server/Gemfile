@@ -1,1 +1,10 @@
+source 'http://rubygems.org'
+
 gem 'sinatra'
+gem 'mongoid', '2.0.0.beta.20'
+gem 'heroku'
+
+group(:development, :test) do
+  gem 'rspec'
+  gem 'fuubar'
+end
