@@ -17,9 +17,16 @@ helpers do
 end
 
 namespace '/api/v1' do
-  get('/events/:id') { api_response Event.find_by_id(params[:id].to_i) }
+  get('/events/:id') { api_response Event.find(params[:id]) }
   get('/tags/:tag/events') { api_response Event.find(:tag => params[:tag]) }
   post('/events') { Event.create(JSON.parse(params[:event])) }
+  get('/events') {
+    if params[:bbox]
+      api_response Event.where(:location.within => {"$box" => JSON.parse(params[:bbox]) } ).find()
+    else
+      api_response Event.find()
+    end
+  }
 end
 
 get('/') { 'Hello world!' }

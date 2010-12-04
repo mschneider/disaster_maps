@@ -4,6 +4,7 @@ gem 'sinatra', '~> 1.1'
 gem 'sinatra-namespace'
 gem 'mongoid', '2.0.0.beta.20'
 gem 'heroku'
+gem 'typhoeus'
 
 group(:development, :test) do
   gem 'rspec', '2.2'
