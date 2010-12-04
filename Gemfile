@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
+gem 'sinatra-namespace'
 gem 'mongoid', '2.0.0.beta.20'
 gem 'heroku'
 

@@ -8,20 +8,17 @@ set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
 set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
-get '/api/v1/events/:id' do
-  pass unless event = Event.find_by_id(params[:id].to_i)
-  event.to_json
+helpers do
+  def api_response(resource)
+    pass unless resource
+    resource.to_json
+  end
 end
 
-get '/api/v1/tags/:tag/events' do
-  pass unless events = Event.find(:tag => params[:tag])
-  events.to_json
+namespace '/api/v1' do
+  get('/events/:id') { api_response Event.find_by_id(params[:id].to_i) }
+  get('/tags/:tag/events') { api_response Event.find(:tag => params[:tag]) }
+  post('/events') { Event.create(JSON.parse(params[:event])) }
 end
 
-post '/api/v1/events' do
-  Event.create(JSON.parse(params[:event]))
-end
-
-get '/' do
-  'Hello world!'
-end
+get('/') { 'Hello world!' }

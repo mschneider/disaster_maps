@@ -53,6 +53,8 @@ GEM
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
+    sinatra-namespace (0.6.1)
+      sinatra (~> 1.1)
     tilt (1.1)
     tzinfo (0.3.23)
     will_paginate (3.0.pre2)
@@ -69,3 +71,4 @@ DEPENDENCIES
   rack-test
   rspec (= 2.2)
   sinatra
+  sinatra-namespace
