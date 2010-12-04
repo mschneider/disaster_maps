@@ -1,0 +1,32 @@
+.compass .back {
+    fill: #EEEEEE;
+    fill-opacity: 0.8;
+}
+.compass .fore {
+    stroke: #999999;
+    stroke-width: 1.5px;
+}
+.compass rect.back.fore {
+    fill: #999999;
+    fill-opacity: 0.3;
+    shape-rendering: crispedges;
+    stroke: #EEEEEE;
+    stroke-width: 1px;
+}
+.compass .direction {
+    fill: none;
+}
+.compass .chevron {
+    fill: none;
+    stroke: #999999;
+    stroke-width: 5px;
+}
+.compass .zoom .chevron {
+    stroke-width: 4px;
+}
+.compass .active .chevron, .compass .chevron.active {
+    stroke: #FFFFFF;
+}
+.compass.active .active .direction {
+    fill: #999999;
+}

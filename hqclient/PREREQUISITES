@@ -1,0 +1,15 @@
+"Build Time" prerequisites
+---------------------------
+  Polymaps
+  --------
+  Checkout polymaps next to your disaster_maps checkout.
+
+  git clone https://github.com/simplegeo/polymaps.git
+
+  Compass
+  -------
+  We use compass, which in term uses sass for better handling of stylesheets
+  http://compass-style.org/docs/
+
+  gem install compass
+
