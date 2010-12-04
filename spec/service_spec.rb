@@ -85,15 +85,30 @@ describe 'Service' do
   describe 'POST /api/v1/events' do
     it 'should create an event and read it afterwards' do
       parameter_hash =  {
-        "title" => 'House destroyed',
-        "description" => 'House belonging to Mr Karzai was completely destroyed, family homeless',
-        "location" => [73.2, 36.2],
-        "tags" => %w(homeless bridge cut-off-supply-route)
+        'title' => 'House destroyed',
+        'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
+        'location' => [73.2, 36.2],
+        'tags' => %w(homeless bridge cut-off-supply-route)
       }
       post '/api/v1/events', parameter_hash.to_json
       last_response.should be_ok
       new_event = Event.find(JSON.parse(last_response.body)['id'])
       new_event.should_not be_nil
+    end
+    
+    it 'should return 400 if the event has no title' do
+      post '/api/v1/events', {'location' => [73.2, 36.2]}.to_json
+      last_response.status.should == 400
+    end
+    
+    it 'should return 400 if the event has no location' do
+      post '/api/v1/events', {'title' => 'House destroyed'}.to_json
+      last_response.status.should == 400
+    end
+    
+    it 'should return 400 if the event has invalid attributes' do
+      post '/api/v1/events', {'title' => 'a title', 'invalid_key' => 'value'}.to_json
+      last_response.status.should == 400
     end
   end
 end

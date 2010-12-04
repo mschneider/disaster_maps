@@ -42,10 +42,11 @@ namespace '/api/v1' do
   # return event with given id
   get('/events/:id') { api_response_for_event Event.find(params[:id]) }
   
-  
+  # create event with given parameters
   post('/events') do
-    event = Event.create(JSON.parse(request.body.read))
-    400 unless event.valid?
+    param_hash = JSON.parse(request.body.read)
+    event = Event.create(param_hash)
+    error 400 unless event.valid?
     {:id => event._id.to_s}.to_json
   end
   
