@@ -60,6 +60,6 @@ describe 'service' do
       attributes = JSON.parse(last_response.body)
       attributes['title'].should == 'House destroyed'
       attributes['description'].should == 'The belonging to Mr Karzai was completely destroyed, family homeless'
+    end
   end
-
 end
