@@ -14,9 +14,9 @@ describe 'Service' do
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      # Event.mocks(:find).expects(1).returns(@event)
+      Event.expects(:find_by_id).with(1).returns(@event)
       get '/api/v1/events/1'
-      response.should be_ok
+      last_response.should be_ok
     end
   end
 

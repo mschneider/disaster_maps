@@ -13,5 +13,10 @@ require './models/event'
 require 'sinatra'
 
 get '/api/v1/events/:id' do
-  Event.find_by_id(params[:id])
+  Event.find_by_id(params[:id].to_i).to_json
+end
+
+post '/api/v1/events/' do
+  debugger
+  Event.create(JSON.parse(params))
 end
