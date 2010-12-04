@@ -1,16 +1,12 @@
 require 'yaml'
 require 'mongoid'
-
-file_name = File.join(File.dirname(__FILE__), "config", "mongoid.yml")
-@settings = YAML.load_file(file_name)
-env = ENV['RACK_ENV'] || 'development'
-
-Mongoid.configure do |config|
-  config.from_hash(@settings[env])
-end
-
 require './models/event'
 require 'sinatra'
+
+set :app_file, __FILE__
+set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
+set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
+Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 get '/api/v1/events/:id' do
   event = Event.find_by_id(params[:id].to_i)
