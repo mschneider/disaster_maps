@@ -15,7 +15,6 @@ describe 'Service' do
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      # Event.expects(:find_by_id).with(1).returns(@event)
       get "/api/v1/events/#{@db_event._id.to_s}"
       last_response.should be_ok
       attributes = JSON.parse(last_response.body)['event']
@@ -23,7 +22,6 @@ describe 'Service' do
     end
 
     it 'should return a 404 for an event that doesn\'t exist' do
-      # Event.expects(:find_by_id).with(1).returns(nil)
       get '/api/v1/events/4cfa7d260f2abc14c5000002'
       last_response.status.should == 404
       puts last_response.inspect
@@ -32,12 +30,6 @@ describe 'Service' do
 
   describe 'GET /api/v1/events' do
     it 'should return events within a valid bbox' do
-      query_criteria = Object.new
-      query_criteria.expects(:find).returns([@event])
-      Event.expects(:where)
-        .with(:location.within => {"$box" => [[73.0646,35.6842],[74.3033,36.2907]]} )
-        .returns(query_criteria)
-
       get '/api/v1/events?bbox=[[73.0646,35.6842],[74.3033,36.2907]]'
       last_response.should be_ok
       JSON.parse(last_response.body).size.should == 1

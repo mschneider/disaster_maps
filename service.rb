@@ -20,6 +20,8 @@ helpers do
   end
 end
 
+#BSON::InvalidObjectId
+
 namespace '/api/v1' do
 
   # return list of events with given tag
@@ -27,14 +29,14 @@ namespace '/api/v1' do
   
   # return list of events in the given area or any area
   get('/events') do
-    event_set = Event
     if params[:bbox]
-      event_set = event_set.where(:location.within => {"$box" => JSON.parse(params[:bbox])})
+      events Event.where(:location.within => {"$box" => JSON.parse(params[:bbox])}).find()
+    # if params[:tag]
+    #   event_set = event_set.where(:tags => params[:tag])
+    # end
+    else
+      events Event.find(:all)
     end
-    if params[:tag]
-      event_set = event_set.where(:tags => params[:tag])
-    end
-    events event_set.find()
   end
   
   # return event with given id
