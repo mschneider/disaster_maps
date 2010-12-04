@@ -9,16 +9,15 @@ describe 'Service' do
 
   before(:each) do
     Event.destroy_all
-    @event = Factory.stub(:event)
-    @db_event = Factory.create(:event)
+    @event = Factory.create(:event)
   end
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      get "/api/v1/events/#{@db_event._id.to_s}"
+      get "/api/v1/events/#{@event._id.to_s}"
       last_response.should be_ok
       attributes = JSON.parse(last_response.body)['event']
-      attributes['title'].should == @db_event.title
+      attributes['title'].should == @event.title
     end
 
     it 'should return a 404 for an event that doesn\'t exist' do
@@ -36,12 +35,6 @@ describe 'Service' do
     end
 
     it 'should return 404 if no event inside the area is found' do
-      query_criteria = Object.new
-      query_criteria.expects(:find).returns([])
-      Event.expects(:where)
-        .with(:location.within => {"$box" => [[1,2],[3,4]]} )
-        .returns(query_criteria)
-
       get '/api/v1/events?bbox=[[1,2],[3,4]]'
       last_response.should_not be_ok
     end

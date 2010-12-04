@@ -30,7 +30,7 @@ namespace '/api/v1' do
   # return list of events in the given area or any area
   get('/events') do
     if params[:bbox]
-      events Event.where(:location.within => {"$box" => JSON.parse(params[:bbox])}).find()
+      events Event.where(:location.within => {"$box" => JSON.parse(params[:bbox])}).to_a
     # if params[:tag]
     #   event_set = event_set.where(:tags => params[:tag])
     # end
