@@ -1,15 +1,12 @@
-require File.dirname(__FILE__) + '/../service'
-require 'rspec'
-require 'factory_girl'
-require File.dirname(__FILE__) + '/factories/event'
+require File.join(File.dirname(__FILE__), 'spec_helper')
 
-set :environment, :test
+describe 'Service' do
+  include Rack::Test::Methods
 
-def app
-  Sinatra::Application
-end
+  def app
+    @app ||= Sinatra::Application
+  end
 
-describe 'service' do
   before(:each) do
     # Event.destroy_all
     @event = Factory.stub(:event)
@@ -17,7 +14,7 @@ describe 'service' do
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      Event.mocks(:find).expects(1).returns(@event)
+      # Event.mocks(:find).expects(1).returns(@event)
       get '/api/v1/events/1'
       response.should be_ok
     end

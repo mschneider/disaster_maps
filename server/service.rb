@@ -10,8 +10,8 @@ Mongoid.configure do |config|
 end
 
 require './models/event'
-
 require 'sinatra'
+
 get '/api/v1/events/:id' do
   Event.find_by_id(params[:id])
 end

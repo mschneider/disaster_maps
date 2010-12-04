@@ -35,6 +35,8 @@ GEM
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
     rack (1.2.1)
+    rack-test (0.5.6)
+      rack (>= 1.0)
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
@@ -64,5 +66,6 @@ DEPENDENCIES
   heroku
   mocha
   mongoid (= 2.0.0.beta.20)
+  rack-test
   rspec (= 2.2)
   sinatra
