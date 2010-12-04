@@ -24,6 +24,9 @@
 body.spatialbrowser {
   height: 100%;
   background-color: #ddd;
+  background-color: #1a82f7;
+  background: -moz-linear-gradient(100% 100% 90deg, #f79F18, #E78F08);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
   
   #container {
     @include box-shadow;
@@ -75,7 +78,16 @@ body.spatialbrowser {
     #map {
         height: 100%;
         border: 4px solid #CCCCCC;
-    }
+        
+        .eventLocation {
+            stroke: grey;
+            fill: white;
+        }
+        .eventLocation:hover {
+            stroke: white;
+            fill: grey;
+        }
+}
 
   }
      
