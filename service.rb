@@ -1,33 +1,25 @@
 require 'yaml'
 require 'mongoid'
-
-file_name = File.join(File.dirname(__FILE__), "config", "mongoid.yml")
-@settings = YAML.load_file(file_name)
-env = ENV['RACK_ENV'] || 'development'
-
-Mongoid.configure do |config|
-  config.from_hash(@settings[env])
-end
-
 require './models/event'
 require 'sinatra'
+require 'sinatra/namespace'
 
-get '/api/v1/events/:id' do
-  event = Event.find_by_id(params[:id].to_i)
-  raise Sinatra::NotFound unless event
-  event.to_json
+set :app_file, __FILE__
+set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
+set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
+Mongoid.configure { |c| c.from_hash(settings.db_config) }
+
+helpers do
+  def api_response(resource)
+    pass unless resource
+    resource.to_json
+  end
 end
 
-get '/api/v1/tags/:tag/events' do
-  events = Event.find(:tag => params[:tag])
-  raise Sinatra::NotFound unless events
-  events.to_json
+namespace '/api/v1' do
+  get('/events/:id') { api_response Event.find_by_id(params[:id].to_i) }
+  get('/tags/:tag/events') { api_response Event.find(:tag => params[:tag]) }
+  post('/events') { Event.create(JSON.parse(params[:event])) }
 end
 
-post '/api/v1/events' do
-  Event.create(JSON.parse(params[:event]))
-end
-
-get '/' do
-  'Hello world!'
-end
+get('/') { 'Hello world!' }
