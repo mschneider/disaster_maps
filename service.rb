@@ -10,11 +10,11 @@ set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 helpers do
-  def event(resource)
+  def api_response_for_event(resource)
     pass unless resource
     { :event => resource }.to_json
   end
-  def events(resources)
+  def api_response_for_events(resources)
     pass if resources.empty?
     { :events => resources }.to_json
   end
@@ -25,22 +25,25 @@ end
 namespace '/api/v1' do
 
   # return list of events with given tag
-  get('/tags/:tag/events') { events Event.find(:conditions => { :tags => params[:tag]})  }
+  get('/tags/:tag/events') { api_response_for_events Event.find(:conditions => { :tags => params[:tag]})  }
   
   # return list of events in the given area or any area
   get('/events') do
+    criteria = Event.find(:all)
     if params[:bbox]
-      events Event.where(:location.within => {"$box" => JSON.parse(params[:bbox])}).to_a
+      criteria = criteria.where(:location.within => {"$box" => JSON.parse(params[:bbox])})
+    end
+    if params[:within_radius]
+      criteria = criteria.where(:location.within => {"$center" => JSON.parse(params[:within_radius])})
+    end
     # if params[:tag]
     #   event_set = event_set.where(:tags => params[:tag])
     # end
-    else
-      events Event.find(:all)
-    end
+    api_response_for_events criteria.to_a
   end
   
   # return event with given id
-  get('/events/:id') { event Event.find(params[:id]) }
+  get('/events/:id') { api_response_for_event Event.find(params[:id]) }
   
   
   post('/events') do

@@ -13,4 +13,5 @@ group(:development, :test) do
   gem 'factory_girl'
   gem 'mocha'
   gem 'thin'
+  gem 'faker'
 end

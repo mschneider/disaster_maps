@@ -28,15 +28,26 @@ describe 'Service' do
   end
 
   describe 'GET /api/v1/events' do
+    it 'should return events within a valid radius' do
+      get '/api/v1/events?within_radius=[[0,0],1]'
+      
+    end
+
+    it 'should return 404 if there are no events within a given radius' do
+      get '/api/v1/events?within_radius=[[73.1646,35.6842],5]'
+      last_response.should be_ok
+      JSON.parse(last_response.body).size.should > 0
+    end
+
     it 'should return events within a valid bbox' do
       get '/api/v1/events?bbox=[[73.0646,35.6842],[74.3033,36.2907]]'
       last_response.should be_ok
-      JSON.parse(last_response.body).size.should == 1
+      JSON.parse(last_response.body).size.should > 0
     end
 
     it 'should return 404 if no event inside the area is found' do
       get '/api/v1/events?bbox=[[1,2],[3,4]]'
-      last_response.should_not be_ok
+      last_response.status.should == 404
     end
   end
 
@@ -50,20 +61,6 @@ describe 'Service' do
     it 'should return a 404 for an tag that doesn\'t exist' do
       get '/api/v1/tags/not_an_actual_tag/events'
       last_response.should_not be_ok
-    end
-  end
-
-  describe 'GET /api/v1/events/:bounds' do
-    it 'should return events by tag' do
-      pending
-      get '/api/v1/events/73.0646,35.6842,74.3033,36.2907'
-    end
-  end
-
-  describe 'GET /api/v1/events/:location' do
-    it 'should return events by point location' do
-      pending
-      get '/api/v1/events/73.3,36.2'
     end
   end
 
