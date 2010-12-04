@@ -7,4 +7,6 @@ gem 'heroku'
 group(:development, :test) do
   gem 'rspec'
   gem 'fuubar'
+  gem 'factory_girl'
+  gem 'mocha'
 end

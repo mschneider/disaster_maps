@@ -10,15 +10,15 @@ end
 describe 'service' do
   before(:each) do
     Event.destroy_all
-    event = Event.create(
-      :title => 'Bridge collapsed',
-      :description => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
-      :location => [73.3, 36.2],  #lon, lat : think x,y
-      :tags => %w(bridge) )
+    @event = Factory.stub(:event)
   end
 
   describe 'GET /api/v1/events/:id' do
-    it 'should return event by id'
+    it 'should return event by id' do
+      Event.mocks(:find).expects(1).returns(@event)
+      get '/api/v1/events/1'
+      response.should be_ok
+    end
   end
 
   describe 'GET /api/v1/events/:tag' do
@@ -41,18 +41,20 @@ describe 'service' do
 
   describe 'POST /api/v1/events' do
     it 'should create an event' do
-      post '/api/v1/events', {
+      parameter_hash =  {
         :title => 'House destroyed',
         :description => 'House belonging to Mr Karzai was completely destroyed, family homeless',
         :location => [73.2, 36.2],
         :tags => %(homeless)
-      }.to_json
+      }
+      Event.expects(:create).with(parameter_hash)
+      post '/api/v1/events', parameter_hash.to_json
       last_response.should be_ok
-      id = JSON.parse(last_response.body)['id']
-      get "/api/v1/events/#{id}"
-      attributes = JSON.parse(last_response.body)
-      attributes['title'].should == 'House destroyed'
-      attributes['description'].should == 'House belonging to Mr Karzai was completely destroyed, family homeless'
+      # id = JSON.parse(last_response.body)['id']
+      #      get "/api/v1/events/#{id}"
+      #      attributes = JSON.parse(last_response.body)
+      #      attributes['title'].should == 'House destroyed'
+      #      attributes['description'].should == 'House belonging to Mr Karzai was completely destroyed, family homeless'
     end
   end
 end
