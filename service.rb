@@ -9,14 +9,12 @@ set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 get '/api/v1/events/:id' do
-  event = Event.find_by_id(params[:id].to_i)
-  raise Sinatra::NotFound unless event
+  pass unless event = Event.find_by_id(params[:id].to_i)
   event.to_json
 end
 
 get '/api/v1/tags/:tag/events' do
-  events = Event.find(:tag => params[:tag])
-  raise Sinatra::NotFound unless events
+  pass unless events = Event.find(:tag => params[:tag])
   events.to_json
 end
 
