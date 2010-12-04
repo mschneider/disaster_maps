@@ -9,7 +9,8 @@ Mongoid.configure do |config|
   config.from_hash(@settings[env])
 end
 
-require './models/events'
+require './models/event'
+require 'sinatra'
 
 get '/api/v1/events/:id' do
   Event.find_by_id(params[:id])

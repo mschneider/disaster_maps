@@ -6,4 +6,5 @@ class Event
   field :updated_at,  :type => Date
   field :occurred_at, :type => Date
   field :tags
+  field :location
 end
