@@ -9,9 +9,32 @@
 
 	   <script type="text/javascript" src="js/lib/polymaps.js"></script>
 	   <script type="text/javascript">
+	   var po = org.polymaps;
+	   var map;
+	   
 	   function init() {
-		    var po = org.polymaps;
-		    var map = po.map()
+		   var data = { "type": "FeatureCollection",
+			   "features": [
+			       { "type": "Feature",
+			       "geometry": {"type": "Point", "coordinates": [13.21, 52.55]},
+			       "properties": {"prop0": "value0"}
+			       }
+			      ]
+			    }
+			 		   
+		   function load(e) {
+			   for (var i = 0; i < e.features.length; i++) {
+			     var feature = e.features[i];
+			     var element = feature.element;
+			     var textnode = po.svg("text");
+			     textnode.setAttribute("transform", element.getAttribute("transform"));
+			     element.parentNode.appendChild(
+			         textnode.appendChild(document.createTextNode(feature.data.properties.prop0))
+			         .parentNode);
+			   }
+			 }
+			 
+		    map = po.map()
 			    .container(document.getElementById("map").appendChild(po.svg("svg")))
 			    .add(po.interact())
 			    .add(po.hash());
@@ -21,10 +44,70 @@
 			    + "/1a1b06b230af4efdbb989ea99e9841af" // http://cloudmade.com/register
 			    + "/998/256/{Z}/{X}/{Y}.png")
 			    .hosts(["a.", "b.", "c.", ""])));
-		
-			map.add(po.compass()
-			    .pan("none"));
+
+		    map.add(po.geoJson().id("eventlayer").features(data.features).on("load", load));
+		    
+			map.add(po.compass().pan("none"));
+			map.center({lat: 52.552, lon: 13.215})
+			   .zoom(4);
 	   }
+
+	   
+		/*
+		    map = po.map()
+		       .container(document.getElementById("map").appendChild(po.svg("svg")))
+		       .center({lat: 37.787, lon: -122.228})
+		       .zoom(14)
+		       .zoomRange([12, 16])
+		       .add(po.interact());
+
+		   map.add(po.image()
+		       .url(po.url("http://{S}tile.cloudmade.com"
+		       + "/1a1b06b230af4efdbb989ea99e9841af" // http://cloudmade.com/register
+		       + "/20760/256/{Z}/{X}/{Y}.png")
+		       .hosts(["a.", "b.", "c.", ""])));
+
+		   map.add(po.geoJson()
+		       .url("http://oakland.crimespotting.org"
+		           + "/crime-data"
+		           + "?count=1000"
+		           + "&format=json"
+		           + "&bbox={B}"
+		           + "&dstart=2010-04-01"
+		           + "&dend=2010-05-01")
+		       .on("load", load)
+		       .clip(false)
+		       .zoom(14));
+
+		   map.add(po.compass()
+		       .pan("none"));
+
+		   function load(e) {
+		     var cluster = e.tile.cluster || (e.tile.cluster = kmeans()
+		         .iterations(16)
+		         .size(64));
+
+		     for (var i = 0; i < e.features.length; i++) {
+		       cluster.add(e.features[i].data.geometry.coordinates);
+		     }
+
+		     var tile = e.tile, g = tile.element;
+		     while (g.lastChild) g.removeChild(g.lastChild);
+
+		     var means = cluster.means();
+		     means.sort(function(a, b) { return b.size - a.size; });
+		     for (var i = 0; i < means.length; i++) {
+		       var mean = means[i], point = g.appendChild(po.svg("circle"));
+		       point.setAttribute("cx", mean.x);
+		       point.setAttribute("cy", mean.y);
+		       point.setAttribute("r", Math.pow(2, tile.zoom - 11) * Math.sqrt(mean.size));
+		     }
+		   }
+
+		   		   
+			   
+	   }
+		   */
 	   </script>
 	   
 	       
