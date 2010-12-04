@@ -14,25 +14,43 @@ describe 'Service' do
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      # Event.mocks(:find).expects(1).returns(@event)
+      Event.expects(:find_by_id).with(1).returns(@event)
       get '/api/v1/events/1'
-      response.should be_ok
+      last_response.should be_ok
+    end
+    
+    it 'should return a 404 for an event that doesn\'t exist' do
+      Event.expects(:find_by_id).with(1).returns(nil)
+      get '/api/v1/events/1'
+      last_response.should_not be_ok
     end
   end
 
-  describe 'GET /api/v1/events/:tag' do
-    it 'should return events by tag'
-    it 'should return a 404 for an event that doesn\'t exist'
+  describe 'GET /api/v1/tags/:tag/events' do
+    it 'should return events by tag' do
+      Event.expects(:find).with(:tag => 'bridge').returns([@event])
+      get '/api/v1/tags/bridge/events'
+      last_response.should be_ok
+      JSON.parse(last_response.body).first.should have_key('tags')
+    end
+    
+    it 'should return a 404 for an tag that doesn\'t exist' do
+      Event.expects(:find).with(:tag => 'bridge').returns(nil)
+      get '/api/v1/tags/bridge/events'
+      last_response.should_not be_ok
+    end
   end
 
   describe 'GET /api/v1/events/:bounds' do
     it 'should return events by tag' do
+      pending
       get '/api/v1/events/73.0646,35.6842,74.3033,36.2907'
     end
   end
 
   describe 'GET /api/v1/events/:location' do
     it 'should return events by point location' do
+      pending
       get '/api/v1/events/73.3,36.2'
     end
   end
@@ -40,13 +58,13 @@ describe 'Service' do
   describe 'POST /api/v1/events' do
     it 'should create an event' do
       parameter_hash =  {
-        :title => 'House destroyed',
-        :description => 'House belonging to Mr Karzai was completely destroyed, family homeless',
-        :location => [73.2, 36.2],
-        :tags => %(homeless)
+        "title" => 'House destroyed',
+        "description" => 'House belonging to Mr Karzai was completely destroyed, family homeless',
+        "location" => [73.2, 36.2],
+        "tags" => %(homeless)
       }
       Event.expects(:create).with(parameter_hash)
-      post '/api/v1/events', parameter_hash.to_json
+      post '/api/v1/events', :event => parameter_hash.to_json
       last_response.should be_ok
       # id = JSON.parse(last_response.body)['id']
       #      get "/api/v1/events/#{id}"
