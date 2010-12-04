@@ -23,7 +23,6 @@ describe 'service' do
 
   describe 'GET /api/v1/events/:tag' do
     it 'should return events by tag'
-
     it 'should return a 404 for an event that doesn\'t exist'
   end
 
