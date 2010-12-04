@@ -54,6 +54,7 @@ GEM
       rack (~> 1.1)
       tilt (~> 1.1)
     tilt (1.1)
+    typhoeus (0.2.0)
     tzinfo (0.3.23)
     will_paginate (3.0.pre2)
 
@@ -69,3 +70,4 @@ DEPENDENCIES
   rack-test
   rspec (= 2.2)
   sinatra
+  typhoeus

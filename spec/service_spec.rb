@@ -20,6 +20,33 @@ describe 'Service' do
     end
   end
 
+  describe 'GET /api/v1/events' do
+    it 'should return events within a valid bbox' do
+      query_criteria = Object.new
+      query_criteria.expects(:find).returns([@event])
+      Event.expects(:where)
+        .with(:location.within => {"$box" => [[73.0646,35.6842],[74.3033,36.2907]]} )
+        .returns(query_criteria)
+
+      get '/api/v1/events?bbox=[[73.0646,35.6842],[74.3033,36.2907]]'
+      last_response.should be_ok
+      JSON.parse(last_response.body).size.should == 1
+    end
+
+    it 'should return empty array for bbox outside events area' do
+      query_criteria = Object.new
+      query_criteria.expects(:find).returns([])
+      Event.expects(:where)
+        .with(:location.within => {"$box" => [[1,2],[3,4]]} )
+        .returns(query_criteria)
+
+      get '/api/v1/events?bbox=[[1,2],[3,4]]'
+      last_response.should be_ok
+      puts JSON.parse(last_response.body)
+      JSON.parse(last_response.body).should == []
+    end
+  end
+
   describe 'GET /api/v1/tags/:tag/events' do
     it 'should return events by tag' do
       Event.expects(:find).with(:tag => 'bridge').returns([@event])
@@ -27,7 +54,7 @@ describe 'Service' do
       last_response.should be_ok
       JSON.parse(last_response.body).first.should have_key('tags')
     end
-    
+
     it 'should return a 404 for an event that doesn\'t exist'
   end
 

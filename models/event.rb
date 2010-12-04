@@ -6,5 +6,6 @@ class Event
   field :updated_at,  :type => Date
   field :occurred_at, :type => Date
   field :tags
-  field :location
+  field :location, :type => Array
+  index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
 end

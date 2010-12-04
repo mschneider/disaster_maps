@@ -16,6 +16,17 @@ get '/api/v1/events/:id' do
   Event.find_by_id(params[:id].to_i).to_json
 end
 
+get '/api/v1/events' do
+  where_opts = {}
+  if params[:bbox]
+    bbox = JSON.parse(params[:bbox])
+    events = Event.where(:location.within => {"$box" => JSON.parse(params[:bbox]) } ).find()
+  else
+    events = Event.find()
+  end
+  events.to_json
+end
+
 get '/api/v1/tags/:tag/events' do
   Event.find(:tag => params[:tag]).to_json
 end
