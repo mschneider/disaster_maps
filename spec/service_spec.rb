@@ -49,26 +49,36 @@ describe 'Service' do
       get '/api/v1/events?bbox=[[1,2],[3,4]]'
       last_response.status.should == 404
     end
-  end
-
-  describe 'GET /api/v1/tags/:tag/events' do
-    it 'should return events by tag' do
-      get '/api/v1/tags/bridge/events'
+    
+    it 'should return events tagged with the given tag' do
+      get '/api/v1/events?tag=bridge'
       last_response.should be_ok
       JSON.parse(last_response.body)['events'].first.should have_key('tags')
     end
 
-    it 'should return a 404 for an tag that doesn\'t exist' do
-      get '/api/v1/tags/not_an_actual_tag/events'
+    it 'should return a 404 if no event with the given tag is found' do
+      get '/api/v1/events?tag=not_an_actual_tag'
       last_response.should_not be_ok
     end
   end
+
+  describe 'GET /api/v1/tags/:tag/events' do
+  end
   
   describe 'GET /api/v1/tags' do
+    
+    before(:each) do
+      @another_event = Factory.create(:another_event)
+    end
+    
     it 'should return all tags' do
       get '/api/v1/tags'
       last_response.should be_ok
-      JSON.parse(last_response.body)['tags'].first.should == @event.tags.first
+      counts = JSON.parse(last_response.body)['tags'].inject({}) do | counts, tag |
+        counts[tag['name']] ||= 0
+        counts[tag['name']] += tag['count']
+      end
+      counts.should == { 'bridge' => 2, 'cut-off-supply-route' => 1, 'construction' => 1}
     end
   end
 

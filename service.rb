@@ -23,11 +23,8 @@ end
 #BSON::InvalidObjectId
 
 namespace '/api/v1' do
-
-  # return list of events with given tag
-  get('/tags/:tag/events') { api_response_for_events Event.find(:conditions => { :tags => params[:tag]})  }
   
-  # return list of events in the given area or any area
+  # return list of events
   get('/events') do
     criteria = Event.find(:all)
     if params[:bbox]
@@ -36,9 +33,9 @@ namespace '/api/v1' do
     if params[:within_radius]
       criteria = criteria.where(:location.within => {"$center" => JSON.parse(params[:within_radius])})
     end
-    # if params[:tag]
-    #   event_set = event_set.where(:tags => params[:tag])
-    # end
+    if params[:tag]
+      criteria = criteria.where(:tags => params[:tag])
+    end
     api_response_for_events criteria.to_a
   end
   
