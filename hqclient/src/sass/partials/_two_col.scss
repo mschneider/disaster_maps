@@ -26,6 +26,7 @@ body.spatialbrowser {
   background-color: #ddd;
   
   #container {
+    @include box-shadow;
     @include container;
     //border: 1px solid black; 
     margin-top: 10px;
@@ -52,11 +53,11 @@ body.spatialbrowser {
     // true means it's the last column in the row
     @include column($sidebar-columns, true);
     float: right;
+    @include box-shadow;
+    @include border-radius;
     
     .taglist {
         @include no-bullets;
-        @include box-shadow;
-        @include border-radius;
         padding: 5px;
         margin: 5px;
         a {
