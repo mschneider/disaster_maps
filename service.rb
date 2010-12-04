@@ -16,11 +16,6 @@ helpers do
   end
 end
 
-# https://github.com/mongoid/mongoid/issues/#issue/276
-error Mongoid::Errors::DocumentNotFound do
-  error 404, {:message => "Not found"}.to_json
-end
-
 namespace '/api/v1' do
   get('/events/:id') { api_response Event.find(params[:id]) }
   get('/tags/:tag/events') { api_response Event.find(:tag => params[:tag]) }
