@@ -1,5 +1,7 @@
 require File.dirname(__FILE__) + '/../service'
-require 'spec'
+require 'rspec'
+require 'factory_girl'
+require File.dirname(__FILE__) + '/factories/event'
 
 set :environment, :test
 
@@ -9,7 +11,7 @@ end
 
 describe 'service' do
   before(:each) do
-    Event.destroy_all
+    # Event.destroy_all
     @event = Factory.stub(:event)
   end
 
