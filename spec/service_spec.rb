@@ -66,11 +66,6 @@ describe 'Service' do
       Event.expects(:create).with(parameter_hash)
       post '/api/v1/events', :event => parameter_hash.to_json
       last_response.should be_ok
-      # id = JSON.parse(last_response.body)['id']
-      #      get "/api/v1/events/#{id}"
-      #      attributes = JSON.parse(last_response.body)
-      #      attributes['title'].should == 'House destroyed'
-      #      attributes['description'].should == 'House belonging to Mr Karzai was completely destroyed, family homeless'
     end
   end
 end
