@@ -63,6 +63,14 @@ describe 'Service' do
       last_response.should_not be_ok
     end
   end
+  
+  describe 'GET /api/v1/tags' do
+    it 'should return all tags' do
+      get '/api/v1/tags'
+      last_response.should be_ok
+      JSON.parse(last_response.body)['tags'].first.should == @event.tags.first
+    end
+  end
 
   describe 'POST /api/v1/events' do
     it 'should create an event and read it afterwards' do
