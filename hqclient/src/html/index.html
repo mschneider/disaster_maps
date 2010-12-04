@@ -1,7 +1,12 @@
 <html >
 	<head>
-	   <title>Disaster Maps</title>
-       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        <title>Disaster Maps</title>
+		<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if IE]>
+		    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+
 	   <script type="text/javascript" src="js/lib/polymaps.js"></script>
 	   <script type="text/javascript">
 	   function init() {
@@ -22,11 +27,25 @@
 	   }
 	   </script>
 	   
-        
+	       
 	</head>
-	<body onload="init()">
-	   <h1>Disaster Maps</h1>
-	   <div id="map">
+	<body class="bp two-col" onload="init()">
+	   <div id="container">
+		   <div id="header">
+               <h1>Disaster Maps</h1>
+		   </div>
+		   <div id="sidebar">
+		      <ul>
+		          <li>tag1</li>
+		          <li>tag2</li>
+		          <li>tag3</li>
+		          <li>tag4</li>
+		      </ul>
+		   </div>
+		   <div id="content">
+	           <div id="map"></div>
+		   </div>
+		   <div id="footer"></div>
 	   </div>
 	</body>
 </html>

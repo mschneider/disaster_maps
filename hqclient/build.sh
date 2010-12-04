@@ -18,14 +18,13 @@ fi
 mkdir -p $TARGET
 mkdir -p $TARGET/js/lib
 
-# 'deploy' html - this goes to toplevel, so must be done first
+# 'compile' html - this goes to toplevel, so must be done first
 rsync -a --delete $HQCLIENT_BASEDIR/src/html/ $TARGET/
 
-# 'deploy' js
+# 'compile' js
 rsync -a --delete $HQCLIENT_BASEDIR/src/js/ $TARGET/js/
 [ -d $TARGET/js/lib/ ] || mkdir -p $TARGET/js/lib/
 cp $POLYMAPS_BASEDIR/polymaps.js $TARGET/js/lib/
 
-# 'deploy' css
-[ -d $TARGET/css ] || mkdir -p  $TARGET/css
-sass --update $HQCLIENT_BASEDIR/src/sass:$TARGET/css
+# 'compile' css
+compass compile --sass-dir src/sass/ --images-dir src/img/ --javascripts-dir src/js/ --css-dir target/css/
