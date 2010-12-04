@@ -1,5 +1,5 @@
 #rack config
 
-require File.join(File.dirname(__FILE__),"server", "myapp")
+require File.join(File.dirname(__FILE__), "server", "service")
 
 run Sinatra::Application
