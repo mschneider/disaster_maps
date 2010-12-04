@@ -22,10 +22,10 @@ describe 'Service' do
 
   describe 'GET /api/v1/tags/:tag/events' do
     it 'should return events by tag' do
-      Event.expects(:find).with(:tag => 'bridge').returns(@event)
+      Event.expects(:find).with(:tag => 'bridge').returns([@event])
       get '/api/v1/tags/bridge/events'
       last_response.should be_ok
-      JSON.parse(last_response).should include @event
+      JSON.parse(last_response.body).first.should have_key('tags')
     end
     
     it 'should return a 404 for an event that doesn\'t exist'

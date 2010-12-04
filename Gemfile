@@ -10,5 +10,4 @@ group(:development, :test) do
   gem 'fuubar'
   gem 'factory_girl'
   gem 'mocha'
-  gem 'ruby-debug'
 end
