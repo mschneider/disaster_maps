@@ -8,15 +8,25 @@ describe 'Service' do
   end
 
   before(:each) do
-    # Event.destroy_all
+    Event.destroy_all
     @event = Factory.stub(:event)
+    @db_event = Factory.create(:event)
   end
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      Event.expects(:find_by_id).with(1).returns(@event)
-      get '/api/v1/events/1'
+      # Event.expects(:find_by_id).with(1).returns(@event)
+      get "/api/v1/events/#{@db_event._id.to_s}"
       last_response.should be_ok
+      attributes = JSON.parse(last_response.body)
+      attributes['title'].should == @db_event.title
+    end
+
+    it 'should return a 404 for an event that doesn\'t exist' do
+      # Event.expects(:find_by_id).with(1).returns(nil)
+      get '/api/v1/events/4cfa7d260f2abc14c5000002'
+      last_response.status.should == 404
+      puts last_response.inspect
     end
   end
 
@@ -42,7 +52,7 @@ describe 'Service' do
 
       get '/api/v1/events?bbox=[[1,2],[3,4]]'
       last_response.should be_ok
-      puts JSON.parse(last_response.body)
+      # puts JSON.parse(last_response.body)
       JSON.parse(last_response.body).should == []
     end
   end
@@ -55,7 +65,11 @@ describe 'Service' do
       JSON.parse(last_response.body).first.should have_key('tags')
     end
 
-    it 'should return a 404 for an event that doesn\'t exist'
+    it 'should return a 404 for an tag that doesn\'t exist' do
+      Event.expects(:find).with(:tag => 'bridge').returns(nil)
+      get '/api/v1/tags/bridge/events'
+      last_response.should_not be_ok
+    end
   end
 
   describe 'GET /api/v1/events/:bounds' do

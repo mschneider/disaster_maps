@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'sinatra'
+gem 'sinatra', '~> 1.1'
+gem 'sinatra-namespace'
 gem 'mongoid', '2.0.0.beta.20'
 gem 'heroku'
 gem 'typhoeus'
@@ -11,4 +12,5 @@ group(:development, :test) do
   gem 'fuubar'
   gem 'factory_girl'
   gem 'mocha'
+  gem 'thin'
 end

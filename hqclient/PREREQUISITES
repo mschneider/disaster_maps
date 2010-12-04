@@ -1,0 +1,17 @@
+"Build Time" prerequisites
+---------------------------
+  Polymaps
+  --------
+  Checkout polymaps next to your disaster_maps checkout.
+
+  git clone https://github.com/simplegeo/polymaps.git
+
+  Compass
+  -------
+  We use compass, which in term uses sass for better handling of stylesheets
+  http://compass-style.org/docs/
+
+  gem install -n /usr/local/bin compass
+
+  # the project was converted to a compass project with the following command:
+  # compass install --sass-dir src/sass/ --images-dir src/img/ --javascripts-dir src/js/ --css-dir target/css/ blueprint/sematic
