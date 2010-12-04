@@ -10,23 +10,45 @@ set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 helpers do
-  def api_response(resource)
+  def event(resource)
     pass unless resource
-    resource.to_json
+    { :event => resource }.to_json
+  end
+  def events(resources)
+    pass if resources.empty?
+    { :events => resources }.to_json
   end
 end
 
+#BSON::InvalidObjectId
+
 namespace '/api/v1' do
-  get('/events/:id') { api_response Event.find(params[:id]) }
-  get('/tags/:tag/events') { api_response Event.find(:tag => params[:tag]) }
-  post('/events') { Event.create(JSON.parse(params[:event])) }
-  get('/events') {
+
+  # return list of events with given tag
+  get('/tags/:tag/events') { events Event.find(:conditions => { :tags => params[:tag]})  }
+  
+  # return list of events in the given area or any area
+  get('/events') do
     if params[:bbox]
-      api_response Event.where(:location.within => {"$box" => JSON.parse(params[:bbox]) } ).find()
+      events Event.where(:location.within => {"$box" => JSON.parse(params[:bbox])}).find()
+    # if params[:tag]
+    #   event_set = event_set.where(:tags => params[:tag])
+    # end
     else
-      api_response Event.find()
+      events Event.find(:all)
     end
-  }
+  end
+  
+  # return event with given id
+  get('/events/:id') { event Event.find(params[:id]) }
+  
+  
+  post('/events') do
+    event = Event.create(JSON.parse(request.body.read))
+    400 unless event.valid?
+    {:id => event._id.to_s}.to_json
+  end
+  
 end
 
 get('/') { 'Hello world!' }

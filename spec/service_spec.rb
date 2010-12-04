@@ -15,15 +15,13 @@ describe 'Service' do
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      # Event.expects(:find_by_id).with(1).returns(@event)
       get "/api/v1/events/#{@db_event._id.to_s}"
       last_response.should be_ok
-      attributes = JSON.parse(last_response.body)
+      attributes = JSON.parse(last_response.body)['event']
       attributes['title'].should == @db_event.title
     end
 
     it 'should return a 404 for an event that doesn\'t exist' do
-      # Event.expects(:find_by_id).with(1).returns(nil)
       get '/api/v1/events/4cfa7d260f2abc14c5000002'
       last_response.status.should == 404
       puts last_response.inspect
@@ -32,18 +30,12 @@ describe 'Service' do
 
   describe 'GET /api/v1/events' do
     it 'should return events within a valid bbox' do
-      query_criteria = Object.new
-      query_criteria.expects(:find).returns([@event])
-      Event.expects(:where)
-        .with(:location.within => {"$box" => [[73.0646,35.6842],[74.3033,36.2907]]} )
-        .returns(query_criteria)
-
       get '/api/v1/events?bbox=[[73.0646,35.6842],[74.3033,36.2907]]'
       last_response.should be_ok
       JSON.parse(last_response.body).size.should == 1
     end
 
-    it 'should return empty array for bbox outside events area' do
+    it 'should return 404 if no event inside the area is found' do
       query_criteria = Object.new
       query_criteria.expects(:find).returns([])
       Event.expects(:where)
@@ -51,23 +43,19 @@ describe 'Service' do
         .returns(query_criteria)
 
       get '/api/v1/events?bbox=[[1,2],[3,4]]'
-      last_response.should be_ok
-      # puts JSON.parse(last_response.body)
-      JSON.parse(last_response.body).should == []
+      last_response.should_not be_ok
     end
   end
 
   describe 'GET /api/v1/tags/:tag/events' do
     it 'should return events by tag' do
-      Event.expects(:find).with(:tag => 'bridge').returns([@event])
       get '/api/v1/tags/bridge/events'
       last_response.should be_ok
-      JSON.parse(last_response.body).first.should have_key('tags')
+      JSON.parse(last_response.body)['events'].first.should have_key('tags')
     end
 
     it 'should return a 404 for an tag that doesn\'t exist' do
-      Event.expects(:find).with(:tag => 'bridge').returns(nil)
-      get '/api/v1/tags/bridge/events'
+      get '/api/v1/tags/not_an_actual_tag/events'
       last_response.should_not be_ok
     end
   end
@@ -87,16 +75,17 @@ describe 'Service' do
   end
 
   describe 'POST /api/v1/events' do
-    it 'should create an event' do
+    it 'should create an event and read it afterwards' do
       parameter_hash =  {
         "title" => 'House destroyed',
         "description" => 'House belonging to Mr Karzai was completely destroyed, family homeless',
         "location" => [73.2, 36.2],
-        "tags" => %(homeless)
+        "tags" => %w(homeless bridge cut-off-supply-route)
       }
-      Event.expects(:create).with(parameter_hash)
-      post '/api/v1/events', :event => parameter_hash.to_json
+      post '/api/v1/events', parameter_hash.to_json
       last_response.should be_ok
+      new_event = Event.find(JSON.parse(last_response.body)['id'])
+      new_event.should_not be_nil
     end
   end
 end
