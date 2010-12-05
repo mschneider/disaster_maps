@@ -12,9 +12,9 @@ Marker string should probably be validated to be without invalid chars like " or
 ### Image upload
 
 #### 3: Image upload
+Images need to be attached to an event and stored in db instead of public folder - image upload is currently a stupid http post
 Images should be possible to upload via iphone.
 An Event has many Images URLs.
-Images should be fetchable via the api or through the public folder - pick one implementation.
 
 ### Updating Events
 
