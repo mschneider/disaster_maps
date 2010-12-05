@@ -9,6 +9,7 @@
 		    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
 		
+       <!--  script src="http://js.pusherapp.com/1.6/pusher.min.js"></script-->
 	   <script type="text/javascript" src="js/lib/jquery-1.4.4.min.js"></script>
 	   <script type="text/javascript" src="js/lib/jquery-ui-1.8.6.custom.min.js"></script>
 	   <script type="text/javascript" src="js/lib/polymaps.js"></script>
@@ -19,7 +20,8 @@
 	   var BASE_URL_SAB = "http://192.168.1.63:9292/api/v1"
 	   var BASE_URL = BASE_URL_SAB;
 
-	   var EVENTS_URL = BASE_URL + "/events";
+	   var EVENTS_URL = BASE_URL + "/events?blist={B}&geojson=true";
+	   var TAGS_URL = BASE_URL + "/tags";
 	   //var EVENTS_URL = BASE_URL_M + "/events?blist=[{B}]";
 	   
        var data1 = {
@@ -59,8 +61,10 @@
            var element = feature.element;
            var qe = $(element);
            element.setAttribute("class", "eventLocation");
-           var title = feature.data.properties.tags.join(", ");
-           var newNode = $("<div>" + feature.data.properties.text + "</div>");
+           console.log("data %o", feature.data);
+           var props = feature.data.properties;
+           var title = props.tags.join(", ");
+           var newNode = $("<div>" + props.description + "</div>");
            $("#content").append(newNode);
            newNode.dialog({ autoOpen: false, title: title })
            qe.click(function() {newNode.dialog('open')});
@@ -74,14 +78,15 @@
        }
 
        function receiveData(evt) {
-               var data = evt.data;
+           var data = evt.data;
+           if (data) {
                if (data.type == 'tags') {
                    // update the tags nodes
                    
                } else if (data.type == 'events' ) {
                    // update the events layer
                }
-                
+           }
        }
 
        function setUpWebSockets() {
@@ -98,12 +103,14 @@
        } 
 	   $(document).ready(function() {
 		   
-			 
+		    
 		    map = po.map()
 			    .container(document.getElementById("map").appendChild(po.svg("svg")))
 			    .add(po.interact())
 			    .add(po.hash());
-            map.center({lat: 52.552, lon: 13.215})
+            
+            //map.center({lat: 36.2, lon: 73.3})
+            map.center({lat: 52.55, lon: 13.21})
             .zoom(4);
 		
 			map.add(po.image()
@@ -115,10 +122,30 @@
             map.add(po.geoJson()
                     .id("eventlayer")
                     .url(EVENTS_URL)
-                    /*.on("load", putEventsOnMap)*/);
+                    .on("load", putEventsOnMap));
 		    
 			map.add(po.compass().pan("none"));
-			   
+
+			// get tags
+			$.ajax({
+				dataType: 'json',
+			    url: TAGS_URL,
+			    success: function(data) {
+                    if (!data) {
+                        return;
+                    }
+                    var ct = $('#currentTags');
+                    var tags = data.tags;
+                    if (tags) {
+                      for (var i= 0; i< tags.length; ++i) {
+                          var tag = tags[i];
+                          ct.append("<li class=\"tag\">" + tag.name + "</li>");
+                      }
+                    }
+				  //console.log('%o', data);
+			    }
+			});
+			
 			setUpWebSockets();
 	   });
 	   
@@ -133,15 +160,12 @@
 		   </div>
 		   <div id="sidebar">
 		      <ul id="currentTags" class="taglist">
+                  <!-- li class="tag"><a href="">tag1</a></li-->
+		      </ul>
+		      <!-- ul id="mostPopularTags" class="taglist">
                   <li class="tag"><a href="">tag1</a></li>
                   <li class="tag"><a href="">tag2</a></li>
-                  <li class="tag"><a href="">tag3</a></li>
-                  <li class="tag"><a href="">tag4</a></li>
-		      </ul>
-		      <ul id="mostPopularTags" class="taglist">
-                  <li class="tag"><a href="">tag1</a></li>
-                  <li class="tag"><a href="">tag2</a></li>
-		      </ul>
+		      </ul-->
 		   </div>
 		   <div id="content">
 	           <div id="map"></div>
