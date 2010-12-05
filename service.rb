@@ -10,46 +10,55 @@ set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 helpers do
-  def api_response_for_event(resource)
+  def api_response_for(model, resource)
     pass unless resource
-    { :event => resource }.to_json
+    { model => resource }.to_json
   end
-  def api_response_for_events(resources)
+  def api_response_for_multiple(model, resources)
     pass if resources.empty?
-    { :events => resources }.to_json
+    { model => resources }.to_json
   end
 end
 
 #BSON::InvalidObjectId
 
 namespace '/api/v1' do
+  namespace '/events' do
   
-  # return list of events
-  get('/events') do
-    criteria = Event.find(:all)
-    if params[:bbox]
-      criteria = criteria.where(:location.within => {"$box" => JSON.parse(params[:bbox])})
+    # return list of events
+    get do
+      criteria = Event.find(:all)
+      if params[:bbox]
+        criteria = criteria.where(:location.within => {"$box" => JSON.parse(params[:bbox])})
+      end
+      if params[:within_radius]
+        criteria = criteria.where(:location.within => {"$center" => JSON.parse(params[:within_radius])})
+      end
+      if params[:tag]
+        criteria = criteria.where(:tags => params[:tag])
+      end
+      api_response_for_multiple :events, criteria.to_a
     end
-    if params[:within_radius]
-      criteria = criteria.where(:location.within => {"$center" => JSON.parse(params[:within_radius])})
+  
+    # return event with given id
+    get '/:id' do
+      api_response_for :event, Event.find(params[:id])
     end
-    if params[:tag]
-      criteria = criteria.where(:tags => params[:tag])
+  
+    # create event with given parameters
+    post do
+      param_hash = JSON.parse(request.body.read)
+      event = Event.create(param_hash)
+      error 400 unless event.valid?
+      {:id => event._id.to_s}.to_json
     end
-    api_response_for_events criteria.to_a
   end
   
-  # return event with given id
-  get('/events/:id') { api_response_for_event Event.find(params[:id]) }
-  
-  # create event with given parameters
-  post('/events') do
-    param_hash = JSON.parse(request.body.read)
-    event = Event.create(param_hash)
-    error 400 unless event.valid?
-    {:id => event._id.to_s}.to_json
+  namespace '/tags' do
+    get do
+      api_response_for_multiple :tags, Event.tags_with_counts
+    end
   end
-  
 end
 
 get('/') { 'Hello world!' }

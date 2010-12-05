@@ -74,11 +74,12 @@ describe 'Service' do
     it 'should return all tags' do
       get '/api/v1/tags'
       last_response.should be_ok
-      counts = JSON.parse(last_response.body)['tags'].inject({}) do | counts, tag |
-        counts[tag['name']] ||= 0
-        counts[tag['name']] += tag['count']
-      end
-      counts.should == { 'bridge' => 2, 'cut-off-supply-route' => 1, 'construction' => 1}
+      counts = JSON.parse(last_response.body)['tags']
+      counts.should == [
+        { 'name' => 'bridge',               'count' => 2},
+        { 'name' => 'construction',         'count' => 1},
+        { 'name' => 'cut-off-supply-route', 'count' => 1}
+      ]
     end
   end
 
