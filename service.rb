@@ -17,6 +17,7 @@ Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 helpers do
   def api_response_for(model, resource, geojson=false)
+    # content_type 'application/json', :charset => 'utf-8'
     pass unless resource
     if geojson
       resources2geojson([resource]).to_json
@@ -26,6 +27,7 @@ helpers do
   end
 
   def api_response_for_multiple(model, resources, geojson=false)
+    # content_type 'application/json', :charset => 'utf-8'
     pass if resources.empty?
     if geojson
       resources2geojson(resources).to_json
@@ -100,6 +102,7 @@ namespace '/api/v1' do
       param_hash = JSON.parse(request.body.read)
       event = Event.create(param_hash)
       error 400 unless event.valid?
+      Pusher['channel_test'].trigger('create', api_response_for(:event, event))
       {:id => event._id.to_s}.to_json
     end
       
@@ -115,20 +118,28 @@ namespace '/api/v1' do
       api_response_for_multiple :tags, Event.all_tags
     end
   end
+  
+  namespace '/markers' do
+    get do
+      api_response_for_multiple :markers, Event.all_markers
+    end
+  end
 end
 
 get '/seed' do
   Event.destroy_all
-  Event.create({
+  e1 = Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
     'location' => [73.3, 36.2],
+    'marker' => '/markers/fire.png',
     'tags' =>  %w(bridge cut-off-supply-route)
   })
-  Event.create({
+  e2 = Event.create({
     'title' => 'House destroyed',
     'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
     'location' => [70.1, 35.1],
+    'marker' => '/markers/accident.png',
     'tags' => %w(house destroyed)
   })
   # berlin
@@ -139,20 +150,13 @@ get '/seed' do
     'tags' => %w(house destroyed)
   })
   Event.create({
-    'title' => 'House destroyed',
-    'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
-    'location' => [13.413,52.504],
-    'tags' => %w(house destroyed)
-  })
-  Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
     'location' => [13.417,52.50400],
     'tags' => %w(house destroyed)
   })
+  error 400 unless e1.valid? && e2.valid?
   'success'
 end
 
 get('/') { 'Hello world!' }
-
-set :public, File.dirname(__FILE__) + '/hqclient/target'

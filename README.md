@@ -56,3 +56,6 @@ Only update those clients, which can view the Event.
 
 `$ curl "http://localhost:9292/api/v1/tags"  
 {"tags":[{"name":"bridge","count":1},{"name":"cut-off-supply-route","count":1},{"name":"destroyed","count":1},{"name":"house","count":1}]}`
+
+## Attribution
+Maps Icons are cc-by-sa by Nicolas Mollet: http://code.google.com/p/google-maps-icons/
