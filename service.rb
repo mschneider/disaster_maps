@@ -147,11 +147,13 @@ get '/seed' do
     'title' => 'House destroyed',
     'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
     'location' => [13.412151,52.503002],
+    'marker' => '/markers/explosion.png'
     'tags' => %w(house destroyed)
   })
   Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
+    'marker' => '/markers/flood.png'
     'location' => [13.417,52.50400],
     'tags' => %w(house destroyed)
   })
