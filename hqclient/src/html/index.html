@@ -9,7 +9,6 @@
 		    <link href="css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<![endif]-->
 		
-       <!--  script src="http://js.pusherapp.com/1.6/pusher.min.js"></script-->
 	   <script type="text/javascript" src="js/lib/jquery-1.4.4.min.js"></script>
 	   <script type="text/javascript" src="js/lib/jquery-ui-1.8.6.custom.min.js"></script>
 	   <script type="text/javascript" src="js/lib/polymaps.js"></script>
@@ -61,7 +60,7 @@
            var element = feature.element;
            var qe = $(element);
            element.setAttribute("class", "eventLocation");
-           console.log("data %o", feature.data);
+           //console.log("data %o", feature.data);
            var props = feature.data.properties;
            var title = props.tags.join(", ");
            var newNode = $("<div>" + props.description + "</div>");
@@ -90,7 +89,7 @@
        }
 
        function setUpWebSockets() {
-           function debug(str){ $("#debug").append("<p>"+str+"</p>"); };
+/*           function debug(str){ $("#debug").append("<p>"+str+"</p>"); };
            if (window["WebSocket"]) {           
 	           var ws = new WebSocket("ws://yourservice.com/websocket");
 	           ws.onmessage = receiveData;
@@ -99,8 +98,26 @@
 	             debug("connected...");
 	             ws.send("hello server");
 	           };
-           }
+           }*/
        } 
+       function setUpPusher() {
+           //console.log('setup');
+           var pusher = new Pusher('146c7a4550ea415df4d4');
+           var myChannel = pusher.subscribe('test_channel');
+           myChannel.bind('create', function(event) {
+               if (window['console']){
+            	    console.log('something happened %o', event);
+               };
+               //alert('something happened: ' + event);
+               map.add(po.geoJson()
+                       
+                       .features(event)
+                       .on("load", putEventsOnMap));
+
+               
+           });
+           //console.log('setup end');
+       }
 	   $(document).ready(function() {
 		   
 		    
@@ -111,7 +128,7 @@
             
             //map.center({lat: 36.2, lon: 73.3})
             map.center({lat: 52.55, lon: 13.21})
-            .zoom(4);
+            .zoom(10);
 		
 			map.add(po.image()
 			    .url(po.url("http://{S}tile.cloudmade.com"
@@ -125,7 +142,7 @@
                     .on("load", putEventsOnMap));
 		    
 			map.add(po.compass().pan("none"));
-
+            //console.log('before tags');
 			// get tags
 			$.ajax({
 				dataType: 'json',
@@ -145,12 +162,13 @@
 				  //console.log('%o', data);
 			    }
 			});
-			
-			setUpWebSockets();
+			//console.log('after tags');
+			setUpPusher();
 	   });
 	   
 	   </script>
 	   
+       
 	       
 	</head>
 	<body class="spatialbrowser" >
@@ -173,5 +191,6 @@
 		   </div>
 		   <div id="footer"></div>
 	   </div>
+       <script src="http://js.pusherapp.com/1.6/pusher.min.js"></script>
 	</body>
 </html>
