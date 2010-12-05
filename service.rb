@@ -65,6 +65,7 @@ namespace '/api/v1' do
 end
 
 get '/seed' do
+  Event.destroy_all
   Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
@@ -77,6 +78,7 @@ get '/seed' do
     'location' => [70.1, 35.1],
     'tags' => %w(house destroyed)
   })
+  'success'
 end
 
 get('/') { 'Hello world!' }
