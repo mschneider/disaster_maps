@@ -19,6 +19,9 @@
 	   var BASE_URL_SAB = "http://192.168.1.63:9292/api/v1"
 	   var BASE_URL = BASE_URL_SAB;
 
+	   var EVENTS_URL = BASE_URL + "/events";
+	   //var EVENTS_URL = BASE_URL_M + "/events?blist=[{B}]";
+	   
        var data1 = {
  	       "events": {
     	       "features": [
@@ -111,7 +114,7 @@
 
             map.add(po.geoJson()
                     .id("eventlayer")
-                    .url(po.url(BASE_URL + "/events"))
+                    .url(EVENTS_URL)
                     /*.on("load", putEventsOnMap)*/);
 		    
 			map.add(po.compass().pan("none"));

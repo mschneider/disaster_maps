@@ -1,22 +1,28 @@
 require 'yaml'
 require 'mongoid'
-require './models/event'
 require 'sinatra'
 require 'sinatra/namespace'
 
 before do
   headers['Access-Control-Allow-Origin'] = '*'
 end
+require 'pusher'
 
 set :app_file, __FILE__
+require File.expand_path('models/event', settings.root)
+require File.expand_path('config/confidentials', settings.root)
 set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
 set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 helpers do
-  def api_response_for(model, resource)
+  def api_response_for(model, resource, geojson=false)
     pass unless resource
-    { model => resource }.to_json
+    if geojson
+      resources2geojson([resource]).to_json
+    else
+      { model => resource }.to_json
+    end
   end
 
   def api_response_for_multiple(model, resources, geojson=false)
@@ -46,13 +52,17 @@ helpers do
     geojson=geojson_tmpl
     feature = geojson["features"][0]
     feature["geometry"]["coordinates"] = resource.location
-    feature["geometry"]["properties"] = resource.attributes
+    feature["properties"] = resource.attributes
     feature
   end
 end
 
 error BSON::InvalidObjectId do
   error 404
+end
+
+before do
+  headers['Access-Control-Allow-Origin'] = '*'
 end
 
 namespace '/api/v1' do
@@ -119,6 +129,25 @@ get '/seed' do
     'title' => 'House destroyed',
     'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
     'location' => [70.1, 35.1],
+    'tags' => %w(house destroyed)
+  })
+  # berlin
+  Event.create({
+    'title' => 'House destroyed',
+    'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
+    'location' => [13.412151,52.503002],
+    'tags' => %w(house destroyed)
+  })
+  Event.create({
+    'title' => 'House destroyed',
+    'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
+    'location' => [13.413,52.504],
+    'tags' => %w(house destroyed)
+  })
+  Event.create({
+    'title' => 'Bridge collapsed',
+    'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
+    'location' => [13.417,52.50400],
     'tags' => %w(house destroyed)
   })
   'success'

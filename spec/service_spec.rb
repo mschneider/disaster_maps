@@ -31,6 +31,11 @@ describe 'Service' do
     end
   end
 
+  describe 'GET /api/v1/events*?geojson=true' do
+    it 'should return events as geojson'
+    it 'should return a single event as geojson'
+  end
+
   describe 'GET /api/v1/events' do
     it 'should return events within a valid radius' do
       get '/api/v1/events?within_radius=[[73.1646,35.6842],5]'
@@ -55,7 +60,7 @@ describe 'Service' do
     end
     
     it 'should return events within a valid blist' do
-      get '/api/v1/events?blist=73.0646,35.6842,74.3033,36.2907'
+      get '/api/v1/events?blist=35.6842,73.0646,36.2907,74.3033'
       last_response.should be_ok
       JSON.parse(last_response.body).size.should > 0
     end

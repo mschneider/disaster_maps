@@ -8,9 +8,10 @@ GEM
     activesupport (3.0.3)
     bson (1.1.4)
     builder (2.1.2)
-    compass (0.10.5)
+    compass (0.10.6)
       haml (>= 3.0.4)
     configuration (1.2.0)
+    crack (0.1.8)
     daemons (1.1.0)
     diff-lcs (1.1.2)
     eventmachine (0.12.10)
@@ -26,6 +27,7 @@ GEM
       launchy (~> 0.3.2)
       rest-client (>= 1.4.0, < 1.7.0)
     i18n (0.5.0)
+    json (1.4.6)
     json_pure (1.4.6)
     launchy (0.3.7)
       configuration (>= 0.0.5)
@@ -40,6 +42,11 @@ GEM
       mongo (~> 1.1)
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
+    pusher (0.7.0)
+      crack (~> 0.1.0)
+      json (~> 1.4.0)
+      ruby-hmac (~> 0.4.0)
+      signature (~> 0.1.2)
     rack (1.2.1)
     rack-test (0.5.6)
       rack (>= 1.0)
@@ -55,7 +62,10 @@ GEM
       diff-lcs (~> 1.1.2)
     rspec-instafail (0.1.5)
     rspec-mocks (2.2.0)
+    ruby-hmac (0.4.0)
     ruby-progressbar (0.0.9)
+    signature (0.1.2)
+      ruby-hmac
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
@@ -81,6 +91,7 @@ DEPENDENCIES
   heroku
   mocha
   mongoid (= 2.0.0.beta.20)
+  pusher
   rack-test
   rspec (= 2.2)
   sinatra (~> 1.1)
