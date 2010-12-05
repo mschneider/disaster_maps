@@ -112,7 +112,7 @@
                //alert('something happened: ' + event);
                map.add(po.geoJson()
                        
-                       .features(event)
+                       .features(event.features)
                        .on("load", putEventsOnMap));
 
                
