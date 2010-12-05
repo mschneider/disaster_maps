@@ -14,6 +14,7 @@ We need Marker Icons for Events like:
  * Food supply
  * Destruction
  * anything else you can come up with
+ 
 place them into /public/marker/
 
 #### 1: Marker index
