@@ -135,38 +135,12 @@ end
 
 get '/seed' do
   Event.destroy_all
-  return 'cleared all'
-  e1 = Event.create({
-    'title' => 'Bridge collapsed',
-    'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
-    'location' => [73.3, 36.2],
-    'marker' => '/markers/fire.png',
-    'tags' =>  %w(bridge cut-off-supply-route)
-  })
-  e2 = Event.create({
-    'title' => 'House destroyed',
-    'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
-    'location' => [70.1, 35.1],
-    'marker' => '/markers/accident.png',
-    'tags' => %w(house destroyed)
-  })
-  # berlin
-  Event.create({
-    'title' => 'House destroyed',
-    'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
-    'location' => [13.412151,52.503002],
-    'marker' => '/markers/explosion.png',
-    'tags' => %w(house destroyed)
-  })
-  Event.create({
-    'title' => 'Bridge collapsed',
-    'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
-    'marker' => '/markers/flood.png',
-    'location' => [13.417,52.50400],
-    'tags' => %w(house destroyed)
-  })
-  error 400 unless e1.valid? && e2.valid?
-  'success'
+  require 'factory_girl'
+  require File.join(File.dirname(__FILE__), 'spec', 'factories.rb')
+  error 400 unless Factory.create(:explosion_event).valid? && Factory.create(:construction_event).valid?
+  'Database successfully seeded.'
 end
 
-get('/') { 'Hello world!' }
+get '/' do
+  'Hello world!'
+end
