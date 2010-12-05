@@ -12,20 +12,16 @@ Marker string should probably be validated to be without invalid chars like " or
 ### Image upload
 
 #### 3: Image upload
-Images need to be attached to an event and stored in db instead of public folder - image upload is currently a stupid http post
+Images need to be attached to an event and stored in db instead of public folder.
+Image upload is currently a stupid http post.
 Images should be possible to upload via iphone.
-An Event has many Images URLs.
+An Event should have many Images.
 
 ### Updating Events
 
 #### 2: Update API
 Events should be updatable via the API.
-There should be an updated flag set in the database so we can distinguish between creation an updating in an post_save callback.
-
-#### 4: Push Service
-Updated events should be added queued to the push-service after updating or creating them.
-The Push Service has clients registered.
-The clients shuould be updated via Websockets and Iphone Push of the updated / create event.
+Updated events should be queued to the push-service.
 
 #### optional 5: differential Push Service
 Record the updated values on POST.
@@ -35,8 +31,10 @@ Only update those clients, which can view the Event.
 
 ## API Documentation
 
-### Markers
-"/api/v1/markers" returns list of available markers
+- `GET /api/v1/event/$` returns the event with the given id
+- `GET /api/v1/events` returns all events as json array. you can specify filters via the GET-parameters `tag`, `bbox` and `within_radius`.
+- `GET /api/v1/markers` returns all available markers as json array
+- `GET /api/v1/tags` returns all tags with their occurence count as json array
 
 ### Example Calls
 
@@ -47,4 +45,5 @@ Only update those clients, which can view the Event.
 {"tags":[{"name":"bridge","count":1},{"name":"cut-off-supply-route","count":1},{"name":"destroyed","count":1},{"name":"house","count":1}]}`
 
 ## Attribution
+
 Maps Icons are cc-by-sa by Nicolas Mollet: http://code.google.com/p/google-maps-icons/
