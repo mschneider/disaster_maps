@@ -56,7 +56,7 @@ namespace '/api/v1' do
   
   namespace '/tags' do
     get do
-      api_response_for_multiple :tags, Event.tags_with_counts
+      api_response_for_multiple :tags, Event.all_tags
     end
   end
 end

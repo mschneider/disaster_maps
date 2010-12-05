@@ -12,8 +12,17 @@ class Event
   validates_presence_of :title
   validates_presence_of :location
   
-  def self.tags_with_counts
-    tags = collection.map_reduce(
+  after_save :rebuild_tags
+  
+  def self.all_tags
+    tags = Mongoid.master.collection('tags')
+    tags.find().to_a.map!{|item| { :name => item['_id'], :count => item['value'].to_i } }
+  end
+  
+  protected
+  
+  def rebuild_tags
+    Event.collection.map_reduce(
       """function() {
         this.tags.forEach(function(tag){
             emit(tag, 1);
@@ -25,8 +34,9 @@ class Event
           count += value;
         });
         return count;
-      }"""
+      }""",
+      # this behves like a materialzed view
+      { :out => 'tags'}
     )
-    tags.find().to_a.map!{|item| { :name => item['_id'], :count => item['value'].to_i } }
   end
 end
