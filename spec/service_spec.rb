@@ -146,5 +146,11 @@ describe 'Service' do
       last_response.should be_ok
     end
   end
-
+  
+  describe 'POST /user_images/filename.png' do
+    it "should upload an image" do
+      post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new('fixtures/image/fire.png','image/png')
+      last_response.should be_ok
+    end
+  end
 end
