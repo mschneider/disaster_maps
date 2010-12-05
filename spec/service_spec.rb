@@ -145,7 +145,7 @@ describe 'Service' do
   end
   
   describe 'POST /user_images/uploadedfire.png' do
-    it "should upload an image and save it to /user_images/uploadedfire.png" do
+    it "should upload an image and save it to /public/user_images/uploadedfire.png" do
       source_filename = 'public/markers/fire.png'
       target_filename = 'public/user_images/uploadedfire.png'
       post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new(source_filename,'image/png')
