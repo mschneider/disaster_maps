@@ -55,7 +55,7 @@ describe 'Service' do
     end
     
     it 'should return events within a valid blist' do
-      get '/api/v1/events?blist=[73.0646,35.6842,74.3033,36.2907]'
+      get '/api/v1/events?blist=73.0646,35.6842,74.3033,36.2907'
       last_response.should be_ok
       JSON.parse(last_response.body).size.should > 0
     end

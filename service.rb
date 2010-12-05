@@ -3,7 +3,6 @@ require 'mongoid'
 require './models/event'
 require 'sinatra'
 require 'sinatra/namespace'
-require 'sinatra/cross_origin'
 
 before do
   headers['Access-Control-Allow-Origin'] = '*'
@@ -19,9 +18,36 @@ helpers do
     pass unless resource
     { model => resource }.to_json
   end
-  def api_response_for_multiple(model, resources)
+
+  def api_response_for_multiple(model, resources, geojson=false)
     pass if resources.empty?
-    { model => resources }.to_json
+    if geojson
+      resources2geojson(resources).to_json
+    else
+      { model => resources }.to_json
+    end
+  end
+
+  def geojson_tmpl
+    JSON.parse('{ "type": "FeatureCollection", "features": [{ "type": "Feature",
+                  "geometry": {"type": "Point", "coordinates": [102.0, 0.5]} 
+                }]}')
+  end
+
+  def resources2geojson(resources)
+    geojson = geojson_tmpl
+    geojson["features"] = resources.collect do |resource|
+      resource2feature(resource)
+    end
+    geojson
+  end
+
+  def resource2feature(resource)
+    geojson=geojson_tmpl
+    feature = geojson["features"][0]
+    feature["geometry"]["coordinates"] = resource.location
+    feature["geometry"]["properties"] = resource.attributes
+    feature
   end
 end
 
@@ -36,8 +62,9 @@ namespace '/api/v1' do
     get do
       criteria = Event.find(:all)
       if params[:blist]
-        bounding_list = JSON.parse(params[:blist])
-        bounding_box = [[bounding_list[0], bounding_list[1]], [bounding_list[2], bounding_list[3]]]
+        bounding_list = params[:blist].split(',').map{ |c| c.to_f}
+        bounding_box = [[bounding_list[1], bounding_list[0]], [bounding_list[3], bounding_list[2]]]
+        puts bounding_box.inspect
         criteria = criteria.where(:location.within => {"$box" => bounding_box})
       end
       if params[:bbox]
@@ -51,7 +78,11 @@ namespace '/api/v1' do
       if params[:tag]
         criteria = criteria.where(:tags => params[:tag])
       end
-      api_response_for_multiple :events, criteria.to_a
+      if params[:geojson]
+        api_response_for_multiple :events, criteria.to_a, geojson=true
+      else
+        api_response_for_multiple :events, criteria.to_a
+      end
     end
   
     # create event with given parameters
