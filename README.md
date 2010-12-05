@@ -6,22 +6,8 @@ API for sending data on events from the field
 
 ### Markers
 
-#### 1: Meaningfull Marker Icons
-We need Marker Icons for Events like:
-
- * Construction
- * Water supply
- * Food supply
- * Destruction
- * anything else you can come up with
- 
-place them into /public/marker/
-
-#### 1: Marker index
-The User should select between these given Markers.
-Therefore we need a Model validation accepting only Markers present on the server.
-Try listing the Directory /public/marker/ on class creation of Event.
-And then something like validates_within.
+#### 1: Marker validation
+Marker string should probably be validated to be without invalid chars like " or brackets in it.
 
 ### Image upload
 
@@ -48,6 +34,9 @@ Clients register to the push service with a certain view rectangle.
 Only update those clients, which can view the Event.
 
 ## API Documentation
+
+### Markers
+"/api/v1/markers" returns list of available markers
 
 ### Example Calls
 
