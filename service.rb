@@ -11,10 +11,12 @@ Mongoid.configure { |c| c.from_hash(settings.db_config) }
 
 helpers do
   def api_response_for(model, resource)
+    # content_type 'application/json', :charset => 'utf-8'
     pass unless resource
     { model => resource }.to_json
   end
   def api_response_for_multiple(model, resources)
+    # content_type 'application/json', :charset => 'utf-8'
     pass if resources.empty?
     { model => resources }.to_json
   end
@@ -69,22 +71,31 @@ namespace '/api/v1' do
       api_response_for_multiple :tags, Event.all_tags
     end
   end
+  
+  namespace '/markers' do
+    get do
+      api_response_for_multiple :markers, Event.all_markers
+    end
+  end
 end
 
 get '/seed' do
   Event.destroy_all
-  Event.create({
+  e1 = Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
     'location' => [73.3, 36.2],
+    'marker' => '/markers/fire.png',
     'tags' =>  %w(bridge cut-off-supply-route)
   })
-  Event.create({
+  e2 = Event.create({
     'title' => 'House destroyed',
     'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
     'location' => [70.1, 35.1],
+    'marker' => '/markers/accident.png',
     'tags' => %w(house destroyed)
   })
+  error 400 unless e1.valid? && e2.valid?
   'success'
 end
 

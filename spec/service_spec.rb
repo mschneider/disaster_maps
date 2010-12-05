@@ -124,4 +124,22 @@ describe 'Service' do
       last_response.status.should == 400
     end
   end
+  
+  describe 'GET /api/v1/markers' do
+    it 'should return list of markers' do
+      get '/api/v1/markers'
+      last_response.should be_ok
+      markers = JSON.parse(last_response.body)
+      markers.should_not be_nil
+      markers.size.should > 0
+    end
+  end
+  
+  describe 'GET /markers/fire.png' do
+    it 'should return marker fire' do
+      get '/markers/fire.png'
+      last_response.should be_ok
+    end
+  end
+
 end

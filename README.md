@@ -49,3 +49,5 @@ Only update those clients, which can view the Event.
 
 ## API Documentation
 
+## Attribution
+Maps Icons are cc-by-sa by Nicolas Mollet: http://code.google.com/p/google-maps-icons/

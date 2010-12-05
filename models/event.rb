@@ -6,6 +6,7 @@ class Event
   field :updated_at,  :type => Date
   field :occurred_at, :type => Date
   field :tags, :type => Array
+  field :marker
   field :location, :type => Array
   index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
   
@@ -17,6 +18,15 @@ class Event
   def self.all_tags
     tags = Mongoid.master.collection('tags')
     tags.find().to_a.map!{|item| { :name => item['_id'], :count => item['value'].to_i } }
+  end
+  
+  def self.all_markers
+    @@files
+  end
+
+  @@files = Dir.glob("public/markers/*.{jpg,png,gif}")
+  @@files.each do |file|
+    file['public/'] = '/'
   end
   
   protected
