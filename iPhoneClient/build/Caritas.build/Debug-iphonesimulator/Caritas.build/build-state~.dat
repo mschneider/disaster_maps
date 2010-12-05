@@ -1,0 +1,2292 @@
+TCaritas
+v7
+r0
+t313177222.291965
+cCheck dependencies
+cProcessInfoPlistFile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Info.plist" Caritas-Info.plist
+cCpResource build/Debug-iphonesimulator/Caritas.app/Three20.bundle ../three20/src/Three20.bundle
+cCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/MainWindow.xib"
+cCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/RootViewController.xib"
+cCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib"
+cCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.xib"
+cProcessPCH /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch.gch Caritas_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelVersionCompile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas.momd" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld"
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/main.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/CaritasAppDelegate.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/RootViewController.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventEntryView.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Event.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Tag.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Location.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagTableDataSource.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventDetailView.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas" normal i386
+cGenerateDSYMFile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app.dSYM" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas"
+cTouch "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004CC122A000000000001D6CE0
+t1287725728
+s1928416
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c000000004CC12294000000000000046B
+t1287725716
+s1131
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000004CC127E80000000000074190
+t1287727080
+s475536
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h
+c000000004CC127DD00000000000001D0
+t1287727069
+s464
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.h
+c000000004CC1294D00000000000002FE
+t1287727437
+s766
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c000000004CC12977000000000017E7F0
+t1287727479
+s1566704
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/TargetConditionals.h
+c000000004CB3FA0800000000000031E9
+t1286863368
+s12777
+
+N/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CBF770C0000000000D00CA0
+t1287616268
+s13634720
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/../three20/src/Three20.bundle
+c000000004CFA28F300000000000001DC
+t1291462899
+s476
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld
+c000000004CFA73200000000000000088
+t1291481888
+s136
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch
+c000000004CFA37A600000000000001D9
+t1291466662
+s473
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+i"CaritasAppDelegate.h"
+i"Event.h"
+i"Location.h"
+i"Tag.h"
+i"EventEntryView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.h
+c000000004CFA375C000000000000049D
+t1291466588
+s1181
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m
+c000000004CFA6BBF00000000000022EF
+t1291479999
+s8943
+i"CaritasAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.h
+c000000004CFA74B60000000000000265
+t1291482294
+s613
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+i"EventDetailView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m
+c000000004CFA7C5F0000000000002D0B
+t1291484255
+s11531
+i"RootViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.h
+c000000004CFA732000000000000002BA
+t1291481888
+s698
+i<CoreData/CoreData.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m
+c000000004CFA7320000000000000011E
+t1291481888
+s286
+i"Event.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.h
+c000000004CFA75000000000000000230
+t1291482368
+s560
+i<UIKit/UIKit.h>
+i<MapKit/MapKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m
+c000000004CFA7C6B0000000000000985
+t1291484267
+s2437
+i"EventDetailView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.xib
+c000000004CFA7CA20000000000006544
+t1291484322
+s25924
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.h
+c000000004CFA6DB400000000000003E6
+t1291480500
+s998
+i<UIKit/UIKit.h>
+i"Three20/Three20.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m
+c000000004CFA73200000000000001CB5
+t1291481888
+s7349
+i"EventEntryView.h"
+i"TagTableDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib
+c000000004CFA6DC20000000000009314
+t1291480514
+s37652
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.h
+c000000004CFA749B00000000000001D5
+t1291482267
+s469
+i<CoreData/CoreData.h>
+i<MapKit/MapKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m
+c000000004CFA7492000000000000019F
+t1291482258
+s415
+i"Location.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/MainWindow.xib
+c000000004CFA24300000000000005FF4
+t1291461680
+s24564
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.h
+c000000004CFA28F30000000000000334
+t1291462899
+s820
+i<Three20/Three20.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m
+c000000004CFA28F30000000000003015
+t1291462899
+s12309
+i"MockDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/RootViewController.xib
+c000000004CFA24300000000000004452
+t1291461680
+s17490
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.h
+c000000004CFA5F2E00000000000001DD
+t1291476782
+s477
+i<CoreData/CoreData.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m
+c000000004CFA6020000000000000053F
+t1291477024
+s1343
+i"Tag.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.h
+c000000004CFA49140000000000000219
+t1291471124
+s537
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m
+c000000004CFA41A70000000000000654
+t1291469223
+s1620
+i"TagFieldDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.h
+c000000004CFA4B14000000000000022E
+t1291471636
+s558
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m
+c000000004CFA60B8000000000000067E
+t1291477176
+s1662
+i"TagTableDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Caritas.LinkFileList
+c000000004CFA7D03000000000000050B
+t1291484419
+s1291
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/CaritasAppDelegate.o
+t1291484421
+s75812
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Event.o
+t1291484421
+s5944
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventDetailView.o
+t1291484421
+s52016
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventEntryView.o
+t1291484421
+s85240
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Location.o
+t1291484421
+s12560
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/MockDataSource.o
+t1291470940
+s94668
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/RootViewController.o
+t1291484421
+s72404
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Tag.o
+t1291484421
+s15588
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagFieldDataSource.o
+t2
+s0
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagTableDataSource.o
+t1291484421
+s55740
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/main.o
+t1291484421
+s6440
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app
+t1291484422
+s374
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app.dSYM
+t1291484422
+s102
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas
+t1291484422
+s1326660
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas.momd
+t1291484421
+s136
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/EventDetailView.nib
+t1291484420
+s2611
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/EventEntryView.nib
+t1291484420
+s3292
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Info.plist
+t1291484419
+s595
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/MainWindow.nib
+t1291484419
+s1509
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/PkgInfo
+t1291484419
+s8
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/RootViewController.nib
+t1291484419
+s979
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Three20.bundle
+t1291484419
+s476
+
+N/Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m
+c000000004CFA2430000000000000016B
+t1291461680
+s363
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20.a
+c000000004CFA29F20000000000001038
+t1291463154
+s4152
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20Core.a
+c000000004CFA29DD0000000000033350
+t1291463133
+s209744
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20Network.a
+c000000004CFA29DF0000000000051AF0
+t1291463135
+s334576
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20Style.a
+c000000004CFA29E500000000001273E8
+t1291463141
+s1209320
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20UI.a
+c000000004CFA29F100000000005837E8
+t1291463153
+s5781480
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20UICommon.a
+c000000004CFA29DE0000000000037628
+t1291463134
+s226856
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/Debug-iphonesimulator/libThree20UINavigator.a
+c000000004CFA29E70000000000082BD0
+t1291463143
+s535504
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20/Three20.h
+c000000004CFA29F10000000000000412
+t1291463153
+s1042
+i"Three20Core/Three20Core.h"
+i"Three20Network/Three20Network.h"
+i"Three20Style/Three20Style.h"
+i"Three20UICommon/Three20UICommon.h"
+i"Three20UINavigator/Three20UINavigator.h"
+i"Three20UI/Three20UI.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTCorePreprocessorMacros.h
+c000000004CFA29DA0000000000000836
+t1291463130
+s2102
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTDebug.h
+c000000004CFA29DA0000000000000EBD
+t1291463130
+s3773
+i<TargetConditionals.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTEntityTables.h
+c000000004CFA29DA00000000000004E0
+t1291463130
+s1248
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTGlobalCore.h
+c000000004CFA29DA00000000000005E6
+t1291463130
+s1510
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTGlobalCoreLocale.h
+c000000004CFA29DA000000000000056D
+t1291463130
+s1389
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTGlobalCorePaths.h
+c000000004CFA29DA00000000000005D7
+t1291463130
+s1495
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTGlobalCoreRects.h
+c000000004CFA29DA0000000000000520
+t1291463130
+s1312
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/TTMarkupStripper.h
+c000000004CFA29DA00000000000003CB
+t1291463130
+s971
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Core/Three20Core.h
+c000000004CFA29DA00000000000003DD
+t1291463130
+s989
+i"Three20Core/TTCorePreprocessorMacros.h"
+i"Three20Core/TTGlobalCore.h"
+i"Three20Core/TTGlobalCoreLocale.h"
+i"Three20Core/TTGlobalCorePaths.h"
+i"Three20Core/TTGlobalCoreRects.h"
+i"Three20Core/TTDebug.h"
+i"Three20Core/TTEntityTables.h"
+i"Three20Core/TTMarkupStripper.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTErrorCodes.h
+c000000004CFA29DE00000000000002BB
+t1291463134
+s699
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTGlobalNetwork.h
+c000000004CFA29DE000000000000057D
+t1291463134
+s1405
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTModel.h
+c000000004CFA29DE0000000000000CEB
+t1291463134
+s3307
+i<Foundation/Foundation.h>
+i"Three20Network/TTURLRequestCachePolicy.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTModelDelegate.h
+c000000004CFA29DE00000000000008A8
+t1291463134
+s2216
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLCache.h
+c000000004CFA29DE00000000000018EA
+t1291463134
+s6378
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLDataResponse.h
+c000000004CFA29DE0000000000000363
+t1291463134
+s867
+i"Three20Network/TTURLResponse.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLImageResponse.h
+c000000004CFA29DE0000000000000434
+t1291463134
+s1076
+i"Three20Network/TTURLResponse.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLRequest.h
+c000000004CFA29DE0000000000001A70
+t1291463134
+s6768
+i<Foundation/Foundation.h>
+i"Three20Network/TTURLRequestCachePolicy.h"
+i"Three20Core/TTCorePreprocessorMacros.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLRequestCachePolicy.h
+c000000004CFA29DE00000000000004CF
+t1291463134
+s1231
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLRequestDelegate.h
+c000000004CFA29DE00000000000006C3
+t1291463134
+s1731
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLRequestModel.h
+c000000004CFA29DE00000000000006A1
+t1291463134
+s1697
+i"Three20Network/TTModel.h"
+i"Three20Network/TTURLRequestDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLRequestQueue.h
+c000000004CFA29DE0000000000000DAC
+t1291463134
+s3500
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTURLResponse.h
+c000000004CFA29DE000000000000064F
+t1291463134
+s1615
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/TTUserInfo.h
+c000000004CFA29DE0000000000000673
+t1291463134
+s1651
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Network/Three20Network.h
+c000000004CFA29DE000000000000058B
+t1291463134
+s1419
+i"Three20Core/Three20Core.h"
+i"Three20Network/TTGlobalNetwork.h"
+i"Three20Network/TTURLRequestCachePolicy.h"
+i"Three20Network/TTErrorCodes.h"
+i"Three20Network/TTModel.h"
+i"Three20Network/TTModelDelegate.h"
+i"Three20Network/TTURLRequestModel.h"
+i"Three20Network/TTURLRequest.h"
+i"Three20Network/TTURLRequestDelegate.h"
+i"Three20Network/TTURLResponse.h"
+i"Three20Network/TTURLDataResponse.h"
+i"Three20Network/TTURLImageResponse.h"
+i"Three20Network/TTUserInfo.h"
+i"Three20Network/TTURLRequestQueue.h"
+i"Three20Network/TTURLCache.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTBevelBorderStyle.h
+c000000004CFA29DF00000000000004FD
+t1291463135
+s1277
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTBlendStyle.h
+c000000004CFA29DF0000000000000340
+t1291463135
+s832
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTBoxStyle.h
+c000000004CFA29DF00000000000005FD
+t1291463135
+s1533
+i"Three20Style/TTStyle.h"
+i"Three20Style/TTPosition.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTContentStyle.h
+c000000004CFA29DF00000000000002DB
+t1291463135
+s731
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTDefaultStyleSheet+DragRefreshHeader.h
+c000000004CFA29E000000000000004C3
+t1291463136
+s1219
+i"Three20Style/TTDefaultStyleSheet.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTDefaultStyleSheet.h
+c000000004CFA29DF0000000000000FD7
+t1291463135
+s4055
+i"Three20Style/TTStyleSheet.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTFlowLayout.h
+c000000004CFA29DF0000000000000324
+t1291463135
+s804
+i"Three20Style/TTLayout.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTFourBorderStyle.h
+c000000004CFA29DF0000000000000630
+t1291463135
+s1584
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTGlobalStyle.h
+c000000004CFA29DF0000000000000774
+t1291463135
+s1908
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTGridLayout.h
+c000000004CFA29DF0000000000000373
+t1291463135
+s883
+i"Three20Style/TTLayout.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTHighlightBorderStyle.h
+c000000004CFA29DF0000000000000442
+t1291463135
+s1090
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTImageStyle.h
+c000000004CFA29DF00000000000007A7
+t1291463135
+s1959
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTInnerShadowStyle.h
+c000000004CFA29DF00000000000002B8
+t1291463135
+s696
+i"Three20Style/TTShadowStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTInsetStyle.h
+c000000004CFA29DF0000000000000337
+t1291463135
+s823
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTLayout.h
+c000000004CFA29DF00000000000002F8
+t1291463135
+s760
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTLinearGradientBorderStyle.h
+c000000004CFA29DF00000000000005DC
+t1291463135
+s1500
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTLinearGradientFillStyle.h
+c000000004CFA29DF00000000000003D5
+t1291463135
+s981
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTMaskStyle.h
+c000000004CFA29DF000000000000032D
+t1291463135
+s813
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTPartStyle.h
+c000000004CFA29DF00000000000003CD
+t1291463135
+s973
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTPosition.h
+c000000004CFA29DF00000000000002CA
+t1291463135
+s714
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTRectangleShape.h
+c000000004CFA29DF00000000000002C8
+t1291463135
+s712
+i"Three20Style/TTShape.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTReflectiveFillStyle.h
+c000000004CFA29DF0000000000000435
+t1291463135
+s1077
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTRoundedLeftArrowShape.h
+c000000004CFA29DF000000000000032E
+t1291463135
+s814
+i"Three20Style/TTShape.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTRoundedRectangleShape.h
+c000000004CFA29DF00000000000004DD
+t1291463135
+s1245
+i"Three20Style/TTShape.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTRoundedRightArrowShape.h
+c000000004CFA29DF0000000000000330
+t1291463135
+s816
+i"Three20Style/TTShape.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTShadowStyle.h
+c000000004CFA29DF0000000000000402
+t1291463135
+s1026
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTShape.h
+c000000004CFA29DF00000000000004D8
+t1291463135
+s1240
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTShapeStyle.h
+c000000004CFA29DF000000000000038A
+t1291463135
+s906
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTSolidBorderStyle.h
+c000000004CFA29DF0000000000000399
+t1291463135
+s921
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTSolidFillStyle.h
+c000000004CFA29DF000000000000033B
+t1291463135
+s827
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTSpeechBubbleShape.h
+c000000004CFA29DF000000000000046A
+t1291463135
+s1130
+i"Three20Style/TTShape.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyle.h
+c000000004CFA29DF0000000000000474
+t1291463135
+s1140
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyleContext.h
+c000000004CFA29DF00000000000004BA
+t1291463135
+s1210
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyleDelegate.h
+c000000004CFA29DF000000000000039D
+t1291463135
+s925
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyleSheet.h
+c000000004CFA29E000000000000003E3
+t1291463136
+s995
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledBlock.h
+c000000004CFA29DF00000000000002B7
+t1291463135
+s695
+i"Three20Style/TTStyledElement.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledBoldNode.h
+c000000004CFA29E000000000000002B8
+t1291463136
+s696
+i"Three20Style/TTStyledInline.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledBoxFrame.h
+c000000004CFA29E00000000000000437
+t1291463136
+s1079
+i"Three20Style/TTStyledFrame.h"
+i"Three20Style/TTStyleDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledButtonNode.h
+c000000004CFA29E0000000000000042F
+t1291463136
+s1071
+i"Three20Style/TTStyledInlineBlock.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledElement.h
+c000000004CFA29E00000000000000515
+t1291463136
+s1301
+i"Three20Style/TTStyledNode.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledFrame.h
+c000000004CFA29E000000000000005E0
+t1291463136
+s1504
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledImageFrame.h
+c000000004CFA29E0000000000000046E
+t1291463136
+s1134
+i"Three20Style/TTStyledFrame.h"
+i"Three20Style/TTStyleDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledImageNode.h
+c000000004CFA29E0000000000000043F
+t1291463136
+s1087
+i"Three20Style/TTStyledElement.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledInline.h
+c000000004CFA29E000000000000002B8
+t1291463136
+s696
+i"Three20Style/TTStyledElement.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledInlineBlock.h
+c000000004CFA29E000000000000002BD
+t1291463136
+s701
+i"Three20Style/TTStyledElement.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledInlineFrame.h
+c000000004CFA29E000000000000003F3
+t1291463136
+s1011
+i"Three20Style/TTStyledBoxFrame.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledItalicNode.h
+c000000004CFA29E000000000000002BA
+t1291463136
+s698
+i"Three20Style/TTStyledInline.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledLineBreakNode.h
+c000000004CFA29E000000000000002BB
+t1291463136
+s699
+i"Three20Style/TTStyledBlock.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledLinkNode.h
+c000000004CFA29E00000000000000423
+t1291463136
+s1059
+i"Three20Style/TTStyledInline.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledNode.h
+c000000004CFA29E0000000000000047B
+t1291463136
+s1147
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledText.h
+c000000004CFA29E00000000000000EFB
+t1291463136
+s3835
+i<UIKit/UIKit.h>
+i"Three20Network/TTURLRequestDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledTextDelegate.h
+c000000004CFA29E00000000000000314
+t1291463136
+s788
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledTextFrame.h
+c000000004CFA29E000000000000004D5
+t1291463136
+s1237
+i"Three20Style/TTStyledFrame.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledTextNode.h
+c000000004CFA29E0000000000000037F
+t1291463136
+s895
+i"Three20Style/TTStyledNode.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTStyledTextParser.h
+c000000004CFA29E0000000000000055F
+t1291463136
+s1375
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/TTTextStyle.h
+c000000004CFA29E00000000000000B13
+t1291463136
+s2835
+i"Three20Style/TTStyle.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20Style/Three20Style.h
+c000000004CFA29E00000000000000C09
+t1291463136
+s3081
+i"Three20Core/Three20Core.h"
+i"Three20Network/Three20Network.h"
+i"Three20Style/TTGlobalStyle.h"
+i"Three20Style/TTPosition.h"
+i"Three20Style/TTDefaultStyleSheet.h"
+i"Three20Style/TTDefaultStyleSheet+DragRefreshHeader.h"
+i"Three20Style/TTLayout.h"
+i"Three20Style/TTFlowLayout.h"
+i"Three20Style/TTGridLayout.h"
+i"Three20Style/TTShape.h"
+i"Three20Style/TTRectangleShape.h"
+i"Three20Style/TTRoundedRectangleShape.h"
+i"Three20Style/TTRoundedRightArrowShape.h"
+i"Three20Style/TTRoundedLeftArrowShape.h"
+i"Three20Style/TTSpeechBubbleShape.h"
+i"Three20Style/TTStyle.h"
+i"Three20Style/TTStyleDelegate.h"
+i"Three20Style/TTStyleContext.h"
+i"Three20Style/TTContentStyle.h"
+i"Three20Style/TTPartStyle.h"
+i"Three20Style/TTShapeStyle.h"
+i"Three20Style/TTInsetStyle.h"
+i"Three20Style/TTBoxStyle.h"
+i"Three20Style/TTTextStyle.h"
+i"Three20Style/TTImageStyle.h"
+i"Three20Style/TTMaskStyle.h"
+i"Three20Style/TTBlendStyle.h"
+i"Three20Style/TTSolidFillStyle.h"
+i"Three20Style/TTLinearGradientFillStyle.h"
+i"Three20Style/TTReflectiveFillStyle.h"
+i"Three20Style/TTShadowStyle.h"
+i"Three20Style/TTInnerShadowStyle.h"
+i"Three20Style/TTSolidBorderStyle.h"
+i"Three20Style/TTHighlightBorderStyle.h"
+i"Three20Style/TTFourBorderStyle.h"
+i"Three20Style/TTBevelBorderStyle.h"
+i"Three20Style/TTLinearGradientBorderStyle.h"
+i"Three20Style/TTStyledText.h"
+i"Three20Style/TTStyledTextDelegate.h"
+i"Three20Style/TTStyledNode.h"
+i"Three20Style/TTStyledTextNode.h"
+i"Three20Style/TTStyledElement.h"
+i"Three20Style/TTStyledBlock.h"
+i"Three20Style/TTStyledInline.h"
+i"Three20Style/TTStyledInlineBlock.h"
+i"Three20Style/TTStyledBoldNode.h"
+i"Three20Style/TTStyledItalicNode.h"
+i"Three20Style/TTStyledLinkNode.h"
+i"Three20Style/TTStyledButtonNode.h"
+i"Three20Style/TTStyledImageNode.h"
+i"Three20Style/TTStyledLineBreakNode.h"
+i"Three20Style/TTStyledFrame.h"
+i"Three20Style/TTStyledBoxFrame.h"
+i"Three20Style/TTStyledInlineFrame.h"
+i"Three20Style/TTStyledTextFrame.h"
+i"Three20Style/TTStyledImageFrame.h"
+i"Three20Style/TTStyledTextParser.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTActionSheetController.h
+c000000004CFA29E70000000000000C84
+t1291463143
+s3204
+i"Three20UI/TTPopupViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTActionSheetControllerDelegate.h
+c000000004CFA29E70000000000000704
+t1291463143
+s1796
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTActivityLabel.h
+c000000004CFA29E70000000000000749
+t1291463143
+s1865
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTAlertViewController.h
+c000000004CFA29E70000000000000663
+t1291463143
+s1635
+i"Three20UI/TTPopupViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTAlertViewControllerDelegate.h
+c000000004CFA29E70000000000000394
+t1291463143
+s916
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTButton.h
+c000000004CFA29E70000000000000796
+t1291463143
+s1942
+i"Three20Style/TTStyleDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTButtonBar.h
+c000000004CFA29E700000000000003E5
+t1291463143
+s997
+i"Three20UI/TTView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTErrorView.h
+c000000004CFA29E700000000000003FB
+t1291463143
+s1019
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTImageView.h
+c000000004CFA29E70000000000000B5C
+t1291463143
+s2908
+i"Three20UI/TTView.h"
+i"Three20Network/TTURLRequestDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTImageViewDelegate.h
+c000000004CFA29E700000000000004A4
+t1291463143
+s1188
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTLabel.h
+c000000004CFA29E70000000000000346
+t1291463143
+s838
+i"Three20UI/TTView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTLauncherItem.h
+c000000004CFA29E700000000000005E5
+t1291463143
+s1509
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTLauncherView.h
+c000000004CFA29E70000000000000AEA
+t1291463143
+s2794
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTLauncherViewDelegate.h
+c000000004CFA29E700000000000004F0
+t1291463143
+s1264
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTLink.h
+c000000004CFA29E70000000000000460
+t1291463143
+s1120
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTListDataSource.h
+c000000004CFA29E700000000000003F3
+t1291463143
+s1011
+i"Three20UI/TTTableViewDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTMessageController.h
+c000000004CFA29E70000000000001B6F
+t1291463143
+s7023
+i"Three20UI/TTViewController.h"
+i"Three20UI/TTTextEditorDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTMessageControllerDelegate.h
+c000000004CFA29E7000000000000081A
+t1291463143
+s2074
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTMessageField.h
+c000000004CFA29E8000000000000058E
+t1291463144
+s1422
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTMessageRecipientField.h
+c000000004CFA29E800000000000003CA
+t1291463144
+s970
+i"Three20UI/TTMessageField.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTMessageSubjectField.h
+c000000004CFA29E8000000000000037B
+t1291463144
+s891
+i"Three20UI/TTMessageTextField.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTMessageTextField.h
+c000000004CFA29E80000000000000331
+t1291463144
+s817
+i"Three20UI/TTMessageField.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTModelViewController.h
+c000000004CFA29E80000000000001712
+t1291463144
+s5906
+i"Three20UI/TTViewController.h"
+i"Three20Network/TTModelDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTNavigationController.h
+c000000004CFA29E8000000000000047D
+t1291463144
+s1149
+i"Three20UINavigator/TTBaseNavigationController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTNavigator.h
+c000000004CFA29E80000000000000435
+t1291463144
+s1077
+i"Three20UINavigator/TTBaseNavigator.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPageControl.h
+c000000004CFA29E80000000000000505
+t1291463144
+s1285
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPhoto.h
+c000000004CFA29E80000000000000515
+t1291463144
+s1301
+i"Three20UI/TTPhotoVersion.h"
+i"Three20UINavigator/TTURLObject.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPhotoSource.h
+c000000004CFA29E800000000000004F7
+t1291463144
+s1271
+i"Three20Network/TTModel.h"
+i"Three20UINavigator/TTURLObject.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPhotoVersion.h
+c000000004CFA29E800000000000002EB
+t1291463144
+s747
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPhotoView.h
+c000000004CFA29E80000000000000581
+t1291463144
+s1409
+i"Three20UI/TTImageView.h"
+i"Three20UI/TTPhotoVersion.h"
+i"Three20UI/TTImageViewDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPhotoViewController.h
+c000000004CFA29E80000000000000C70
+t1291463144
+s3184
+i"Three20UI/TTModelViewController.h"
+i"Three20UI/TTScrollViewDelegate.h"
+i"Three20UI/TTScrollViewDataSource.h"
+i"Three20UI/TTThumbsViewControllerDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPickerTextField.h
+c000000004CFA29E80000000000000533
+t1291463144
+s1331
+i"Three20UI/TTSearchTextField.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPickerTextFieldDelegate.h
+c000000004CFA29E800000000000003DE
+t1291463144
+s990
+i"Three20UI/TTSearchTextFieldDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPopupViewController.h
+c000000004CFA29E80000000000000513
+t1291463144
+s1299
+i"Three20UI/TTModelViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPostController.h
+c000000004CFA29E80000000000000955
+t1291463144
+s2389
+i"Three20UI/TTPopupViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTPostControllerDelegate.h
+c000000004CFA29E800000000000005F1
+t1291463144
+s1521
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTRecursiveProgress.h
+c000000004CFA29E80000000000000E79
+t1291463144
+s3705
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTScrollView.h
+c000000004CFA29E8000000000000178C
+t1291463144
+s6028
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTScrollViewDataSource.h
+c000000004CFA29E8000000000000058A
+t1291463144
+s1418
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTScrollViewDelegate.h
+c000000004CFA29E800000000000007A7
+t1291463144
+s1959
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTSearchBar.h
+c000000004CFA29E8000000000000085C
+t1291463144
+s2140
+i"Three20UI/TTView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTSearchDisplayController.h
+c000000004CFA29E80000000000000637
+t1291463144
+s1591
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTSearchTextField.h
+c000000004CFA29E80000000000000703
+t1291463144
+s1795
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTSearchTextFieldDelegate.h
+c000000004CFA29E80000000000000341
+t1291463144
+s833
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTSearchlightLabel.h
+c000000004CFA29E80000000000000520
+t1291463144
+s1312
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTSectionedDataSource.h
+c000000004CFA29E80000000000000841
+t1291463144
+s2113
+i"Three20UI/TTTableViewDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTStyledTextLabel.h
+c000000004CFA29E800000000000008E4
+t1291463144
+s2276
+i"Three20Style/TTStyledTextDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTStyledTextTableCell.h
+c000000004CFA29E80000000000000331
+t1291463144
+s817
+i"Three20UI/TTTableViewCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTStyledTextTableItemCell.h
+c000000004CFA29E80000000000000341
+t1291463144
+s833
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTab.h
+c000000004CFA29E80000000000000374
+t1291463144
+s884
+i"Three20UI/TTButton.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTabBar.h
+c000000004CFA29E800000000000005B2
+t1291463144
+s1458
+i"Three20UI/TTView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTabDelegate.h
+c000000004CFA29E800000000000002FA
+t1291463144
+s762
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTabGrid.h
+c000000004CFA29E800000000000002EC
+t1291463144
+s748
+i"Three20UI/TTTabBar.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTabItem.h
+c000000004CFA29E80000000000000409
+t1291463144
+s1033
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTabStrip.h
+c000000004CFA29E80000000000000301
+t1291463144
+s769
+i"Three20UI/TTTabBar.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableActivityItem.h
+c000000004CFA29E80000000000000319
+t1291463144
+s793
+i"Three20UI/TTTableItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableActivityItemCell.h
+c000000004CFA29E80000000000000385
+t1291463144
+s901
+i"Three20UI/TTTableViewCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableButton.h
+c000000004CFA29E800000000000002B1
+t1291463144
+s689
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableCaptionItem.h
+c000000004CFA29E80000000000000410
+t1291463144
+s1040
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableCaptionItemCell.h
+c000000004CFA29E800000000000002FF
+t1291463144
+s767
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableControlCell.h
+c000000004CFA29E8000000000000039C
+t1291463144
+s924
+i"Three20UI/TTTableViewCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableControlItem.h
+c000000004CFA29E80000000000000392
+t1291463144
+s914
+i"Three20UI/TTTableItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableFlushViewCell.h
+c000000004CFA29E8000000000000038D
+t1291463144
+s909
+i"Three20UI/TTTableViewCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableGrayTextItem.h
+c000000004CFA29E800000000000002B7
+t1291463144
+s695
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableHeaderView.h
+c000000004CFA29E800000000000002E2
+t1291463144
+s738
+i"Three20UI/TTView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableImageItem.h
+c000000004CFA29E80000000000000564
+t1291463144
+s1380
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableImageItemCell.h
+c000000004CFA29E80000000000000338
+t1291463144
+s824
+i"Three20UI/TTTableTextItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableItem.h
+c000000004CFA29E80000000000000302
+t1291463144
+s770
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableLink.h
+c000000004CFA29E800000000000002AF
+t1291463144
+s687
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableLinkedItem.h
+c000000004CFA29E80000000000000442
+t1291463144
+s1090
+i"Three20UI/TTTableItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableLinkedItemCell.h
+c000000004CFA29E800000000000002F5
+t1291463144
+s757
+i"Three20UI/TTTableViewCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableLongTextItem.h
+c000000004CFA29E800000000000002B7
+t1291463144
+s695
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableMessageItem.h
+c000000004CFA29E80000000000000518
+t1291463144
+s1304
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableMessageItemCell.h
+c000000004CFA29E8000000000000044A
+t1291463144
+s1098
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableMoreButton.h
+c000000004CFA29E8000000000000036D
+t1291463144
+s877
+i"Three20UI/TTTableSubtitleItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableMoreButtonCell.h
+c000000004CFA29E800000000000003D1
+t1291463144
+s977
+i"Three20UI/TTTableSubtitleItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableRightCaptionItem.h
+c000000004CFA29E800000000000002C1
+t1291463144
+s705
+i"Three20UI/TTTableCaptionItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableRightCaptionItemCell.h
+c000000004CFA29E80000000000000304
+t1291463144
+s772
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableRightImageItem.h
+c000000004CFA29E800000000000002BB
+t1291463144
+s699
+i"Three20UI/TTTableImageItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableStyledTextItem.h
+c000000004CFA29E80000000000000482
+t1291463144
+s1154
+i"Three20UI/TTTableLinkedItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableSubtextItem.h
+c000000004CFA29E800000000000002BC
+t1291463144
+s700
+i"Three20UI/TTTableCaptionItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableSubtextItemCell.h
+c000000004CFA29E800000000000002FF
+t1291463144
+s767
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableSubtitleItem.h
+c000000004CFA29E800000000000005F5
+t1291463144
+s1525
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableSubtitleItemCell.h
+c000000004CFA29E80000000000000385
+t1291463144
+s901
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableSummaryItem.h
+c000000004CFA29E800000000000002B6
+t1291463144
+s694
+i"Three20UI/TTTableTextItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableTextItem.h
+c000000004CFA29E80000000000000406
+t1291463144
+s1030
+i"Three20UI/TTTableLinkedItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableTextItemCell.h
+c000000004CFA29E800000000000002C3
+t1291463144
+s707
+i"Three20UI/TTTableLinkedItemCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableView.h
+c000000004CFA29E800000000000006A2
+t1291463144
+s1698
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewCell.h
+c000000004CFA29E8000000000000076F
+t1291463144
+s1903
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewController.h
+c000000004CFA29E80000000000001044
+t1291463144
+s4164
+i"Three20UI/TTModelViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewDataSource.h
+c000000004CFA29E80000000000000B6C
+t1291463144
+s2924
+i<UIKit/UIKit.h>
+i"Three20Network/TTModel.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewDelegate.h
+c000000004CFA29E80000000000000710
+t1291463144
+s1808
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewDragRefreshDelegate.h
+c000000004CFA29E800000000000006BA
+t1291463144
+s1722
+i"Three20UI/TTTableViewVarHeightDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewGroupedVarHeightDelegate.h
+c000000004CFA29E8000000000000033F
+t1291463144
+s831
+i"Three20UI/TTTableViewVarHeightDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewItem.h
+c000000004CFA29E80000000000000371
+t1291463144
+s881
+i"Three20UI/TTTableItem.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewPlainDelegate.h
+c000000004CFA29E8000000000000030D
+t1291463144
+s781
+i"Three20UI/TTTableViewDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewPlainVarHeightDelegate.h
+c000000004CFA29E800000000000002E5
+t1291463144
+s741
+i"Three20UI/TTTableViewVarHeightDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTableViewVarHeightDelegate.h
+c000000004CFA29E8000000000000031D
+t1291463144
+s797
+i"Three20UI/TTTableViewDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTextBarController.h
+c000000004CFA29E800000000000008AC
+t1291463144
+s2220
+i"Three20UI/TTPopupViewController.h"
+i"Three20UI/TTTextEditorDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTextBarDelegate.h
+c000000004CFA29E8000000000000056B
+t1291463144
+s1387
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTextEditor.h
+c000000004CFA29E80000000000000691
+t1291463144
+s1681
+i"Three20UI/TTView.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTTextEditorDelegate.h
+c000000004CFA29E80000000000000534
+t1291463144
+s1332
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTThumbView.h
+c000000004CFA29E800000000000002D3
+t1291463144
+s723
+i"Three20UI/TTButton.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTThumbsDataSource.h
+c000000004CFA29E80000000000000486
+t1291463144
+s1158
+i"Three20UI/TTTableViewDataSource.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTThumbsTableViewCell.h
+c000000004CFA29E80000000000000521
+t1291463144
+s1313
+i"Three20UI/TTTableViewCell.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTThumbsTableViewCellDelegate.h
+c000000004CFA29E8000000000000031B
+t1291463144
+s795
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTThumbsViewController.h
+c000000004CFA29E80000000000000578
+t1291463144
+s1400
+i"Three20UI/TTTableViewController.h"
+i"Three20UI/TTThumbsTableViewCellDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTThumbsViewControllerDelegate.h
+c000000004CFA29E80000000000000505
+t1291463144
+s1285
+i<Foundation/Foundation.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTView.h
+c000000004CFA29E8000000000000041F
+t1291463144
+s1055
+i"Three20Style/TTStyleDelegate.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTViewController.h
+c000000004CFA29E800000000000006C8
+t1291463144
+s1736
+i"Three20UINavigator/TTNavigatorViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTWebController.h
+c000000004CFA29E8000000000000091C
+t1291463144
+s2332
+i"Three20UI/TTModelViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/TTYouTubeView.h
+c000000004CFA29E800000000000003CF
+t1291463144
+s975
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UI/Three20UI.h
+c000000004CFA29E70000000000001441
+t1291463143
+s5185
+i"Three20UI/TTNavigator.h"
+i"Three20UI/TTViewController.h"
+i"Three20UI/TTNavigationController.h"
+i"Three20UI/TTWebController.h"
+i"Three20UI/TTMessageController.h"
+i"Three20UI/TTMessageControllerDelegate.h"
+i"Three20UI/TTMessageField.h"
+i"Three20UI/TTMessageRecipientField.h"
+i"Three20UI/TTMessageTextField.h"
+i"Three20UI/TTMessageSubjectField.h"
+i"Three20UI/TTAlertViewController.h"
+i"Three20UI/TTAlertViewControllerDelegate.h"
+i"Three20UI/TTActionSheetController.h"
+i"Three20UI/TTActionSheetControllerDelegate.h"
+i"Three20UI/TTPostController.h"
+i"Three20UI/TTPostControllerDelegate.h"
+i"Three20UI/TTTextBarController.h"
+i"Three20UI/TTTextBarDelegate.h"
+i"Three20Network/TTURLCache.h"
+i"Three20UI/TTView.h"
+i"Three20UI/TTImageView.h"
+i"Three20UI/TTImageViewDelegate.h"
+i"Three20UI/TTYouTubeView.h"
+i"Three20UI/TTScrollView.h"
+i"Three20UI/TTScrollViewDelegate.h"
+i"Three20UI/TTScrollViewDataSource.h"
+i"Three20UI/TTLauncherView.h"
+i"Three20UI/TTLauncherViewDelegate.h"
+i"Three20UI/TTLauncherItem.h"
+i"Three20UI/TTLabel.h"
+i"Three20UI/TTStyledTextLabel.h"
+i"Three20UI/TTActivityLabel.h"
+i"Three20UI/TTSearchlightLabel.h"
+i"Three20UI/TTButton.h"
+i"Three20UI/TTLink.h"
+i"Three20UI/TTTabBar.h"
+i"Three20UI/TTTabDelegate.h"
+i"Three20UI/TTTabStrip.h"
+i"Three20UI/TTTabGrid.h"
+i"Three20UI/TTTab.h"
+i"Three20UI/TTTabItem.h"
+i"Three20UI/TTButtonBar.h"
+i"Three20UI/TTPageControl.h"
+i"Three20UI/TTTextEditor.h"
+i"Three20UI/TTTextEditorDelegate.h"
+i"Three20UI/TTSearchTextField.h"
+i"Three20UI/TTSearchTextFieldDelegate.h"
+i"Three20UI/TTPickerTextField.h"
+i"Three20UI/TTPickerTextFieldDelegate.h"
+i"Three20UI/TTSearchBar.h"
+i"Three20UI/TTTableViewController.h"
+i"Three20UI/TTSearchDisplayController.h"
+i"Three20UI/TTTableView.h"
+i"Three20UI/TTTableViewDelegate.h"
+i"Three20UI/TTTableViewVarHeightDelegate.h"
+i"Three20UI/TTTableViewGroupedVarHeightDelegate.h"
+i"Three20UI/TTTableViewPlainDelegate.h"
+i"Three20UI/TTTableViewPlainVarHeightDelegate.h"
+i"Three20UI/TTTableViewDragRefreshDelegate.h"
+i"Three20UI/TTListDataSource.h"
+i"Three20UI/TTSectionedDataSource.h"
+i"Three20UI/TTTableHeaderView.h"
+i"Three20UI/TTTableViewCell.h"
+i"Three20UI/TTTableItem.h"
+i"Three20UI/TTTableLinkedItem.h"
+i"Three20UI/TTTableTextItem.h"
+i"Three20UI/TTTableCaptionItem.h"
+i"Three20UI/TTTableRightCaptionItem.h"
+i"Three20UI/TTTableSubtextItem.h"
+i"Three20UI/TTTableSubtitleItem.h"
+i"Three20UI/TTTableMessageItem.h"
+i"Three20UI/TTTableLongTextItem.h"
+i"Three20UI/TTTableGrayTextItem.h"
+i"Three20UI/TTTableSummaryItem.h"
+i"Three20UI/TTTableLink.h"
+i"Three20UI/TTTableButton.h"
+i"Three20UI/TTTableMoreButton.h"
+i"Three20UI/TTTableImageItem.h"
+i"Three20UI/TTTableRightImageItem.h"
+i"Three20UI/TTTableActivityItem.h"
+i"Three20UI/TTTableStyledTextItem.h"
+i"Three20UI/TTTableControlItem.h"
+i"Three20UI/TTTableViewItem.h"
+i"Three20UI/TTTableLinkedItemCell.h"
+i"Three20UI/TTTableTextItemCell.h"
+i"Three20UI/TTTableCaptionItemCell.h"
+i"Three20UI/TTTableSubtextItemCell.h"
+i"Three20UI/TTTableRightCaptionItemCell.h"
+i"Three20UI/TTTableSubtitleItemCell.h"
+i"Three20UI/TTTableMessageItemCell.h"
+i"Three20UI/TTTableMoreButtonCell.h"
+i"Three20UI/TTTableImageItemCell.h"
+i"Three20UI/TTStyledTextTableItemCell.h"
+i"Three20UI/TTStyledTextTableCell.h"
+i"Three20UI/TTTableActivityItemCell.h"
+i"Three20UI/TTTableControlCell.h"
+i"Three20UI/TTTableFlushViewCell.h"
+i"Three20UI/TTErrorView.h"
+i"Three20UI/TTPhotoVersion.h"
+i"Three20UI/TTPhotoSource.h"
+i"Three20UI/TTPhoto.h"
+i"Three20UI/TTPhotoViewController.h"
+i"Three20UI/TTPhotoView.h"
+i"Three20UI/TTThumbsViewController.h"
+i"Three20UI/TTThumbsViewControllerDelegate.h"
+i"Three20UI/TTThumbsDataSource.h"
+i"Three20UI/TTThumbsTableViewCell.h"
+i"Three20UI/TTThumbsTableViewCellDelegate.h"
+i"Three20UI/TTThumbView.h"
+i"Three20UI/TTRecursiveProgress.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UICommon/TTBaseViewController.h
+c000000004CFA29DD0000000000000A15
+t1291463133
+s2581
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UICommon/TTGlobalUICommon.h
+c000000004CFA29DD000000000000150B
+t1291463133
+s5387
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UICommon/Three20UICommon.h
+c000000004CFA29DD00000000000002CE
+t1291463133
+s718
+i"Three20UICommon/TTGlobalUICommon.h"
+i"Three20UICommon/TTBaseViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTBaseNavigationController.h
+c000000004CFA29E6000000000000050F
+t1291463142
+s1295
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTBaseNavigator.h
+c000000004CFA29E60000000000001B38
+t1291463142
+s6968
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i"Three20UINavigator/TTNavigatorPersistenceMode.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTGlobalNavigatorMetrics.h
+c000000004CFA29E600000000000006A1
+t1291463142
+s1697
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTNavigationMode.h
+c000000004CFA29E600000000000003E5
+t1291463142
+s997
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTNavigatorDelegate.h
+c000000004CFA29E60000000000000657
+t1291463142
+s1623
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTNavigatorPersistenceMode.h
+c000000004CFA29E60000000000000348
+t1291463142
+s840
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTNavigatorViewController.h
+c000000004CFA29E6000000000000036A
+t1291463142
+s874
+i"Three20UICommon/TTBaseViewController.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTURLAction.h
+c000000004CFA29E60000000000000A90
+t1291463142
+s2704
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTURLGeneratorPattern.h
+c000000004CFA29E60000000000000379
+t1291463142
+s889
+i"Three20UINavigator/TTURLPattern.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTURLMap.h
+c000000004CFA29E6000000000000161C
+t1291463142
+s5660
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i"Three20UINavigator/TTNavigationMode.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTURLNavigatorPattern.h
+c000000004CFA29E600000000000006E0
+t1291463142
+s1760
+i"Three20UINavigator/TTURLPattern.h"
+i"Three20UINavigator/TTNavigationMode.h"
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTURLObject.h
+c000000004CFA29E60000000000000497
+t1291463142
+s1175
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/TTURLPattern.h
+c000000004CFA29E60000000000000511
+t1291463142
+s1297
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/kurutepe/development/Fifteen Jugglers/three20/Build/Products/three20/Three20UINavigator/Three20UINavigator.h
+c000000004CFA29E6000000000000054C
+t1291463142
+s1356
+i"Three20UINavigator/TTGlobalNavigatorMetrics.h"
+i"Three20UINavigator/TTURLObject.h"
+i"Three20UINavigator/TTNavigatorViewController.h"
+i"Three20UINavigator/TTBaseNavigationController.h"
+i"Three20UINavigator/TTNavigatorPersistenceMode.h"
+i"Three20UINavigator/TTBaseNavigator.h"
+i"Three20UINavigator/TTNavigatorDelegate.h"
+i"Three20UINavigator/TTURLAction.h"
+i"Three20UINavigator/TTURLMap.h"
+i"Three20UINavigator/TTNavigationMode.h"
+i"Three20UINavigator/TTURLPattern.h"
+i"Three20UINavigator/TTURLGeneratorPattern.h"
+i"Three20UINavigator/TTURLNavigatorPattern.h"
+
+N/var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch.gch
+t1291484421
+s20038000
+
+N/var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-cfpqhkbtgzccjfapkwaxqslurnup/Caritas_Prefix.pch.gch
+t1291463793
+s19356976
+
+N/var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-hfrxqfuovnwccgdtayeobsfibnol/Caritas_Prefix.pch.gch
+t1291466708
+s19500720
+
+NCaritas-Info.plist
+c000000004CFA78660000000000000377
+t1291483238
+s887
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies313177219#313177219#0(0"0(0#1#0"8662821536#0"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/CaritasAppDelegate.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.413161
+e313177221.570740
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/CaritasAppDelegate.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m313177221#313177221#0(0"0(0#0#81"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m8664358400#2162"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/CaritasAppDelegate.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/CaritasAppDelegate.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Event.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.611338
+e313177221.678939
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Event.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m313177221#313177221#0(0"0(0#0#60"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m8663430816#2128"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Event.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Event.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventDetailView.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.847214
+e313177221.960366
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventDetailView.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m: In function '-[EventDetailView viewWillAppear:]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m:42: warning: class 'NSManagedObject' does not implement the 'MKAnnotation' protocol
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m:44: warning: incompatible Objective-C types initializing 'struct NSManagedObject *', expected 'struct Location *'
+lSLF07#2@78"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m313177221#313177221#0(462"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m: In function '-[EventDetailView viewWillAppear:]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m:42: warning: class 'NSManagedObject' does not implement the 'MKAnnotation' protocol/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m:44: warning: incompatible Objective-C types initializing 'struct NSManagedObject *', expected 'struct Location *'2(22@70"Class 'NSManagedObject' does not implement the 'MKAnnotation' protocol313177221#122#155#0(6@70"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m313177067#42#0#42#0#45"class '*' does not implement the '*' protocol0(22@100"Incompatible Objective-C types initializing 'struct NSManagedObject *', expected 'struct Location *'313177221#277#185#0(6@70"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m313177067#44#0#44#0#61"incompatible Objective-C types initializing '*', expected '*'0(0#0#70"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m8663614976#2148"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventDetailView.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventEntryView.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.570854
+e313177221.797636
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventEntryView.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView viewDidLoad]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:30: warning: '-managedObjectContext' not found in protocol(s)
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView validateParameters]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:92: warning: control reaches end of non-void function
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView submitTapped:]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:102: warning: type 'id <UIApplicationDelegate>' does not conform to the 'CLLocationManagerDelegate' protocol
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView textField:shouldChangeCharactersInRange:replacementString:]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:177: warning: '-search:' not found in protocol(s)
+lSLF07#2@77"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m313177221#313177221#0(1075"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView viewDidLoad]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:30: warning: '-managedObjectContext' not found in protocol(s)/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView validateParameters]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:92: warning: control reaches end of non-void function/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView submitTapped:]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:102: warning: type 'id <UIApplicationDelegate>' does not conform to the 'CLLocationManagerDelegate' protocol/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView textField:shouldChangeCharactersInRange:replacementString:]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:177: warning: '-search:' not found in protocol(s)4(22@48"'-managedObjectContext' not found in protocol(s)313177221#116#132#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m313174688#30#0#30#0#28"'*' not found in protocol(s)0(22@40"Control reaches end of non-void function313177221#371#124#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m313174688#92#0#92#0#40"control reaches end of non-void function0(22@94"Type 'id <UIApplicationDelegate>' does not conform to the 'CLLocationManagerDelegate' protocol313177221#613#179#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m313174688#102#0#102#0#45"type '*' does not conform to the '*' protocol0(22@35"'-search:' not found in protocol(s)313177221#955#120#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m313174688#177#0#177#0#28"'*' not found in protocol(s)0(0#0#69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m8663950976#2146"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/EventEntryView.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Location.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.753078
+e313177221.847108
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Location.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m313177221#313177221#0(0"0(0#0#63"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m8653949184#2134"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Location.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Location.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/MockDataSource.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313163740.506289
+e313163740.716143
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/MockDataSource.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m: In function '-[MockAddressBook fakeSearch:]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: 'NSMutableArray' may not respond to '-perform:withObject:'
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: (Messages without a matching method signature
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: will be assumed to return 'id' and accept
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: '...' as arguments.)
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m: In function '-[MockAddressBook cancel]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:404: warning: 'NSMutableArray' may not respond to '-perform:withObject:'
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m: In function '-[MockAddressBook search:]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:424: warning: 'NSMutableArray' may not respond to '-perform:withObject:'
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:427: warning: 'NSMutableArray' may not respond to '-perform:withObject:'
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:431: warning: 'NSMutableArray' may not respond to '-perform:withObject:'
+lSLF07#2@77"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313163740#313163740#0(1418"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m: In function '-[MockAddressBook fakeSearch:]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: 'NSMutableArray' may not respond to '-perform:withObject:'/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: (Messages without a matching method signature/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: will be assumed to return 'id' and accept/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:333: warning: '...' as arguments.)/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m: In function '-[MockAddressBook cancel]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:404: warning: 'NSMutableArray' may not respond to '-perform:withObject:'/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m: In function '-[MockAddressBook search:]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:424: warning: 'NSMutableArray' may not respond to '-perform:withObject:'/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:427: warning: 'NSMutableArray' may not respond to '-perform:withObject:'/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m:431: warning: 'NSMutableArray' may not respond to '-perform:withObject:'6(22@58"'NSMutableArray' may not respond to '-perform:withObject:'313163740#117#143#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313155699#333#0#333#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)313163740#260#130#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313155699#333#0#333#0#0"0(22@58"'NSMutableArray' may not respond to '-perform:withObject:'313163740#733#143#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313155699#404#0#404#0#26"'*' may not respond to '*'0(22@58"'NSMutableArray' may not respond to '-perform:withObject:'313163740#989#143#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313155699#424#0#424#0#26"'*' may not respond to '*'0(22@58"'NSMutableArray' may not respond to '-perform:withObject:'313163740#1132#143#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313155699#427#0#427#0#26"'*' may not respond to '*'0(22@58"'NSMutableArray' may not respond to '-perform:withObject:'313163740#1275#143#0(6@69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m313155699#431#0#431#0#26"'*' may not respond to '*'0(0#0#69"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m8681573664#2146"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/MockDataSource.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/MockDataSource.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/RootViewController.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.429308
+e313177221.611235
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/RootViewController.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m313177221#313177221#0(0"0(0#0#81"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m8663663840#2162"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/RootViewController.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/RootViewController.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Tag.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.679042
+e313177221.752972
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Tag.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m313177221#313177221#0(0"0(0#0#58"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m8662197984#2124"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Tag.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Tag.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagFieldDataSource.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313163924.713741
+e313163924.799754
+r0
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagFieldDataSource.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m: In function '-[TagFieldDataSource search:]':
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:58: error: request for member 'items' in something not a structure or union
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:60: error: request for member 'items' in something not a structure or union
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m: At top level:
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: incomplete implementation of class 'TagFieldDataSource'
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: method definition for '-tableView:cellForRowAtIndexPath:' not found
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: method definition for '-tableView:numberOfRowsInSection:' not found
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: class 'TagFieldDataSource' does not fully implement the 'UITableViewDataSource' protocol
+o{standard input}:106:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000002$pb"
+o{standard input}:106:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:102:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000002$pb"
+o{standard input}:102:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:67:non-relocatable subtraction expression, "L_OBJC_IVAR_$_TagFieldDataSource.managedObjectContext$non_lazy_ptr" minus "L00000000001$pb"
+o{standard input}:67:symbol: "L_OBJC_IVAR_$_TagFieldDataSource.managedObjectContext$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:57:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"
+o{standard input}:57:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+o{standard input}:53:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"
+o{standard input}:53:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_TagFieldDataSource.managedObjectContext$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+lSLF07#2@81"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313163924#313163924#0(2674"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m: In function '-[TagFieldDataSource search:]':/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:58: error: request for member 'items' in something not a structure or union/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:60: error: request for member 'items' in something not a structure or union/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m: At top level:/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: incomplete implementation of class 'TagFieldDataSource'/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: method definition for '-tableView:cellForRowAtIndexPath:' not found/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: method definition for '-tableView:numberOfRowsInSection:' not found/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m:75: warning: class 'TagFieldDataSource' does not fully implement the 'UITableViewDataSource' protocol{standard input}:106:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000002$pb"{standard input}:106:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:102:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000002$pb"{standard input}:102:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:67:non-relocatable subtraction expression, "L_OBJC_IVAR_$_TagFieldDataSource.managedObjectContext$non_lazy_ptr" minus "L00000000001$pb"{standard input}:67:symbol: "L_OBJC_IVAR_$_TagFieldDataSource.managedObjectContext$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:57:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"{standard input}:57:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression{standard input}:53:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"{standard input}:53:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_TagFieldDataSource.managedObjectContext$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17(4@64"Request for member 'items' in something not a structure or union313163924#120#150#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#58#0#58#0#0"0(4@64"Request for member 'items' in something not a structure or union313163924#270#150#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#60#0#60#0#0"0(23@13"At top level:313163924#420#89#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#0#0#0#0#0"0(22@55"Incomplete implementation of class 'TagFieldDataSource'313163924#509#143#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#75#0#75#0#38"incomplete implementation of class '*'0(22@67"Method definition for '-tableView:cellForRowAtIndexPath:' not found313163924#652#155#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#75#0#75#0#35"method definition for '*' not found0(22@67"Method definition for '-tableView:numberOfRowsInSection:' not found313163924#807#155#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#75#0#75#0#35"method definition for '*' not found0(22@88"Class 'TagFieldDataSource' does not fully implement the 'UITableViewDataSource' protocol313163924#962#176#0(6@73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m313162023#75#0#75#0#51"class '*' does not fully implement the '*' protocol0(0#0#73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m8676942112#2154"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagFieldDataSource.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagFieldDataSource.o"1#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagTableDataSource.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.797755
+e313177221.915530
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagTableDataSource.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m313177221#313177221#0(0"0(0#0#73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m8664728160#2154"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/TagTableDataSource.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/TagTableDataSource.o"0#
+
+CCompileC build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/main.o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177221.333504
+e313177221.413054
+r1
+xCompileC
+xbuild/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/main.o
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m313177221#313177221#0(0"0(0#0#59"/Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m8669504608#2126"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -include /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/main.m" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.xib"
+s313177219.604564
+e313177220.214135
+r1
+xCompileXIB
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.xib
+lSLF07#2@30"CompileXIB EventDetailView.xib313177219#313177220#0(0"0(0#0#72"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.xib8662034656#628"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/EventDetailView.nib" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventDetailView.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib"
+s313177219.600445
+e313177220.207959
+r1
+xCompileXIB
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib:8: warning: UITextView does not support data detectors when the text view is editable.
+lSLF07#2@29"CompileXIB EventEntryView.xib313177219#313177220#0(200"/* com.apple.ibtool.document.warnings *//Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib:8: warning: UITextView does not support data detectors when the text view is editable.1(22@74"UITextView does not support data detectors when the text view is editable.313177220#18446744073709551615#0#0(6@71"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib313173314#8#0#8#0#0"0(0#0#71"/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib8662102880#626"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/EventEntryView.nib" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/MainWindow.xib"
+s313177219.057979
+e313177219.604466
+r1
+xCompileXIB
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib313177219#313177219#0(0"0(0#0#67"/Users/kurutepe/development/Fifteen Jugglers/Caritas/MainWindow.xib8665137952#618"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/MainWindow.nib" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB "/Users/kurutepe/development/Fifteen Jugglers/Caritas/RootViewController.xib"
+s313177219.118333
+e313177219.600345
+r1
+xCompileXIB
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib313177219#313177219#0(0"0(0#0#75"/Users/kurutepe/development/Fifteen Jugglers/Caritas/RootViewController.xib8664051584#634"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/RootViewController.nib" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/RootViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/Caritas.app/Three20.bundle ../three20/src/Three20.bundle
+s313177219.057051
+e313177219.118235
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Caritas.app/Three20.bundle
+x../three20/src/Three20.bundle
+lSLF07#2@34"Copy ../three20/src/Three20.bundle313177219#313177219#0(0"0(0#0#82"/Users/kurutepe/development/Fifteen Jugglers/Caritas/../three20/src/Three20.bundle8669672384#535"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/kurutepe/development/Fifteen Jugglers/Caritas/../three20/src/Three20.bundle" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app"0#
+
+CDataModelVersionCompile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas.momd" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld"
+s313177221.332389
+e313177221.429171
+r1
+xDataModelVersionCompile
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas.momd
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld/Caritas.xcdatamodel:Event.tags: warning: Event.tags -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 
+o/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld/Caritas.xcdatamodel:Event.location: warning: Event.location -- relationship does not have an inverse 
+lSLF07#2@97"DataModelVersionCompile build/Debug-iphonesimulator/Caritas.app/Caritas.momd Caritas.xcdatamodeld313177221#313177221#0(454"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld/Caritas.xcdatamodel:Event.tags: warning: Event.tags -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) /Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld/Caritas.xcdatamodel:Event.location: warning: Event.location -- relationship does not have an inverse 2(22@162"Event.tags -- to-many relationship does not have an inverse:  this is an advanced setting (no object can be in multiple destinations for a specific relationship) 313177221#18446744073709551615#0#0(6@93"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld/Caritas.xcdatamodel313174688#0#0#0#0#0"0(22@56"Event.location -- relationship does not have an inverse 313177221#18446744073709551615#0#0(6@93"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld/Caritas.xcdatamodel313174688#0#0#0#0#0"0(0#0#73"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld8637326112#434"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.6 "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas.xcdatamodeld" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas.momd"0#
+
+CGenerateDSYMFile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app.dSYM" "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas"
+s313177222.218306
+e313177222.288517
+r1
+xGenerateDSYMFile
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app.dSYM
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas
+lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/Caritas.app.dSYM build/Debug-iphonesimulator/Caritas.app/Caritas313177222#313177222#0(0"0(0#0#100"/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas8662818368#431"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas" -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app.dSYM"0#
+
+CLd "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas" normal i386
+s313177221.960461
+e313177222.218200
+r1
+xLd
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas
+xnormal
+xi386
+lSLF07#2@105"Link /Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas313177221#313177222#0(0"0(0#0#0"8647044960#1612"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk "-L/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" -filelist "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Objects-normal/i386/Caritas.LinkFileList" -mmacosx-version-min=10.6 -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20UICommon.a -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20.a -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20UINavigator.a -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20Core.a -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20UI.a -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20Network.a -force_load ../three20/Build/Products/Debug-iphonesimulator/libThree20Style.a -Xlinker -objc_abi_version -Xlinker 2 -framework QuartzCore -framework Foundation -framework UIKit -framework CoreGraphics -framework CoreData -framework CoreLocation -framework MapKit -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Caritas"0#
+
+CProcessInfoPlistFile "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Info.plist" Caritas-Info.plist
+s313177219.029145
+e313177219.056957
+r1
+xProcessInfoPlistFile
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Info.plist
+xCaritas-Info.plist
+lSLF07#2@26"Process Caritas-Info.plist313177219#313177219#0(0"0(0#0#71"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas-Info.plist8651232640#527"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Caritas-Info.plist -genpkginfo "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app/Info.plist"0#
+
+CProcessPCH /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch.gch Caritas_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s313177220.214251
+e313177221.332098
+r1
+xProcessPCH
+x/var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch.gch
+xCaritas_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Caritas_Prefix.pch313177220#313177221#0(0"0(0#0#71"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch8620649184#2002"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch" -o /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-bzdvpkajkguqyqawzbacmivbgjae/Caritas_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-cfpqhkbtgzccjfapkwaxqslurnup/Caritas_Prefix.pch.gch Caritas_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s313156592.061301
+e313156593.054625
+r1
+xProcessPCH
+x/var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-cfpqhkbtgzccjfapkwaxqslurnup/Caritas_Prefix.pch.gch
+xCaritas_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Caritas_Prefix.pch313156592#313156593#0(0"0(0#0#71"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch8663513376#2002"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch" -o /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-cfpqhkbtgzccjfapkwaxqslurnup/Caritas_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-hfrxqfuovnwccgdtayeobsfibnol/Caritas_Prefix.pch.gch Caritas_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s313159507.750973
+e313159508.757547
+r1
+xProcessPCH
+x/var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-hfrxqfuovnwccgdtayeobsfibnol/Caritas_Prefix.pch.gch
+xCaritas_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Caritas_Prefix.pch313159507#313159508#0(0"0(0#0#71"/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch8669890784#2002"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-generated-files.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-own-target-headers.hmap" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-all-target-headers.hmap" -iquote "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/Caritas-project-headers.hmap" "-F/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/include" -I../three20/Build/Products/three20 "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources/i386" "-I/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Caritas.build/Debug-iphonesimulator/Caritas.build/DerivedSources" -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/Caritas_Prefix.pch" -o /var/folders/S9/S9luJDdxGWSuj+KNzAPf2E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Caritas_Prefix-hfrxqfuovnwccgdtayeobsfibnol/Caritas_Prefix.pch.gch0#
+
+CTouch "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app"
+s313177222.288610
+e313177222.291925
+r1
+xTouch
+x/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app
+lSLF07#2@98"Touch /Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app313177222#313177222#0(0"0(0#0#0"8675588928#310"    cd "/Users/kurutepe/development/Fifteen Jugglers/Caritas"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/kurutepe/development/Fifteen Jugglers/Caritas/build/Debug-iphonesimulator/Caritas.app"0#
+

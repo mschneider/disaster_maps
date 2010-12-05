@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSManagedObjectModel_CurrentVersionName</key>
+	<string>Caritas</string>
+	<key>NSManagedObjectModel_VersionHashes</key>
+	<dict>
+		<key>Caritas</key>
+		<dict>
+			<key>Event</key>
+			<data>
+			smrziQaqbp7bhKRJOHYy5Ga/DBKbGYUTnCV0a13dgOA=
+			</data>
+			<key>Location</key>
+			<data>
+			jeOP38PdX6KR14gNECL9EvA9oc2V2fgeNDIFeP26nDs=
+			</data>
+			<key>Tag</key>
+			<data>
+			IWOrr53kUHQbqqDe5600uYhFxtQ5pU/cOhgUvJ90ya0=
+			</data>
+		</dict>
+	</dict>
+</dict>
+</plist>
