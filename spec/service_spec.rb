@@ -145,12 +145,15 @@ describe 'Service' do
   end
   
   describe 'POST /user_images/uploadedfire.png' do
-    it "should upload an image and save it to /user_iamges/uploadedfire.png" do
-      post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new('fixtures/image/fire.png','image/png')
-      fixture_md5 = Digest::MD5.hexdigest(File.read('fixtures/image/fire.png'))
-      upload_md5 = Digest::MD5.hexdigest(File.read("public/user_images/uploadedfire.png"))
+    it "should upload an image and save it to /user_images/uploadedfire.png" do
+      source_filename = 'public/markers/fire.png'
+      target_filename = 'public/user_images/uploadedfire.png'
+      post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new(source_filename,'image/png')
       last_response.should be_ok
+      fixture_md5 = Digest::MD5.hexdigest(File.read(source_filename))
+      upload_md5 = Digest::MD5.hexdigest(File.read(target_filename))
       upload_md5.should == fixture_md5
+      File.delete(target_filename)
     end
   end 
 end

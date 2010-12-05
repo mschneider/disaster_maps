@@ -127,11 +127,9 @@ namespace '/api/v1' do
 end
 
 post '/user_images/:filename' do
-  filename = File.join('public','user_images', params[:filename])
-  datafile = params[:data]
-# "#{datafile[:tempfile].inspect}\n"
+  filename = File.join(File.dirname(__FILE__), 'public', 'user_images', params[:filename])
   File.open(filename, 'wb') do |file|
-    file.write(datafile[:tempfile].read)
+    file.write(params[:data][:tempfile].read)
   end
 end
 
