@@ -1,6 +1,5 @@
 class Event
   include Mongoid::Document
-  field :title
   field :description
   field :created_at,  :type => Date
   field :updated_at,  :type => Date
@@ -10,6 +9,7 @@ class Event
   field :location, :type => Array
   index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
   
+  attr_protected :_id
   validates_presence_of :location
   validates_presence_of :tags
   
