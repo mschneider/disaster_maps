@@ -128,6 +128,7 @@ end
 
 get '/seed' do
   Event.destroy_all
+  return 'cleared all'
   e1 = Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
