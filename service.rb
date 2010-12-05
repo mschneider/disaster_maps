@@ -2,7 +2,6 @@ require 'yaml'
 require 'mongoid'
 require 'sinatra'
 require 'sinatra/namespace'
-require 'sinatra/cross_origin'
 require 'pusher'
 
 set :app_file, __FILE__
