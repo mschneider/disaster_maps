@@ -10,7 +10,7 @@ require 'pusher'
 
 set :app_file, __FILE__
 require File.expand_path('models/event', settings.root)
-require File.expand_path('config/confidentials', settings.root)
+#require File.expand_path('config/confidentials', settings.root)
 set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
 set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
@@ -123,6 +123,15 @@ namespace '/api/v1' do
     get do
       api_response_for_multiple :markers, Event.all_markers
     end
+  end
+end
+
+post '/user_images/:filename' do
+  filename = File.join('public','user_images', params[:filename])
+  datafile = params[:data]
+# "#{datafile[:tempfile].inspect}\n"
+  File.open(filename, 'wb') do |file|
+    file.write(datafile[:tempfile].read)
   end
 end
 
