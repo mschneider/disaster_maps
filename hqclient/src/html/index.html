@@ -58,12 +58,19 @@
 	   
        function addEventDataDialog(feature) {
            var element = feature.element;
+           var props = feature.data.properties;
+           var markerUrl = BASE_URL + props.marker;
+           var markerimage = po.svg("image");
+           markerimage.setAttribute("xlink:href", markerUrl);
+           markerimage.setAttribute("transform", element.getAttribute("transform"));
+           element.parentNode.appendChild(markerimage);
+           
            var qe = $(element);
            element.setAttribute("class", "eventLocation");
            console.log("data %o", feature.data);
-           var props = feature.data.properties;
+           
            var title = props.tags.join(", ");
-           var newNode = $("<div><img src=\"" + BASE_URL + props.marker + "\"/>" +  props.description + "</div>");
+           var newNode = $("<div><img src=\"" + markerUrl + "\"/>" +  props.description + "</div>");
            $("#content").append(newNode);
            
            newNode.dialog({ autoOpen: false, title: title })
