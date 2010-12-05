@@ -1,37 +1,28 @@
 class Event
   include Mongoid::Document
-  field :description
-  field :created_at,  :type => Date
-  field :updated_at,  :type => Date
-  field :occurred_at, :type => Date
+  
   field :tags, :type => Array
-  field :marker
   field :location, :type => Array
+  field :description
+  field :marker
+  
   index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
   
   attr_protected :_id
   validates_presence_of :location
   validates_presence_of :tags
-  
   after_save :rebuild_tags
   
-  def self.all_tags
+  @@files = Dir.glob("public/markers/*.{jpg,png,gif}")
+  @@files.each { |file| file['public/'] = '/' }
+  def self.all_markers() @@files; end
+      
+  def self.all_tags()
     tags = Mongoid.master.collection('tags')
     tags.find().to_a.map!{|item| { :name => item['_id'], :count => item['value'].to_i } }
   end
-  
-  def self.all_markers
-    @@files
-  end
-
-  @@files = Dir.glob("public/markers/*.{jpg,png,gif}")
-  @@files.each do |file|
-    file['public/'] = '/'
-  end
-  
-  protected
-  
-  def rebuild_tags
+    
+  def rebuild_tags()
     Event.collection.map_reduce(
       """function() {
         this.tags.forEach(function(tag){
