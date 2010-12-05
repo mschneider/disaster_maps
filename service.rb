@@ -20,7 +20,9 @@ helpers do
   end
 end
 
-#BSON::InvalidObjectId
+error BSON::InvalidObjectId do
+  error 404
+end
 
 namespace '/api/v1' do
   namespace '/events' do
@@ -40,11 +42,6 @@ namespace '/api/v1' do
       api_response_for_multiple :events, criteria.to_a
     end
   
-    # return event with given id
-    get '/:id' do
-      api_response_for :event, Event.find(params[:id])
-    end
-  
     # create event with given parameters
     post do
       param_hash = JSON.parse(request.body.read)
@@ -52,6 +49,12 @@ namespace '/api/v1' do
       error 400 unless event.valid?
       {:id => event._id.to_s}.to_json
     end
+      
+    # return event with given id
+    get '/:id' do
+      api_response_for :event, Event.find(params[:id])
+    end
+
   end
   
   namespace '/tags' do

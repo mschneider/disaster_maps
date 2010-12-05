@@ -23,20 +23,24 @@ describe 'Service' do
     it 'should return a 404 for an event that doesn\'t exist' do
       get '/api/v1/events/4cfa7d260f2abc14c5000002'
       last_response.status.should == 404
-      puts last_response.inspect
+    end
+    
+    it 'should return 404 for an invalid event id' do
+      get '/api/v1/events/1'
+      last_response.status.should == 404
     end
   end
 
   describe 'GET /api/v1/events' do
     it 'should return events within a valid radius' do
-      get '/api/v1/events?within_radius=[[0,0],1]'
-      
-    end
-
-    it 'should return 404 if there are no events within a given radius' do
       get '/api/v1/events?within_radius=[[73.1646,35.6842],5]'
       last_response.should be_ok
       JSON.parse(last_response.body).size.should > 0
+    end
+
+    it 'should return 404 if there are no events within a given radius' do
+      get '/api/v1/events?within_radius=[[0,0],1]'
+      last_response.status.should == 404
     end
 
     it 'should return events within a valid bbox' do
@@ -58,11 +62,8 @@ describe 'Service' do
 
     it 'should return a 404 if no event with the given tag is found' do
       get '/api/v1/events?tag=not_an_actual_tag'
-      last_response.should_not be_ok
+      last_response.status.should == 404
     end
-  end
-
-  describe 'GET /api/v1/tags/:tag/events' do
   end
   
   describe 'GET /api/v1/tags' do
