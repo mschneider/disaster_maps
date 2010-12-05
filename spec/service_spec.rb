@@ -49,11 +49,22 @@ describe 'Service' do
       JSON.parse(last_response.body).size.should > 0
     end
 
-    it 'should return 404 if no event inside the area is found' do
+    it 'should return 404 if no event inside the bbox area is found' do
       get '/api/v1/events?bbox=[[1,2],[3,4]]'
       last_response.status.should == 404
     end
     
+    it 'should return events within a valid blist' do
+      get '/api/v1/events?blist=[73.0646,35.6842,74.3033,36.2907]'
+      last_response.should be_ok
+      JSON.parse(last_response.body).size.should > 0
+    end
+
+    it 'should return 404 if no event inside the blist area is found' do
+      get '/api/v1/events?blist=[1,2,3,4]'
+      last_response.status.should == 404
+    end
+
     it 'should return events tagged with the given tag' do
       get '/api/v1/events?tag=bridge'
       last_response.should be_ok

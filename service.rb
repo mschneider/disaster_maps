@@ -35,11 +35,18 @@ namespace '/api/v1' do
     # return list of events
     get do
       criteria = Event.find(:all)
+      if params[:blist]
+        bounding_list = JSON.parse(params[:blist])
+        bounding_box = [[bounding_list[0], bounding_list[1]], [bounding_list[2], bounding_list[3]]]
+        criteria = criteria.where(:location.within => {"$box" => bounding_box})
+      end
       if params[:bbox]
-        criteria = criteria.where(:location.within => {"$box" => JSON.parse(params[:bbox])})
+        bounding_box = JSON.parse(params[:bbox])
+        criteria = criteria.where(:location.within => {"$box" => bounding_box})
       end
       if params[:within_radius]
-        criteria = criteria.where(:location.within => {"$center" => JSON.parse(params[:within_radius])})
+        center_and_radius = JSON.parse(params[:within_radius])
+        criteria = criteria.where(:location.within => {"$center" => center_and_radius})
       end
       if params[:tag]
         criteria = criteria.where(:tags => params[:tag])
