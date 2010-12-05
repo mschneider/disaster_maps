@@ -49,3 +49,10 @@ Only update those clients, which can view the Event.
 
 ## API Documentation
 
+### Example Calls
+
+`$ curl "http://localhost:9292/api/v1/events"      
+{"events":[{"_id":"4cfb57f006f6e6a699000001","description":"Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge","location":[73.3,36.2],"tags":["bridge","cut-off-supply-route"],"title":"Bridge collapsed"},{"_id":"4cfb57f006f6e6a699000002","description":"House belonging to Mr Karzai was completely destroyed, family homeless","location":[70.1,35.1],"tags":["house","destroyed"],"title":"House destroyed"}]}`
+
+`$ curl "http://localhost:9292/api/v1/tags"  
+{"tags":[{"name":"bridge","count":1},{"name":"cut-off-supply-route","count":1},{"name":"destroyed","count":1},{"name":"house","count":1}]}`
