@@ -8,6 +8,7 @@ API for sending data on events from the field
 
 #### 1: Meaningfull Marker Icons
 We need Marker Icons for Events like:
+
  * Construction
  * Water supply
  * Food supply
