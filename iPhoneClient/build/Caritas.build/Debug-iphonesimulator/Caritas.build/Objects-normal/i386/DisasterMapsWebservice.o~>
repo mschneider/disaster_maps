@@ -1,0 +1,5 @@
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/DisasterMapsWebservice.m: In function '-[DisasterMapsWebservice postEvent:]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/DisasterMapsWebservice.m:107: warning: incompatible Objective-C types initializing 'struct NSManagedObject *', expected 'struct Location *'
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/DisasterMapsWebservice.m: In function '-[DisasterMapsWebservice handlePostEventResponse:]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/DisasterMapsWebservice.m:211: warning: format not a string literal and no format arguments
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/Classes/DisasterMapsWebservice.m:213: warning: unused variable 'responseDict'

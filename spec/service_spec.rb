@@ -150,7 +150,10 @@ describe 'Service' do
   describe 'POST /user_images/filename.png' do
     it "should upload an image" do
       post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new('fixtures/image/fire.png','image/png')
+      fixture_md5 = Digest::MD5.hexdigest(File.read('fixtures/image/fire.png'))
+      upload_md5 = Digest::MD5.hexdigest(File.read("public/user_images/uploadedfire.png"))
       last_response.should be_ok
+      upload_md5.should == fixture_md5
     end
   end
 end

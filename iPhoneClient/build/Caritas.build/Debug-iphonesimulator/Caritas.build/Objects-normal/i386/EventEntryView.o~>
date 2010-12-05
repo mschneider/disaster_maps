@@ -1,0 +1,16 @@
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView viewDidLoad]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:34: warning: '-managedObjectContext' not found in protocol(s)
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView validateParameters]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:97: warning: control reaches end of non-void function
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView submitTapped:]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:107: warning: type 'id <UIApplicationDelegate>' does not conform to the 'CLLocationManagerDelegate' protocol
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:165: warning: 'CaritasAppDelegate' may not respond to '-postEvent:'
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:165: warning: (Messages without a matching method signature
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:165: warning: will be assumed to return 'id' and accept
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:165: warning: '...' as arguments.)
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView actionSheet:clickedButtonAtIndex:]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:204: warning: class 'EventEntryView' does not implement the 'UINavigationControllerDelegate' protocol
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:216: warning: class 'EventEntryView' does not implement the 'UINavigationControllerDelegate' protocol
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m: In function '-[EventEntryView textField:shouldChangeCharactersInRange:replacementString:]':
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:238: warning: '-search:' not found in protocol(s)
+/Users/kurutepe/development/Fifteen Jugglers/Caritas/EventEntryView.m:238: warning: no '-search:' method found
