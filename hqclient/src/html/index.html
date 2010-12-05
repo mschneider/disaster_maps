@@ -15,39 +15,92 @@
 	   <script type="text/javascript">
 	   var po = org.polymaps;
 	   var map;
+	   var BASE_URL_MAX = "http://192.168.1.54:9292/api/v1"
+	   var BASE_URL = BASE_URL_MAX;
+
+       var data1 = {
+ 	       "events": {
+    	       "features": [
+	                { "type": "Feature",
+	                "geometry": {"type": "Point", "coordinates": [13.21, 52.55]},
+	                "properties": {"text": "Some Information", "tags": ["berlin", "rhok"]}
+	                }
+                ]
+             },
+           "tags": {
+                 "recent": ["rhok", "berlin", "disaster"],
+                 "popular": ["beta"]
+           }
+       }
+       var data2 = {
+               "events": {
+                   "features": [
+                        { "type": "Feature",
+                        "geometry": {"type": "Point", "coordinates": [13.21, 52.55]},
+                        "properties": {"text": "Some Information", "tags": ["berlin", "rhok"]}
+                        },
+                        { "type": "Feature",
+                            "geometry": {"type": "Point", "coordinates": [14.21, 51.55]},
+                            "properties": {"text": "Some more Information", "tags": ["berlin", "rhok2"]}
+                            }
+                    ]
+                 },
+               "tags": {
+                     "recent": ["rhok", "berlin", "disaster"],
+                     "popular": ["beta"]
+               }
+           }
 	   
+       function addEventDataDialog(feature) {
+           var element = feature.element;
+           var qe = $(element);
+           element.setAttribute("class", "eventLocation");
+           var title = feature.data.properties.tags.join(", ");
+           var newNode = $("<div>" + feature.data.properties.text + "</div>");
+           $("#content").append(newNode);
+           newNode.dialog({ autoOpen: false, title: title })
+           qe.click(function() {newNode.dialog('open')});
+       }
+       
+       function putEventsOnMap(e) {
+           for (var i = 0; i < e.features.length; i++) {
+             var feature = e.features[i];
+             addEventDataDialog(feature);
+           }
+       }
+
+       function receiveData(evt) {
+               var data = evt.data;
+               if (data.type == 'tags') {
+                   // update the tags nodes
+                   
+               } else if (data.type == 'events' ) {
+                   // update the events layer
+               }
+                
+       }
+
+       function setUpWebSockets() {
+           function debug(str){ $("#debug").append("<p>"+str+"</p>"); };
+           if (window["WebSocket"]) {           
+	           var ws = new WebSocket("ws://yourservice.com/websocket");
+	           ws.onmessage = receiveData;
+	           ws.onclose = function() { debug("socket closed"); };
+	           ws.onopen = function() {
+	             debug("connected...");
+	             ws.send("hello server");
+	           };
+           }
+       } 
 	   $(document).ready(function() {
 		   
-		   var data = { "type": "FeatureCollection",
-			   "features": [
-			       { "type": "Feature",
-			       "geometry": {"type": "Point", "coordinates": [13.21, 52.55]},
-			       "properties": {"text": "Some Information", "tags": ["berlin", "rhok"]}
-			       }
-			      ]
-			    }
-		   function attachTextData(feature) {
-               var element = feature.element;
-               var qe = $(element);
-               element.setAttribute("class", "eventLocation");
-               var title = feature.data.properties.tags.join(", ");
-               var newNode = $("<div>" + feature.data.properties.text + "</div>");
-               $("#content").append(newNode);
-               newNode.dialog({ autoOpen: false, title: title })
-               qe.click(function() {newNode.dialog('open')});
-		   }
-		   
-		   function load(e) {
-			   for (var i = 0; i < e.features.length; i++) {
-			     var feature = e.features[i];
-			     attachTextData(feature);
-			   }
-			 }
 			 
 		    map = po.map()
 			    .container(document.getElementById("map").appendChild(po.svg("svg")))
 			    .add(po.interact())
 			    .add(po.hash());
+            map.center({lat: 52.552, lon: 13.215})
+            .zoom(4);
 		
 			map.add(po.image()
 			    .url(po.url("http://{S}tile.cloudmade.com"
@@ -55,11 +108,14 @@
 			    + "/998/256/{Z}/{X}/{Y}.png")
 			    .hosts(["a.", "b.", "c.", ""])));
 
-		    map.add(po.geoJson().id("eventlayer").features(data.features).on("load", load));
+            map.add(po.geoJson()
+                    .id("eventlayer")
+                    .url(po.url(BASE_URL + "/events"))
+                    /*.on("load", putEventsOnMap)*/);
 		    
 			map.add(po.compass().pan("none"));
-			map.center({lat: 52.552, lon: 13.215})
-			   .zoom(4);
+			   
+			setUpWebSockets();
 	   });
 	   
 	   </script>
@@ -85,6 +141,7 @@
 		   </div>
 		   <div id="content">
 	           <div id="map"></div>
+	           <div id="debug"></div>
 		   </div>
 		   <div id="footer"></div>
 	   </div>

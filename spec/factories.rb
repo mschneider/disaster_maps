@@ -15,3 +15,11 @@ Factory.define :event do |e|
   e.location    [73.3, 36.2]
   e.tags        %w(bridge cut-off-supply-route)
 end
+
+
+Factory.define :another_event, :class => Event do |e|
+  e.title       'Bridge rebuild'
+  e.description 'Villiage of Balti, Near Gligit is conntected agaion to the supply route'
+  e.location    [73.3, 36.2]
+  e.tags        %w(bridge construction)
+end

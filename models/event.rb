@@ -8,4 +8,35 @@ class Event
   field :tags, :type => Array
   field :location, :type => Array
   index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
+  
+  validates_presence_of :title
+  validates_presence_of :location
+  
+  after_save :rebuild_tags
+  
+  def self.all_tags
+    tags = Mongoid.master.collection('tags')
+    tags.find().to_a.map!{|item| { :name => item['_id'], :count => item['value'].to_i } }
+  end
+  
+  protected
+  
+  def rebuild_tags
+    Event.collection.map_reduce(
+      """function() {
+        this.tags.forEach(function(tag){
+            emit(tag, 1);
+        });
+      }""",
+      """function(key, values) {
+        var count = 0;
+        values.forEach(function(value){
+          count += value;
+        });
+        return count;
+      }""",
+      # this behves like a materialzed view
+      { :out => 'tags'}
+    )
+  end
 end

@@ -24,9 +24,8 @@
 body.spatialbrowser {
   height: 100%;
   background-color: #ddd;
-  background-color: #1a82f7;
-  background: -moz-linear-gradient(100% 100% 90deg, #f79F18, #E78F08);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
+  background: -moz-linear-gradient(100% 100% 90deg, #999, #ddd);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#ddd));
   
   #container {
     @include box-shadow;
@@ -40,6 +39,7 @@ body.spatialbrowser {
   }
   h1, h2, h3, h4, h5, h6 {
      @include text-shadow;
+     color: #E78F08;
   }
 
   #header {
