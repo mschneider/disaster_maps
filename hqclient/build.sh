@@ -30,7 +30,9 @@ cp $POLYMAPS_BASEDIR/polymaps.js $TARGET/js/lib/
 cp $JQUERY_UI_BASEDIR/js/jquery-ui-1.8.6.custom.min.js $TARGET/js/lib/
 
 # 'compile' css
-compass compile --sass-dir src/sass/ --images-dir src/img/ --javascripts-dir src/js/ --css-dir target/css/
+compass compile --sass-dir src/sass/ --images-dir src/img/ --javascripts-dir src/js/ --css-dir $TARGET/css/
 
 # 3rdparty css
+[ -d "$TARGET/css/ui-lightness/" ] || mkdir -p $TARGET/css/ui-lightness/
+
 rsync -a --delete $JQUERY_UI_BASEDIR/css/ui-lightness/ $TARGET/css/ui-lightness/

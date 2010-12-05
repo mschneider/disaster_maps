@@ -10,8 +10,8 @@ class Event
   field :location, :type => Array
   index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
   
-  validates_presence_of :title
   validates_presence_of :location
+  validates_presence_of :tags
   
   after_save :rebuild_tags
   

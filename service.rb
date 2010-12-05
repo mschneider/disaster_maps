@@ -102,7 +102,7 @@ namespace '/api/v1' do
       param_hash = JSON.parse(request.body.read)
       event = Event.create(param_hash)
       error 400 unless event.valid?
-      Pusher['channel_test'].trigger('create', api_response_for(:event, event))
+      Pusher['test_channel'].trigger('create', api_response_for(:event, event, geojson=true))
       {:id => event._id.to_s}.to_json
     end
       
@@ -156,11 +156,13 @@ get '/seed' do
     'title' => 'House destroyed',
     'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
     'location' => [13.412151,52.503002],
+    'marker' => '/markers/explosion.png',
     'tags' => %w(house destroyed)
   })
   Event.create({
     'title' => 'Bridge collapsed',
     'description' => 'Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge',
+    'marker' => '/markers/flood.png',
     'location' => [13.417,52.50400],
     'tags' => %w(house destroyed)
   })

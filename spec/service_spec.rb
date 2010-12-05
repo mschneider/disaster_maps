@@ -114,13 +114,13 @@ describe 'Service' do
       new_event.should_not be_nil
     end
     
-    it 'should return 400 if the event has no title' do
+    it 'should return 400 if the event has no tags' do
       post '/api/v1/events', {'location' => [73.2, 36.2]}.to_json
       last_response.status.should == 400
     end
     
     it 'should return 400 if the event has no location' do
-      post '/api/v1/events', {'title' => 'House destroyed'}.to_json
+      post '/api/v1/events', {'tags' => %w(House destroyed)}.to_json
       last_response.status.should == 400
     end
     
