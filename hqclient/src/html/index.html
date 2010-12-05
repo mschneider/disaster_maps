@@ -15,12 +15,12 @@
 	   <script type="text/javascript">
 	   var po = org.polymaps;
 	   var map;
-	   var BASE_URL_MAX = "http://192.168.1.54:9292/api/v1"
-	   var BASE_URL_SAB = "http://192.168.1.63:9292/api/v1"
+	   var BASE_URL_MAX = "http://192.168.1.54:9292"
+	   var BASE_URL_SAB = "http://192.168.1.63:9292"
 	   var BASE_URL = BASE_URL_SAB;
 
-	   var EVENTS_URL = BASE_URL + "/events?blist={B}&geojson=true";
-	   var TAGS_URL = BASE_URL + "/tags";
+	   var EVENTS_URL = BASE_URL + "/api/v1/events?blist={B}&geojson=true";
+	   var TAGS_URL = BASE_URL + "/api/v1/tags";
 	   //var EVENTS_URL = BASE_URL_M + "/events?blist=[{B}]";
 	   
        var data1 = {
@@ -60,11 +60,12 @@
            var element = feature.element;
            var qe = $(element);
            element.setAttribute("class", "eventLocation");
-           //console.log("data %o", feature.data);
+           console.log("data %o", feature.data);
            var props = feature.data.properties;
            var title = props.tags.join(", ");
-           var newNode = $("<div>" + props.description + "</div>");
+           var newNode = $("<div><img src=\"" + BASE_URL + props.marker + "\"/>" +  props.description + "</div>");
            $("#content").append(newNode);
+           
            newNode.dialog({ autoOpen: false, title: title })
            qe.click(function() {newNode.dialog('open')});
        }
