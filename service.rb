@@ -1,10 +1,12 @@
 require 'yaml'
 require 'mongoid'
-require './models/event'
 require 'sinatra'
 require 'sinatra/namespace'
+require 'pusher'
 
 set :app_file, __FILE__
+require File.expand_path('models/event', settings.root)
+require File.expand_path('config/confidentials', settings.root)
 set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
 set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
 Mongoid.configure { |c| c.from_hash(settings.db_config) }
