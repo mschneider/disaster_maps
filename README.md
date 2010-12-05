@@ -8,11 +8,11 @@ API for sending data on events from the field
 
 #### 1: Meaningfull Marker Icons
 We need Marker Icons for Events like:
-* Construction
-* Water supply
-* Food supply
-* Destruction
-* anything else you can come up with
+ * Construction
+ * Water supply
+ * Food supply
+ * Destruction
+ * anything else you can come up with
 place them into /public/marker/
 
 #### 1: Marker index
