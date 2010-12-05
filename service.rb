@@ -2,6 +2,7 @@ require 'yaml'
 require 'mongoid'
 require 'sinatra'
 require 'sinatra/namespace'
+require 'sinatra/cross_origin'
 require 'pusher'
 
 set :app_file, __FILE__
@@ -24,6 +25,10 @@ end
 
 error BSON::InvalidObjectId do
   error 404
+end
+
+before do
+  headers['Access-Control-Allow-Origin'] = '*'
 end
 
 namespace '/api/v1' do
@@ -91,3 +96,5 @@ get '/seed' do
 end
 
 get('/') { 'Hello world!' }
+
+set :public, File.dirname(__FILE__) + '/hqclient/target'
