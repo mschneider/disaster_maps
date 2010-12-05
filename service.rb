@@ -60,6 +60,7 @@ namespace '/api/v1' do
       param_hash = JSON.parse(request.body.read)
       event = Event.create(param_hash)
       error 400 unless event.valid?
+      Pusher['channel_test'].trigger('create', api_response_for(:event, event))
       {:id => event._id.to_s}.to_json
     end
       
