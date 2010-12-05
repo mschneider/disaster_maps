@@ -9,17 +9,19 @@ describe 'Service' do
 
   before(:each) do
     Event.destroy_all
-    @event = Factory.create(:event)
+    @explosion_event = Factory.create(:explosion_event)
   end
 
   describe 'GET /api/v1/events/:id' do
     it 'should return event by id' do
-      get "/api/v1/events/#{@event._id.to_s}"
+      get "/api/v1/events/#{@explosion_event._id.to_s}"
       last_response.should be_ok
-      attributes = JSON.parse(last_response.body)['event']
-      attributes['title'].should == @event.title
+      response_attributes = JSON.parse(last_response.body)['event']
+      attributes = @explosion_event.attributes
+      attributes[:_id] = attributes[:_id].to_s
+      response_attributes.should == attributes
     end
-
+  
     it 'should return a 404 for an event that doesn\'t exist' do
       get '/api/v1/events/4cfa7d260f2abc14c5000002'
       last_response.status.should == 404
@@ -30,12 +32,7 @@ describe 'Service' do
       last_response.status.should == 404
     end
   end
-
-  describe 'GET /api/v1/events*?geojson=true' do
-    it 'should return events as geojson'
-    it 'should return a single event as geojson'
-  end
-
+  
   describe 'GET /api/v1/events' do
     it 'should return events within a valid radius' do
       get '/api/v1/events?within_radius=[[73.1646,35.6842],5]'
@@ -85,7 +82,7 @@ describe 'Service' do
   describe 'GET /api/v1/tags' do
     
     before(:each) do
-      @another_event = Factory.create(:another_event)
+      Factory.create(:construction_event)
     end
     
     it 'should return all tags' do
@@ -95,20 +92,20 @@ describe 'Service' do
       counts.should == [
         { 'name' => 'bridge',               'count' => 2},
         { 'name' => 'construction',         'count' => 1},
-        { 'name' => 'cut-off-supply-route', 'count' => 1}
+        { 'name' => 'cut-off-supply-route', 'count' => 1},
+        { 'name' => 'explosion',            'count' => 1}
       ]
     end
   end
 
   describe 'POST /api/v1/events' do
-    it 'should create an event and read it afterwards' do
-      parameter_hash =  {
-        'title' => 'House destroyed',
-        'description' => 'House belonging to Mr Karzai was completely destroyed, family homeless',
-        'location' => [73.2, 36.2],
-        'tags' => %w(homeless bridge cut-off-supply-route)
-      }
-      post '/api/v1/events', parameter_hash.to_json
+    
+    before(:each) do
+      @construction_attributes = Factory.attributes_for(:construction_event)
+    end
+    
+    it 'should create an event and return its id' do
+      post '/api/v1/events', @construction_attributes.to_json
       last_response.should be_ok
       new_event = Event.find(JSON.parse(last_response.body)['id'])
       new_event.should_not be_nil
@@ -147,13 +144,13 @@ describe 'Service' do
     end
   end
   
-  describe 'POST /user_images/filename.png' do
-    it "should upload an image" do
+  describe 'POST /user_images/uploadedfire.png' do
+    it "should upload an image and save it to /user_iamges/uploadedfire.png" do
       post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new('fixtures/image/fire.png','image/png')
       fixture_md5 = Digest::MD5.hexdigest(File.read('fixtures/image/fire.png'))
       upload_md5 = Digest::MD5.hexdigest(File.read("public/user_images/uploadedfire.png"))
       last_response.should be_ok
       upload_md5.should == fixture_md5
     end
-  end
+  end 
 end
