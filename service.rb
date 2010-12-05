@@ -3,6 +3,11 @@ require 'mongoid'
 require './models/event'
 require 'sinatra'
 require 'sinatra/namespace'
+require 'sinatra/cross_origin'
+
+before do
+  headers['Access-Control-Allow-Origin'] = '*'
+end
 
 set :app_file, __FILE__
 set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
@@ -82,3 +87,5 @@ get '/seed' do
 end
 
 get('/') { 'Hello world!' }
+
+set :public, File.dirname(__FILE__) + '/hqclient/target'
