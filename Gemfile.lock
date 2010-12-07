@@ -16,7 +16,6 @@ GEM
     diff-lcs (1.1.2)
     eventmachine (0.12.10)
     factory_girl (1.3.2)
-    faker (0.3.1)
     fuubar (0.0.2)
       rspec (~> 2.0)
       rspec-instafail (~> 0.1.4)
@@ -33,8 +32,6 @@ GEM
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
     mime-types (1.16)
-    mocha (0.9.10)
-      rake
     mongo (1.1.4)
       bson (>= 1.1.1)
     mongoid (2.0.0.beta.20)
@@ -86,10 +83,8 @@ PLATFORMS
 DEPENDENCIES
   compass
   factory_girl
-  faker
   fuubar
   heroku
-  mocha
   mongoid (= 2.0.0.beta.20)
   pusher
   rack-test
