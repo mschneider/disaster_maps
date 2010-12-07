@@ -16,7 +16,7 @@
 	   var po = org.polymaps;
 	   var map;
 	   var BASE_URL_MAX = "http://192.168.1.54:9292"
-	   var BASE_URL_SAB = "http://192.168.1.63:9292"
+	   var BASE_URL_SAB = "http://192.168.1.110:9292"
 	   var BASE_URL = BASE_URL_SAB;
 
 	   var EVENTS_URL = BASE_URL + "/api/v1/events?blist={B}&geojson=true";
@@ -110,7 +110,7 @@
        } 
        function setUpPusher() {
            //console.log('setup');
-           var pusher = new Pusher('146c7a4550ea415df4d4');
+           var pusher = new Pusher('ece312c4ae52c34ac2f6');
            var myChannel = pusher.subscribe('test_channel');
            myChannel.bind('create', function(event) {
                if (window['console']){

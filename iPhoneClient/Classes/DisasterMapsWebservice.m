@@ -10,7 +10,7 @@
 
 
 static DisasterMapsWebservice *sharedInstance = nil;
-static NSString * serviceHost = @"http://192.168.1.63:9292";
+static NSString * serviceHost = @"http://192.168.1.110:9292";
 
 @implementation DisasterMapsWebservice
 
