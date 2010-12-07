@@ -6,28 +6,50 @@ API for sending data on events from the field
 
 ### Markers
 
-#### 1: Marker validation
-Marker string should probably be validated to be without invalid chars like " or brackets in it.
+#### Marker validation
+Marker string should probably be validated to not include invalid chars like " or brackets in it.
 
 ### Image upload
 
-#### 3: Image upload
-Images need to be attached to an event and stored in db instead of public folder.
+#### Image upload to MongoDB
+Images need to be attached to an event and stored in db instead of the public folder.
 Image upload is currently a stupid http post.
 Images should be possible to upload via iphone.
 An Event should have many Images.
 
 ### Updating Events
 
-#### 2: Update API
+#### Update API
 Events should be updatable via the API.
 Updated events should be queued to the push-service.
 
-#### optional 5: differential Push Service
+#### optional: differential Push Service
 Record the updated values on POST.
 Invent a nice protocol.
 Clients register to the push service with a certain view rectangle.
 Only update those clients, which can view the Event.
+
+### Filtering Events
+
+#### Filtering by multiple Tags at the same time
+We should support filtering by tags using and/or/not to connect tags to an algebra-style expression.
+The syntax should be easy to use.
+Ideally the user doesn't need to know the syntax and just inputs a series of tags separated by spaces and eventually prefixed with a dash.
+Example Usage:
+`tag1 tag2 -tag3` should translate to (tag1 or tag2) and (not tag3).
+
+### Event Desriptions
+
+#### Markup in Event descriptions
+Event descriptions should be possible to be formatted by the HQ.
+At the same Time it should be possible to display only the essential informations.
+Maybe something like Event embeds Document which has Title and Description.
+
+#### PDF Export or similar
+Parts or Collections of Events should be able to be exported as a complete report.
+
+#### optional: Link with spreadsheats
+Eg. total project costs associated with specific sites in the map, potentially sums for costs created by specific project categories or partner organizations.
 
 ## API Documentation
 
