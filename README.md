@@ -47,10 +47,9 @@ Eg. total project costs associated with specific sites in the map, potentially s
 
 - `GET /api/v1/events/:id` Returns the Event with the given `id` as JSON.
 - `GET /api/v1/events` Returns all Events as JSON array. You can specify filters via the GET-parameters. Available filters are: `tag`, `blist`, `bbox` and `within_radius`.
-- `GET /api/v1/photos/$` Returns the photo with the given id.
+- `GET /api/v1/photos/:id` Returns the photo with the given `id`.
 - `GET /api/v1/markers` Returns all available markers as JSON array.
 - `GET /api/v1/tags` Returns all tags with their occurrence count as JSON array.
-
 - `POST /api/v1/events` Creates a new event based on the JSON supplied in the request body. Returns the id wrapped in JSON.
 - `POST /api/v1/events/:id/photos` Creates a new photo for the Event with the given `id` based on the JSON supplied in the request body. Returns the photo's id wrapped in JSON.
 
