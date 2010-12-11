@@ -56,48 +56,48 @@ Eg. total project costs associated with specific sites in the map, potentially s
 
 ### Example Calls
 
-  $ curl "http://localhost:9292/api/v1/events"
-  {"events":[
-    { "location":[73.3,36.2],
+    $ curl "http://localhost:9292/api/v1/events"
+    {"events":[
+      { "location":[73.3,36.2],
+        "photos":[],
+        "_id":"4d03d2d40cefed8655000001",
+        "marker":"/markers/explosion.png",
+        "tags":["bridge","explosion","cut-off-supply-route"],
+        "description":"Village of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge"
+      },
+      { "location":[73.3,36.2],
+        "photos":[],
+        "_id":"4d03d2d40cefed8655000002",
+        "marker":"/markers/flood.png",
+        "tags":["bridge","construction"],
+        "description":"Villiage of Balti, Near Gligit is conntected agaion to the supply route"
+      }
+    ]}
+  
+    $ curl "http://localhost:9292/api/v1/events/4d03d2d40cefed8655000001"
+    {"event":{
+      "location":[73.3,36.2],
       "photos":[],
       "_id":"4d03d2d40cefed8655000001",
       "marker":"/markers/explosion.png",
       "tags":["bridge","explosion","cut-off-supply-route"],
       "description":"Village of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge"
-    },
-    { "location":[73.3,36.2],
-      "photos":[],
-      "_id":"4d03d2d40cefed8655000002",
-      "marker":"/markers/flood.png",
-      "tags":["bridge","construction"],
-      "description":"Villiage of Balti, Near Gligit is conntected agaion to the supply route"
-    }
-  ]}
-  
-  $ curl "http://localhost:9292/api/v1/events/4d03d2d40cefed8655000001"
-  {"event":{
-    "location":[73.3,36.2],
-    "photos":[],
-    "_id":"4d03d2d40cefed8655000001",
-    "marker":"/markers/explosion.png",
-    "tags":["bridge","explosion","cut-off-supply-route"],
-    "description":"Village of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge"
-  }}
+    }}
 
-  $ curl "http://localhost:9292/api/v1/tags"
-  {"tags":[
-    {"name":"bridge","count":2},
-    {"name":"construction","count":1},
-    {"name":"cut-off-supply-route","count":1},
-    {"name":"explosion","count":1}
-  ]}
+    $ curl "http://localhost:9292/api/v1/tags"
+    {"tags":[
+      {"name":"bridge","count":2},
+      {"name":"construction","count":1},
+      {"name":"cut-off-supply-route","count":1},
+      {"name":"explosion","count":1}
+    ]}
   
-  $ curl "http://localhost:9292/api/v1/markers"
-  {"markers":[
-    "/markers/accident.png","/markers/bomb.png","/markers/explosion.png",
-    "/markers/fire.png","/markers/flood.png","/markers/planecrash.png",
-    "/markers/radiation.png","/markers/revolution.png","/markers/strike.png"
-  ]}
+    $ curl "http://localhost:9292/api/v1/markers"
+    {"markers":[
+      "/markers/accident.png","/markers/bomb.png","/markers/explosion.png",
+      "/markers/fire.png","/markers/flood.png","/markers/planecrash.png",
+      "/markers/radiation.png","/markers/revolution.png","/markers/strike.png"
+    ]}
 
 ## Attribution
 
