@@ -125,10 +125,10 @@ describe 'Service' do
       last_response.status.should == 400
     end
     
-    # it 'should return 400 if the event has invalid attributes' do
-    #   post '/api/v1/events', @construction_attributes.merge('invalid_key' => 'value').to_json
-    #   last_response.status.should == 400
-    # end
+    it 'should return 400 if the event has invalid attributes' do
+      post '/api/v1/events', @construction_attributes.merge('invalid_key' => 'value').to_json
+      last_response.status.should == 400
+    end
   end
   
   describe 'POST /api/v1/events/:id/photos' do

@@ -106,7 +106,11 @@ namespace '/api/v1' do
     # create event with given parameters
     post do
       param_hash = JSON.parse(request.body.read)
-      event = Event.create(param_hash)
+      begin #workaround for mongoid madness
+        event = Event.create(param_hash)
+      rescue NoMethodError
+        error 400
+      end
       error 400 unless event.valid?
       Pusher['test_channel'].trigger('create', api_response_for(:event, event, geojson=true))
       {:id => event._id.to_s}.to_json
