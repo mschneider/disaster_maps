@@ -37,7 +37,7 @@ describe 'Service' do
     it 'should return events within a valid radius' do
       get '/api/v1/events?within_radius=[[73.1646,35.6842],5]'
       last_response.should be_ok
-      JSON.parse(last_response.body).size.should > 0
+      JSON.parse(last_response.body)['events'].size.should > 0
     end
 
     it 'should return 404 if there are no events within a given radius' do
@@ -48,7 +48,7 @@ describe 'Service' do
     it 'should return events within a valid bbox' do
       get '/api/v1/events?bbox=[[73.0646,35.6842],[74.3033,36.2907]]'
       last_response.should be_ok
-      JSON.parse(last_response.body).size.should > 0
+      JSON.parse(last_response.body)['events'].size.should > 0
     end
 
     it 'should return 404 if no event inside the bbox area is found' do
@@ -59,7 +59,7 @@ describe 'Service' do
     it 'should return events within a valid blist' do
       get '/api/v1/events?blist=35.6842,73.0646,36.2907,74.3033'
       last_response.should be_ok
-      JSON.parse(last_response.body).size.should > 0
+      JSON.parse(last_response.body)['events'].size.should > 0
     end
 
     it 'should return 404 if no event inside the blist area is found' do
@@ -142,7 +142,9 @@ describe 'Service' do
       new_photo_id = JSON.parse(last_response.body)['id']
 
       # the event should habe the photo assigned to it
-      
+      get "/api/v1/events/#{@explosion_event._id}"
+      event = JSON.parse(last_response.body)['event']
+      event['photos'].should include new_photo_id
 
       # there should be a new photo with the given id
       get "/api/v1/photos/#{new_photo_id}"
@@ -158,7 +160,7 @@ describe 'Service' do
     it 'should return list of markers' do
       get '/api/v1/markers'
       last_response.should be_ok
-      markers = JSON.parse(last_response.body)
+      markers = JSON.parse(last_response.body)['markers']
       markers.should_not be_nil
       markers.size.should > 0
     end

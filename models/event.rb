@@ -5,6 +5,7 @@ class Event
   field :location, :type => Array
   field :description
   field :marker
+  field :photos, :type => Array
   
   index [[ :location, Mongo::GEO2D ]], :min => 200, :max => 200
   

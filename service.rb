@@ -123,8 +123,11 @@ namespace '/api/v1' do
     
     namespace '/:id/photos' do
       post do
-        id = settings.gridfs.put(params[:file][:tempfile], :filename => params[:caption])
-        {:id => id.to_s}.to_json
+        photo_id = settings.gridfs.put(params[:file][:tempfile], :filename => params[:caption]).to_s
+        event = Event.find(params[:id])
+        event.photos << photo_id
+        error 400 unless event.save
+        {:id => photo_id}.to_json
       end
     end
   end
