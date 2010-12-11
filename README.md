@@ -45,27 +45,68 @@ Eg. total project costs associated with specific sites in the map, potentially s
 
 ## API Documentation
 
-- `GET /api/v1/event/$` returns the event with the given id
-- `GET /api/v1/events` returns all events as json array. you can specify filters via the GET-parameters `tag`, `bbox` and `within_radius`.
-- `GET /api/v1/markers` returns all available markers as json array
-- `GET /api/v1/tags` returns all tags with their occurrence count as json array
+- `GET /api/v1/events/:id` Returns the Event with the given `id` as JSON.
+- `GET /api/v1/events` Returns all Events as JSON array. You can specify filters via the GET-parameters. Available filters are: `tag`, `blist`, `bbox` and `within_radius`.
+- `GET /api/v1/photos/$` Returns the photo with the given id.
+- `GET /api/v1/markers` Returns all available markers as JSON array.
+- `GET /api/v1/tags` Returns all tags with their occurrence count as JSON array.
+
+- `POST /api/v1/events` Creates a new event based on the JSON supplied in the request body. Returns the id wrapped in JSON.
+- `POST /api/v1/events/:id/photos` Creates a new photo for the Event with the given `id` based on the JSON supplied in the request body. Returns the photo's id wrapped in JSON.
 
 ### Example Calls
 
-`$ curl "http://localhost:9292/api/v1/events"
-{"events":[{"_id":"4cfb57f006f6e6a699000001","description":"Villiage of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge","location":[73.3,36.2],"tags":["bridge","cut-off-supply-route"],"title":"Bridge collapsed"},{"_id":"4cfb57f006f6e6a699000002","description":"House belonging to Mr Karzai was completely destroyed, family homeless","location":[70.1,35.1],"tags":["house","destroyed"],"title":"House destroyed"}]}`
+  $ curl "http://localhost:9292/api/v1/events"
+  {"events":[
+    { "location":[73.3,36.2],
+      "photos":[],
+      "_id":"4d03d2d40cefed8655000001",
+      "marker":"/markers/explosion.png",
+      "tags":["bridge","explosion","cut-off-supply-route"],
+      "description":"Village of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge"
+    },
+    { "location":[73.3,36.2],
+      "photos":[],
+      "_id":"4d03d2d40cefed8655000002",
+      "marker":"/markers/flood.png",
+      "tags":["bridge","construction"],
+      "description":"Villiage of Balti, Near Gligit is conntected agaion to the supply route"
+    }
+  ]}
+  
+  $ curl "http://localhost:9292/api/v1/events/4d03d2d40cefed8655000001"
+  {"event":{
+    "location":[73.3,36.2],
+    "photos":[],
+    "_id":"4d03d2d40cefed8655000001",
+    "marker":"/markers/explosion.png",
+    "tags":["bridge","explosion","cut-off-supply-route"],
+    "description":"Village of Balti, Near Gligit is cut off from the supply route due to the collapsed bridge"
+  }}
 
-`$ curl "http://localhost:9292/api/v1/tags"
-{"tags":[{"name":"bridge","count":1},{"name":"cut-off-supply-route","count":1},{"name":"destroyed","count":1},{"name":"house","count":1}]}`
+  $ curl "http://localhost:9292/api/v1/tags"
+  {"tags":[
+    {"name":"bridge","count":2},
+    {"name":"construction","count":1},
+    {"name":"cut-off-supply-route","count":1},
+    {"name":"explosion","count":1}
+  ]}
+  
+  $ curl "http://localhost:9292/api/v1/markers"
+  {"markers":[
+    "/markers/accident.png","/markers/bomb.png","/markers/explosion.png",
+    "/markers/fire.png","/markers/flood.png","/markers/planecrash.png",
+    "/markers/radiation.png","/markers/revolution.png","/markers/strike.png"
+  ]}
 
 ## Attribution
 
 Maps Icons are cc-by-sa by Nicolas Mollet: http://code.google.com/p/google-maps-icons/
 
 ## Team
-    Derjoo http://twitter.com/derjoo
-    Engin Kurutepe http://fifteenjugglers.com
-    Florian Holzhauer http://fholzhauer.de
-    Klas Kalass http://freiheit.com
-    Max Schneider http://twitter.com/m_schneider
-    Shoaib Burq http://geospatial.nomad-labs.com
+Derjoo http://twitter.com/derjoo
+Engin Kurutepe http://fifteenjugglers.com
+Florian Holzhauer http://fholzhauer.de
+Klas Kalass http://freiheit.com
+Max Schneider http://twitter.com/m_schneider
+Shoaib Burq http://geospatial.nomad-labs.com
