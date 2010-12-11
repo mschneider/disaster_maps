@@ -108,7 +108,10 @@ describe 'Service' do
       Pusher['test_channel'].stub(:trigger)
       post '/api/v1/events', @construction_attributes.to_json
       last_response.should be_ok
-      new_event = Event.find(JSON.parse(last_response.body)['id'])
+      
+      # there should be a new event with the given id
+      get "api/v1/events/#{JSON.parse(last_response.body)['id']}"
+      new_event = last_response.body
       new_event.should_not be_nil
     end
     
@@ -137,6 +140,11 @@ describe 'Service' do
       }
       last_response.should be_ok
       new_photo_id = JSON.parse(last_response.body)['id']
+
+      # the event should habe the photo assigned to it
+      
+
+      # there should be a new photo with the given id
       get "/api/v1/photos/#{new_photo_id}"
       last_response.should be_ok
       source_md5 = Digest::MD5.hexdigest(File.read(source_filename))
