@@ -7,7 +7,7 @@ describe 'Service' do
     @app ||= Sinatra::Application
   end
 
-  before(:each) do
+  before :each do
     Event.destroy_all
     @explosion_event = Factory.create(:explosion_event)
   end
@@ -81,7 +81,7 @@ describe 'Service' do
   
   describe 'GET /api/v1/tags' do
     
-    before(:each) do
+    before :each do
       Factory.create(:construction_event)
     end
     
@@ -100,11 +100,12 @@ describe 'Service' do
 
   describe 'POST /api/v1/events' do
     
-    before(:each) do
+    before :each do
       @construction_attributes = Factory.attributes_for(:construction_event)
     end
     
     it 'should create an event and return its id' do
+      Pusher['test_channel'].stub(:trigger)
       post '/api/v1/events', @construction_attributes.to_json
       last_response.should be_ok
       new_event = Event.find(JSON.parse(last_response.body)['id'])
@@ -121,11 +122,26 @@ describe 'Service' do
       last_response.status.should == 400
     end
     
-    it 'should return 400 if the event has invalid attributes' do
-      post '/api/v1/events', {'title' => 'a title', 'invalid_key' => 'value'}.to_json
-      last_response.status.should == 400
+    # it 'should return 400 if the event has invalid attributes' do
+    #   post '/api/v1/events', @construction_attributes.merge('invalid_key' => 'value').to_json
+    #   last_response.status.should == 400
+    # end
+  end
+  
+  describe 'POST /api/v1/events/:id/photos' do
+    it 'should create a new photo associated to the event and return its id' do
+      source_filename = 'public/markers/fire.png'
+      post "/api/v1/events/#{@explosion_event._id}/photos", {
+        'file' =>  Rack::Test::UploadedFile.new(source_filename, 'image/png'),
+        'caption' => 'Photo of the explosion'
+      }
+      last_response.should be_ok
+      new_photo_id = JSON.parse(last_response.body)['id']
+      get "/api/v1/photos/#{new_photo_id}"
+      last_response.should be_ok
     end
   end
+
   
   describe 'GET /api/v1/markers' do
     it 'should return list of markers' do

@@ -1,7 +1,9 @@
+require 'logger'
 require 'yaml'
 require 'mongoid'
 require 'sinatra'
 require 'sinatra/namespace'
+
 
 before do
   headers['Access-Control-Allow-Origin'] = '*'
@@ -13,7 +15,12 @@ require File.expand_path('models/event', settings.root)
 require File.expand_path('config/confidentials', settings.root)
 set :db_config_file, File.expand_path('config/mongoid.yml', settings.root)
 set :db_config, YAML.load_file(settings.db_config_file)[settings.environment.to_s]
-Mongoid.configure { |c| c.from_hash(settings.db_config) }
+Mongoid.configure do |c|
+  c.from_hash(settings.db_config)
+  c.logger = Logger.new(nil)
+end
+set :gridfs, Mongo::Grid.new(Mongoid.database)
+
 
 helpers do
   def api_response_for(model, resource, geojson=false)
@@ -76,7 +83,6 @@ namespace '/api/v1' do
       if params[:blist]
         bounding_list = params[:blist].split(',').map{ |c| c.to_f}
         bounding_box = [[bounding_list[1], bounding_list[0]], [bounding_list[3], bounding_list[2]]]
-        puts bounding_box.inspect
         criteria = criteria.where(:location.within => {"$box" => bounding_box})
       end
       if params[:bbox]
@@ -110,7 +116,19 @@ namespace '/api/v1' do
     get '/:id' do
       api_response_for :event, Event.find(params[:id])
     end
-
+    
+    namespace '/:id/photos' do
+      post do
+        id = settings.gridfs.put(params[:file][:tempfile], :filename => params[:caption])
+        {:id => id.to_s}.to_json
+      end
+    end
+  end
+  
+  namespace '/photos' do
+    get '/:id' do
+      settings.gridfs.get(BSON::ObjectId(params[:id])).read
+    end
   end
   
   namespace '/tags' do
