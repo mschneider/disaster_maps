@@ -139,6 +139,9 @@ describe 'Service' do
       new_photo_id = JSON.parse(last_response.body)['id']
       get "/api/v1/photos/#{new_photo_id}"
       last_response.should be_ok
+      source_md5 = Digest::MD5.hexdigest(File.read(source_filename))
+      upload_md5 = Digest::MD5.hexdigest(last_response.body)
+      upload_md5.should == source_md5
     end
   end
 
@@ -159,17 +162,4 @@ describe 'Service' do
       last_response.should be_ok
     end
   end
-  
-  describe 'POST /user_images/uploadedfire.png' do
-    it "should upload an image and save it to /public/user_images/uploadedfire.png" do
-      source_filename = 'public/markers/fire.png'
-      target_filename = 'public/user_images/uploadedfire.png'
-      post '/user_images/uploadedfire.png', 'data' => Rack::Test::UploadedFile.new(source_filename,'image/png')
-      last_response.should be_ok
-      fixture_md5 = Digest::MD5.hexdigest(File.read(source_filename))
-      upload_md5 = Digest::MD5.hexdigest(File.read(target_filename))
-      upload_md5.should == fixture_md5
-      File.delete(target_filename)
-    end
-  end 
 end

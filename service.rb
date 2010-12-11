@@ -144,13 +144,6 @@ namespace '/api/v1' do
   end
 end
 
-post '/user_images/:filename' do
-  filename = File.join(File.dirname(__FILE__), 'public', 'user_images', params[:filename])
-  File.open(filename, 'wb') do |file|
-    file.write(params[:data][:tempfile].read)
-  end
-end
-
 get '/seed' do
   Event.destroy_all
   require 'factory_girl'
