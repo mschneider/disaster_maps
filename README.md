@@ -9,14 +9,6 @@ API for sending data on events from the field
 #### Marker validation
 Marker string should probably be validated to not include invalid chars like " or brackets in it.
 
-### Image upload
-
-#### Image upload to MongoDB
-Images need to be attached to an event and stored in db instead of the public folder.
-Image upload is currently a stupid http post.
-Images should be possible to upload via iphone.
-An Event should have many Images.
-
 ### Updating Events
 
 #### Update API
