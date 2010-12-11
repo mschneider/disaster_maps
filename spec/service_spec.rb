@@ -109,10 +109,10 @@ describe 'Service' do
       post '/api/v1/events', @construction_attributes.to_json
       last_response.should be_ok
       
-      # there should be a new event with the given id
+      # there should be a new event with the given id and the given attributes
       get "api/v1/events/#{JSON.parse(last_response.body)['id']}"
-      new_event = last_response.body
-      new_event.should_not be_nil
+      new_event = JSON.parse(last_response.body)
+      new_event['event'] == @construction_attributes
     end
     
     it 'should return 400 if the event has no tags' do
