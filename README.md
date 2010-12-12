@@ -103,9 +103,10 @@ Eg. total project costs associated with specific sites in the map, potentially s
 Maps Icons are cc-by-sa by Nicolas Mollet: http://code.google.com/p/google-maps-icons/
 
 ## Team
-Derjoo (http://twitter.com/derjoo)
-Engin Kurutepe (http://fifteenjugglers.com)
-Florian Holzhauer (http://fholzhauer.de)
-Klas Kalass (http://freiheit.com)
-Max Schneider (http://twitter.com/m_schneider)
-Shoaib Burq (http://geospatial.nomad-labs.com)
+
+- Engin Kurutepe [http://fifteenjugglers.com][http://fifteenjugglers.com]
+- Florian Holzhauer [http://fholzhauer.de][http://fholzhauer.de]
+- Jossekin Beilharz [http://twitter.com/derjoo][http://twitter.com/derjoo]
+- Klas Kalass [http://freiheit.com][http://freiheit.com]
+- Maximilian Schneider [http://twitter.com/m_schneider][http://twitter.com/m_schneider]
+- Shoaib Burq [http://geospatial.nomad-labs.com][http://geospatial.nomad-labs.com]
