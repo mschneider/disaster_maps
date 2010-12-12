@@ -104,9 +104,9 @@ Maps Icons are cc-by-sa by Nicolas Mollet: http://code.google.com/p/google-maps-
 
 ## Team
 
-- Engin Kurutepe [http://fifteenjugglers.com][http://fifteenjugglers.com]
-- Florian Holzhauer [http://fholzhauer.de][http://fholzhauer.de]
-- Jossekin Beilharz [http://twitter.com/derjoo][http://twitter.com/derjoo]
-- Klas Kalass [http://freiheit.com][http://freiheit.com]
-- Maximilian Schneider [http://twitter.com/m_schneider][http://twitter.com/m_schneider]
-- Shoaib Burq [http://geospatial.nomad-labs.com][http://geospatial.nomad-labs.com]
+- Engin Kurutepe [fifteenjugglers.com](http://fifteenjugglers.com)
+- Florian Holzhauer [fholzhauer.de](http://fholzhauer.de)
+- Jossekin Beilharz [twitter.com/derjoo](http://twitter.com/derjoo)
+- Klas Kalass [freiheit.com](http://freiheit.com)
+- Maximilian Schneider [twitter.com/m_schneider](http://twitter.com/m_schneider)
+- Shoaib Burq [geospatial.nomad-labs.com](http://geospatial.nomad-labs.com)
