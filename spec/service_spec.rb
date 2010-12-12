@@ -108,11 +108,15 @@ describe 'Service' do
       Pusher['test_channel'].stub(:trigger)
       post '/api/v1/events', @construction_attributes.to_json
       last_response.should be_ok
+      new_event_id = JSON.parse(last_response.body)['id']
       
       # there should be a new event with the given id and the given attributes
-      get "api/v1/events/#{JSON.parse(last_response.body)['id']}"
-      new_event = JSON.parse(last_response.body)
-      new_event['event'] == @construction_attributes
+      get "api/v1/events/#{new_event_id}"
+      new_event = JSON.parse(last_response.body)['event']
+      new_event['_id'].should == new_event_id
+      @construction_attributes.each do | key, value |
+        new_event[key.to_s].should == value
+      end
     end
     
     it 'should return 400 if the event has no tags' do
