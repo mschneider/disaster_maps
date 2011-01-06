@@ -13,6 +13,7 @@ class Event
   validates_presence_of :location
   validates_presence_of :tags
   after_save :rebuild_tags
+  before_create :check_photos
   
   @@files = Dir.glob("public/markers/*.{jpg,png,gif}")
   @@files.each { |file| file['public/'] = '/' }
@@ -40,5 +41,18 @@ class Event
       # this behves like a materialzed view
       { :out => 'tags'}
     )
+  end
+
+  def check_photos
+    return true if self.photos.blank?
+    self.photos = self.photos.collect do |params|
+      begin
+        settings.gridfs.put(params['file']['tempfile'].join, :filename => params['caption']).to_s
+      rescue Exception => e
+        self.errors.add(:base, "Error uploading file")
+        return false
+      end
+    end
+    return true
   end
 end

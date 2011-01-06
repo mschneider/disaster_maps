@@ -102,7 +102,7 @@ namespace '/api/v1' do
         api_response_for_multiple :events, criteria.to_a
       end
     end
-  
+
     # create event with given parameters
     post do
       param_hash = JSON.parse(request.body.read)
@@ -115,7 +115,7 @@ namespace '/api/v1' do
       Pusher['test_channel'].trigger('create', api_response_for(:event, event, geojson=true))
       {:id => event._id.to_s}.to_json
     end
-      
+
     # return event with given id
     get '/:id' do
       api_response_for :event, Event.find(params[:id])

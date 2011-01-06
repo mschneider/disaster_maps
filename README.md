@@ -43,6 +43,10 @@ Parts or Collections of Events should be able to be exported as a complete repor
 #### optional: Link with spreadsheets
 Eg. total project costs associated with specific sites in the map, potentially sums for costs created by specific project categories or partner organisations.
 
+### Authentication
+
+#### Users
+
 ## API Documentation
 
 - `GET /api/v1/events/:id` Returns the Event with the given `id` as JSON.

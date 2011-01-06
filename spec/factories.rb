@@ -13,3 +13,16 @@ Factory.define :construction_event, :class => Event do |e|
   e.marker      '/markers/flood.png'
   e.photos      []
 end
+
+Factory.define :water_contamination, :class => Event do |e|
+  e.tags        %w(contamination disease)
+  e.location    [74.3, 34.2]
+  e.description 'Water contamination; potential for the outbreak of cholera.'
+  e.marker      '/markers/flood.png'
+  e.photos      [
+                  settings.gridfs.put(
+                    Rack::Test::UploadedFile.new('public/markers/fire.png', 'image/png'),
+                    :filename => 'this is a photo').to_s
+                ]
+end
+

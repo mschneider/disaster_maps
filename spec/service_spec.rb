@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__), 'spec_helper')
+require 'pp'
 
 describe 'Service' do
   include Rack::Test::Methods
@@ -10,6 +11,13 @@ describe 'Service' do
   before :each do
     Event.destroy_all
     @explosion_event = Factory.create(:explosion_event)
+  end
+
+  describe 'GET /api/v1/events/latest/:point' do
+    it 'should return the latest event at a point location' do
+      # event = Factory.create(:water_contamination)
+      # get "/api/v1/events/latest/#{event.location.join(',')}"
+    end
   end
 
   describe 'GET /api/v1/events/:id' do
@@ -103,18 +111,53 @@ describe 'Service' do
     before :each do
       @construction_attributes = Factory.attributes_for(:construction_event)
     end
-    
+
+    it 'should create an event and return its id and posted client_id'
+    it 'should create an event and return its id but no client_id when its not posted'
+
     it 'should create an event and return its id' do
       Pusher['test_channel'].stub(:trigger)
       post '/api/v1/events', @construction_attributes.to_json
       last_response.should be_ok
-      
+
       # there should be a new event with the given id and the given attributes
       get "api/v1/events/#{JSON.parse(last_response.body)['id']}"
       new_event = JSON.parse(last_response.body)
       new_event['event'] == @construction_attributes
     end
-    
+
+    it 'should create an event with a photo and return its id' do
+      attributes = Factory.attributes_for(:water_contamination)
+      source_filename = 'public/markers/fire.png'
+      attributes['photos'] = [
+        {
+          :file => Rack::Test::UploadedFile.new(source_filename, 'image/png'),
+          :caption => 'this is a photo'
+        }
+      ]
+
+      pp "About to upload: "
+      pp attributes
+
+      post '/api/v1/events', attributes.to_json
+
+      pp "Response to upload: "
+      pp last_response.body
+
+      last_response.should be_ok
+      id = JSON.parse(last_response.body)["id"]
+
+      get "/api/v1/events/#{id}"
+      res = JSON.parse(last_response.body)
+      res['event']['photos'].each do |photo_id|
+        get "/api/v1/photos/#{photo_id}"
+        last_response.should be_ok
+        source_md5 = Digest::MD5.hexdigest(File.read(source_filename))
+        upload_md5 = Digest::MD5.hexdigest(last_response.body)
+        upload_md5.should == source_md5
+      end
+    end
+
     it 'should return 400 if the event has no tags' do
       post '/api/v1/events', {'location' => [73.2, 36.2]}.to_json
       last_response.status.should == 400
@@ -141,7 +184,7 @@ describe 'Service' do
       last_response.should be_ok
       new_photo_id = JSON.parse(last_response.body)['id']
 
-      # the event should habe the photo assigned to it
+      # the event should have the photo assigned to it
       get "/api/v1/events/#{@explosion_event._id}"
       event = JSON.parse(last_response.body)['event']
       event['photos'].should include new_photo_id
